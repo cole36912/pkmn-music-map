@@ -415,7 +415,6 @@ document.body.appendChild(document.createElement("br"));
 document.body.appendChild(playing);
 
 document.body.appendChild(document.createElement("br"));
-//document.body.appendChild(document.createElement("br"));
 
 document.body.append(page);
 
