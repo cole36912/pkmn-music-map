@@ -1,0 +1,559 @@
+{
+  "generations": [
+    {
+      "name": "Gen I",
+      "maps": ["kanto_rby"]
+    },
+    {
+      "name": "Gen II",
+      "maps": ["tohjo_gsc"]
+    },
+    {
+      "name": "Gen III",
+      "maps": ["hoenn_rse", "kanto_frlg", "sevii_frlg"]
+    },
+    {
+      "name": "Gen IV",
+      "maps": ["sinnoh_dppt", "tohjo_hgss"]
+    }
+  ],
+  "regions": [
+    {
+      "name": "Kanto",
+      "maps": ["kanto_rby", "kanto_gsc", "kanto_frlg", "kanto_hgss"]
+    },
+    {
+      "name": "Johto",
+      "maps": ["johto_gsc", "johto_hgss"]
+    },
+    {
+      "name": "Tohjo",
+      "maps": ["tohjo_gsc", "tohjo_hgss"]
+    },
+    {
+      "name": "Hoenn",
+      "maps": ["hoenn_rse"]
+    },
+    {
+      "name": "Sevii Islands",
+      "maps": ["sevii_frlg"]
+    },
+    {
+      "name": "Sinnoh",
+      "maps": ["sinnoh_dppt"]
+    }
+  ],
+  "games": [
+    {
+      "name": "R/B/Y",
+      "maps": ["kanto_rby"]
+    },
+    {
+      "name": "G/S/C",
+      "maps": ["tohjo_gsc"]
+    },
+    {
+      "name": "R/S/E",
+      "maps": ["hoenn_rse"]
+    },
+    {
+      "name": "FR/LG",
+      "maps": ["kanto_frlg", "sevii_frlg"]
+    },
+    {
+      "name": "D/P/Pt",
+      "maps": ["sinnoh_dppt"]
+    },
+    {
+      "name": "HG/SS",
+      "maps": ["tohjo_hgss"]
+    }
+  ],
+  "maps": [
+    {
+      "id": "kanto_rby",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [
+        {
+          "id": "pallet_town",
+          "name": "Pallet Town",
+          "rects": [
+            {
+              "x": 4,
+              "y": 11,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 4, "y": 11},
+              {"x": 4, "y": 12},
+              {"x": 5, "y": 12},
+              {"x": 5, "y": 11}
+            ]
+          ],
+          "music": "cOWRNLaCMJg"
+        },
+        {
+          "id": "route_1_2",
+          "name": "Route 1/2",
+          "rects": [
+            {
+              "x": 4,
+              "y": 9,
+              "width": 1,
+              "height": 2
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "width": 1,
+              "height": 3
+            }
+          ],
+          "polys": [
+            [
+              {"x": 4, "y": 9},
+              {"x": 4, "y": 11},
+              {"x": 5, "y": 11},
+              {"x": 5, "y": 9}
+            ],
+            [
+              {"x": 4, "y": 5},
+              {"x": 4, "y": 8},
+              {"x": 5, "y": 8},
+              {"x": 5, "y": 5}
+            ]
+          ],
+          "music": "u0G12EBW4KY"
+        },
+        {
+          "id": "viridian_pewter_city",
+          "name": "Viridian/Pewter City",
+          "rects": [
+            {
+              "x": 4,
+              "y": 8,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 4, "y": 8},
+              {"x": 5, "y": 8},
+              {"x": 5, "y": 9},
+              {"x": 4, "y": 9}
+            ],
+            [
+              {"x": 4, "y": 3},
+              {"x": 5, "y": 3},
+              {"x": 5, "y": 4},
+              {"x": 4, "y": 4}
+            ]
+          ],
+          "music": "KY6GsRjKP0k"
+        },
+        {
+          "id": "viridian_forest",
+          "name": "Viridian Forest",
+          "rects": [
+            {
+              "x": 4,
+              "y": 4,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 4, "y": 4},
+              {"x": 5, "y": 4},
+              {"x": 5, "y": 5},
+              {"x": 4, "y": 5}
+            ]
+          ],
+          "music": "Wufz_8FOMzE",
+          "volume": 75
+        },
+        {
+          "id": "route_3-10_16-22",
+          "name": "Route 3-10/16-22",
+          "rects": [
+            {
+              "x": 5,
+              "y": 3,
+              "width": 3,
+              "height": 1
+            },
+            {
+              "x": 7,
+              "y": 2,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 9,
+              "y": 2,
+              "width": 3,
+              "height": 1
+            },
+            {
+              "x": 12,
+              "y": 3,
+              "width": 1,
+              "height": 2
+            },
+            {
+              "x": 12,
+              "y": 6,
+              "width": 1,
+              "height": 3
+            }
+          ],
+          "polys": [
+            [
+              {"x": 5, "y": 3},
+              {"x": 5, "y": 4},
+              {"x": 8, "y": 4},
+              {"x": 8, "y": 2},
+              {"x": 7, "y": 2},
+              {"x": 7, "y": 3}
+            ],
+            [
+              {"x": 9, "y": 2},
+              {"x": 12, "y": 2},
+              {"x": 12, "y": 3},
+              {"x": 9, "y": 3}
+            ],
+            [
+              {"x": 12, "y": 3},
+              {"x": 13, "y": 3},
+              {"x": 13, "y": 5},
+              {"x": 12, "y": 5}
+            ],
+            [
+              {"x": 12, "y": 6},
+              {"x": 13, "y": 6},
+              {"x": 13, "y": 9},
+              {"x": 12, "y": 9}
+            ]
+          ],
+          "music": "hLcJois9yTs"
+        },
+        {
+          "id": "mt_moon",
+          "name": "Mt. Moon",
+          "rects": [
+            {
+              "x": 8,
+              "y": 2,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 8, "y": 2},
+              {"x": 9, "y": 2},
+              {"x": 9, "y": 3},
+              {"x": 8, "y": 3}
+            ]
+          ],
+          "music": "3rj2Tsp_DVM"
+        },
+        {
+          "id": "cerulean_city",
+          "name": "Cerulean City",
+          "rects": [
+            {
+              "x": 12,
+              "y": 2,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 12, "y": 2},
+              {"x": 13, "y": 2},
+              {"x": 13, "y": 3},
+              {"x": 12, "y": 3}
+            ]
+          ],
+          "music": "xpPWNOhJtqs"
+        },
+        {
+          "id": "route_24_25",
+          "name": "Route 24/25",
+          "rects": [
+            {
+              "x": 12,
+              "y": 0,
+              "width": 1,
+              "height": 2
+            },
+            {
+              "x": 13,
+              "y": 0,
+              "width": 2,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 12, "y": 0},
+              {"x": 15, "y": 0},
+              {"x": 15, "y": 1},
+              {"x": 13, "y": 1},
+              {"x": 13, "y": 2},
+              {"x": 12, "y": 2}
+            ]
+          ],
+          "music": "pX9scc13gMw"
+        }
+      ],
+      "src": "https://cdn.bulbagarden.net/upload/8/86/Kanto_Town_Map_RBY.png"
+    },
+    {
+      "id": "johto_gsc",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [],
+      "src": "https://cdn.bulbagarden.net/upload/2/2e/Johto_Town_Map_GSC.png"
+    },
+    {
+      "id": "kanto_gsc",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [
+        {
+          "id": "pallet_town",
+          "name": "Pallet Town",
+          "rects": [
+            {
+              "x": 5,
+              "y": 11,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 5, "y": 11},
+              {"x": 5, "y": 12},
+              {"x": 6, "y": 12},
+              {"x": 6, "y": 11}
+            ]
+          ],
+          "music": "eaK564p5ksc",
+          "volume": 30
+        }
+      ],
+      "src": "https://cdn.bulbagarden.net/upload/0/02/Kanto_Town_Map_GSC.png"
+    },
+    {
+      "id": "tohjo_gsc",
+      "type": "composition",
+      "width": 288,
+      "height": 120,
+      "parts": [
+        {
+          "map": "johto_gsc",
+          "x": 0,
+          "y": 0,
+          "start_x": 0,
+          "start_y": 0,
+          "width": 144,
+          "height": 120
+        },
+        {
+          "map": "kanto_gsc",
+          "x": 144,
+          "y": 0,
+          "start_x": 0,
+          "start_y": 0,
+          "width": 144,
+          "height": 120
+        }
+      ],
+      "fix_corners": false
+    },
+    {
+      "id": "hoenn_rse",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [
+        {
+          "id": "littleroot_town",
+          "name": "Littleroot Town",
+          "rects": [
+            {
+              "x": 5,
+              "y": 13,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 5, "y": 13},
+              {"x": 6, "y": 13},
+              {"x": 6, "y": 14},
+              {"x": 5, "y": 14}
+            ]
+          ],
+          "music": "im6tbN9SZXs"
+        }
+      ],
+      "src": "https://cdn.bulbagarden.net/upload/1/1f/Hoenn_RSE_Map.png"
+    },
+    {
+      "id": "kanto_frlg_original",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [
+        {
+          "id": "pallet_town",
+          "name": "Pallet Town",
+          "rects": [
+            {
+              "x": 8,
+              "y": 15,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "polys": [
+            [
+              {"x": 8, "y": 15},
+              {"x": 8, "y": 16},
+              {"x": 9, "y": 16},
+              {"x": 9, "y": 15}
+            ]
+          ],
+          "music": "dfRLeXXsdnM"
+        }
+      ],
+      "src": "https://cdn.bulbagarden.net/upload/7/7c/KantoTownMap.png"
+    },
+    {
+      "id": "kanto_frlg",
+      "type": "composition",
+      "width": 192,
+      "height": 144,
+      "parts": [
+        {
+          "map": "kanto_frlg_original",
+          "x": 0,
+          "y": 0,
+          "start_x": 24,
+          "start_y": 16,
+          "width": 192,
+          "height": 144
+        }
+      ],
+      "fix_corners": false
+    },
+    {
+      "id": "sevii_frlg",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [],
+      "src": "https://cdn.bulbagarden.net/upload/3/3f/Sevii_Islands_map.png"
+    },
+    {
+      "id": "sinnoh_dppt",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [],
+      "src": "https://cdn.bulbagarden.net/upload/a/ac/Sinnoh.png"
+    },
+    {
+      "id": "johto_hgss_original",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [],
+      "src": "https://cdn.bulbagarden.net/upload/0/04/Johto.png"
+    },
+    {
+      "id": "johto_hgss",
+      "type": "composition",
+      "width": 190,
+      "height": 143,
+      "parts": [
+        {
+          "map": "johto_hgss_original",
+          "x": 0,
+          "y": 0,
+          "start_x": 1,
+          "start_y": 1,
+          "width": 190,
+          "height": 143
+        }
+      ],
+      "fix_corners": true
+    },
+    {
+      "id": "kanto_hgss_original",
+      "type": "basic",
+      "coord_multiplier": 8,
+      "locations": [],
+      "src": "https://cdn.bulbagarden.net/upload/7/78/Kanto.png"
+    },
+    {
+      "id": "kanto_hgss",
+      "type": "composition",
+      "width": 190,
+      "height": 143,
+      "parts": [
+        {
+          "map": "kanto_hgss_original",
+          "x": 0,
+          "y": 0,
+          "start_x": 1,
+          "start_y": 1,
+          "width": 190,
+          "height": 143
+        }
+      ],
+      "fix_corners": true
+    },
+    {
+      "id": "tohjo_hgss",
+      "type": "composition",
+      "width": 360,
+      "height": 143,
+      "parts": [
+        {
+          "map": "johto_hgss_original",
+          "x": 0,
+          "y": 0,
+          "start_x": 1,
+          "start_y": 1,
+          "width": 184,
+          "height": 143
+        },
+        {
+          "map": "kanto_hgss_original",
+          "x": 184,
+          "y": 0,
+          "start_x": 15,
+          "start_y": 1,
+          "width": 176,
+          "height": 143
+        }
+      ],
+      "fix_corners": true
+    }
+  ],
+  "proxy_url": "https://cors-anywhere.herokuapp.com/"
+}
