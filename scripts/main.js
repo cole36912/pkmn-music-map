@@ -327,6 +327,7 @@ const null_part = {
                 block.style.width = `${scale * coord_multiplier * rect.width}px`;
                 block.style.height = `${scale * coord_multiplier * rect.height}px`;
                 block.style.backgroundColor = "rgba(255,0,0,0)";
+                block.style.pointerEvents = "none";
                 block.style.animation = "pulse 1s cubic-bezier(0.3, 0.18, 0.58, 1) 0s infinite alternate";
                 block_containers.get(map_name).div.appendChild(block);
             }
@@ -447,17 +448,6 @@ let s = "\n";
 for(let i = 0; i <= 20; i++)
     s += `${i * 5}%  {color: hsl(${i * 18}, 100%, 50%);}\n`
 style.innerHTML = `
-#overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  pointer-events: none;
-}
 @keyframes pulse {
   0%    {background-color: rgba(255,0,0,0.1);}
   100%  {background-color: rgba(255,0,0,0.75);}
@@ -527,10 +517,6 @@ document.body.appendChild(document.createElement("br"));
 
 document.body.append(page);
 
-let overlay = document.createElement("div");
-overlay.id = "overlay";
-
-document.body.appendChild(overlay);
 
 set_page(data.games[0]);
 
