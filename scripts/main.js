@@ -427,6 +427,9 @@ function onYouTubeIframeAPIReady() {
         height: '0',
         width: '0',
         videoId: 'D0j9AOEhzO8',
+        playerVars: {
+            playsinline: 1
+        },
         events: {
             onStateChange:
                 function(e) {
