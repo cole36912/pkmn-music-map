@@ -447,6 +447,17 @@ let s = "\n";
 for(let i = 0; i <= 20; i++)
     s += `${i * 5}%  {color: hsl(${i * 18}, 100%, 50%);}\n`
 style.innerHTML = `
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
 @keyframes pulse {
   0%    {background-color: rgba(255,0,0,0.1);}
   100%  {background-color: rgba(255,0,0,0.75);}
@@ -515,6 +526,11 @@ document.body.appendChild(playing);
 document.body.appendChild(document.createElement("br"));
 
 document.body.append(page);
+
+let overlay = document.createElement("div");
+overlay.id = "overlay";
+
+document.body.appendChild(overlay);
 
 set_page(data.games[0]);
 
