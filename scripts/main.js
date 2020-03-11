@@ -1,47 +1,81 @@
 
+
+
+//define classes for GPC
+var PolyDefault = gpcas.geometry.PolyDefault ;
+var ArrayList = gpcas.util.ArrayList;
+var PolySimple = gpcas.geometry.PolySimple;
+var Clip = gpcas.geometry.Clip;
+var OperationType = gpcas.geometry.OperationType;
+var LmtTable = gpcas.geometry.LmtTable;
+var ScanBeamTreeEntries = gpcas.geometry.ScanBeamTreeEntries;
+var EdgeTable = gpcas.geometry.EdgeTable;
+var EdgeNode = gpcas.geometry.EdgeNode;
+var ScanBeamTree = gpcas.geometry.ScanBeamTree;
+var Rectangle = gpcas.geometry.Rectangle;
+var BundleState = gpcas.geometry.BundleState;
+var LmtNode = gpcas.geometry.LmtNode;
+var TopPolygonNode = gpcas.geometry.TopPolygonNode;
+var AetTree = gpcas.geometry.AetTree;
+var HState = gpcas.geometry.HState;
+var VertexType = gpcas.geometry.VertexType;
+var VertexNode = gpcas.geometry.VertexNode;
+var PolygonNode = gpcas.geometry.PolygonNode;
+var ItNodeTable = gpcas.geometry.ItNodeTable;
+var StNode = gpcas.geometry.StNode;
+var ItNode = gpcas.geometry.ItNode;
+
 /**
+ *
  * @typedef {
  *     {
- *         id: String
- *         name: String
- *         rects: Array<{
- *             x: Number,
- *             y: Number,
- *             width: Number,
- *             height: Number
- *         }>,
- *         polys: Array<Array<{
- *             x: Number,
- *             y: Number
- *         }>>,
- *         music: String
+ *         x: number,
+ *         y: number,
+ *         width: number,
+ *         height: number
+ *     }
+ * } Rectangle
+ *
+ * @typedef {
+ *     Array<{
+ *         x: number,
+ *         y: number
+ *     }>
+ * } Polygon
+ *
+ * @typedef {
+ *     {
+ *         id: string
+ *         name: string
+ *         rects: Array<Rectangle>,
+ *         music: string
  *     }
  * } Location
  *
  * @typedef {
  *     {
- *         id: String,
- *         type: String,
- *         coord_multiplier: Number,
+ *         id: string,
+ *         type: string,
+ *         coord_multiplier: number,
  *         locations: Array<Location>,
- *         src: String,
- *         width: Number,
- *         height: Number,
+ *         src: string,
+ *         width: number,
+ *         height: number,
  *         parts: Array<{
- *             map: String,
- *             x: Number,
- *             y: Number,
- *             start_x: Number,
- *             start_y: Number
+ *             map: string,
+ *             x: number,
+ *             y: number,
+ *             start_x: number,
+ *             start_y: number
  *         }>,
- *         fix_corners: Boolean
+ *         fix_corners: boolean
  *     }
  * } MapItem
  *
  * @typedef {
  *     {
- *         name: String,
- *         maps: Array<String>
+ *         name: string,
+ *         maps: Array<string>
  *     }
  * } PageItem
  *
@@ -51,10 +85,70 @@
  *          regions: Array<PageItem>,
  *          games: Array<PageItem>,
  *          maps: Array<MapItem>,
- *          proxy_url: String
+ *          proxy_url: string
  *     }
  * } Data
+ *
+ * @typedef {
+ *     {
+ *         x: number,
+ *         y: number,
+ *         length: number,
+ *         axis: boolean,
+ *         rect: number
+ *         side: number
+ *     }
+ * } Side
  */
+
+/**
+ * @returns {Array<Polygon>}
+ * @param rects {Array<Rectangle>}
+ *
+ */
+function rects_to_polys(rects){
+    function createPoly(/*Rectangle*/rect) {
+        const res = new PolyDefault();
+        res.addPoint(new Point(rect.x, rect.y));
+        res.addPoint(new Point(rect.x + rect.width, rect.y));
+        res.addPoint(new Point(rect.x + rect.width, rect.y + rect.height));
+        res.addPoint(new Point(rect.x, rect.y + rect.height));
+        return res;
+    }
+    let poly = createPoly(rects[0]);
+    for(let i = 1; i < rects.length; i++)
+        poly = poly.union(createPoly(rects[i]));
+    let polys = [];
+    for(let i = 0; i < poly.getNumInnerPoly(); i++){
+        let sub_poly = poly.getInnerPoly(i);
+        let part = [];
+        for(let j = 0; j < sub_poly.getNumPoints(); j++)
+            part.push({
+                x: sub_poly.getX(j),
+                y: sub_poly.getY(j)
+            });
+        polys.push(part);
+    }
+    return polys;
+    /**@returns {boolean}*/ function overlap(/*Side*/ s1, /*Side*/ s2){
+        return s1.axis === s2.axis &&
+            ( s1.axis
+                ? s1.y === s2.y && s1.x + s1.length > s2.x + (s1.x > s2.x) * s2.length
+                : s1.x === s2.x && s1.y + s1.length > s2.y + (s1.y > s2.y) * s2.length
+            );
+    }
+    /**@type {Array<Side>}*/ let sides = [];
+    for(let i = 0; i < rects.length; i++)
+        for(let side = 0; side < 4; side++)
+            sides.push({
+                x: rects[i].x + (side === 3) * rects[i].width,
+                y: rects[i].y + (side === 2) * rects[i].height,
+                length: side % 2 === 0 ? rects[i].width : rects[i].height,
+                axis: side % 2 === 1,
+                rect: i,
+                side: side
+            });
+}
 
 
 function get_raw(url){
@@ -183,6 +277,7 @@ playing.style.fontWeight = "bold";
 //playing.style.animation = "rainbow 4s linear 0s infinite normal";
 playing.append("Now Playing: ");
 let now_playing = document.createElement("span");
+now_playing.innerText = "Nothing";
 playing.appendChild(now_playing);
 
 
@@ -245,7 +340,7 @@ const null_part = {
                     break;
                 }
             }
-            for(let poly of location.polys){
+            for(let poly of rects_to_polys(location.rects)){
                 let area = document.createElement("area");
                 area.shape = "poly";
                 area.coords = "";
@@ -417,5 +512,7 @@ document.body.appendChild(playing);
 document.body.appendChild(document.createElement("br"));
 
 document.body.append(page);
+
+set_page(data.games[0]);
 
 
