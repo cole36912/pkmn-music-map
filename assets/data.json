@@ -86,7 +86,14 @@
               "height": 1
             }
           ],
-          "music": "cOWRNLaCMJg"
+          "music": "4q6l2cBUrcU",
+          "sub_locations": [
+            {
+              "id": "pokemon_lab",
+              "name": "Pokemon Lab",
+              "music": "P5U_CRFvKXQ"
+            }
+          ]
         },
         {
           "id": "route_1_2",
@@ -105,7 +112,7 @@
               "height": 3
             }
           ],
-          "music": "u0G12EBW4KY"
+          "music": "x5BYQf4q49U"
         },
         {
           "id": "viridian_pewter_saffron_city",
@@ -130,7 +137,14 @@
               "height": 1
             }
           ],
-          "music": "KY6GsRjKP0k"
+          "music": "wzGTeBMULjU",
+          "sub_locations": [
+            {
+              "id": "silph_co",
+              "name": "Silph Co.",
+              "music": "6UeIH78oyio"
+            }
+          ]
         },
         {
           "id": "viridian_forest_digletts_cave_seafoam_islands",
@@ -149,8 +163,7 @@
               "height": 1
             }
           ],
-          "music": "Wufz_8FOMzE",
-          "volume": 75
+          "music": "SmJrn24tZyE"
         },
         {
           "id": "route_3-10_16-22",
@@ -259,7 +272,14 @@
               "height": 1
             }
           ],
-          "music": "hLcJois9yTs"
+          "music": "IGV2YkdmJYg",
+          "sub_locations": [
+            {
+              "id": "pikachus_beach",
+              "name": "Pikachu's Beach",
+              "music": "H5y-E_rp8Nk"
+            }
+          ]
         },
         {
           "id": "route_11-15",
@@ -296,7 +316,7 @@
               "height": 1
             }
           ],
-          "music": "7bRctqZpTM8"
+          "music": "W7lbYGRXhvQ"
         },
         {
           "id": "route_23_indigo_plateau",
@@ -315,7 +335,14 @@
               "height": 3
             }
           ],
-          "music": "2Q2et9q17eM"
+          "music": "V5AFlOh1HaM",
+          "sub_locations":[
+            {
+              "id": "hall_of_fame",
+              "name": "Hall of Fame",
+              "music": "zvE7jSiV59c"
+            }
+          ]
         },
         {
           "id": "mt_moon_dark_cave_victory_road",
@@ -340,7 +367,7 @@
               "height": 1
             }
           ],
-          "music": "3rj2Tsp_DVM"
+          "music": "nD0V-_Wf9y8"
         },
         {
           "id": "cerulean_fuchsia_city",
@@ -359,7 +386,7 @@
               "height": 1
             }
           ],
-          "music": "xpPWNOhJtqs"
+          "music": "lVbfzupS0RE"
         },
         {
           "id": "route_24_25",
@@ -378,7 +405,7 @@
               "height": 1
             }
           ],
-          "music": "pX9scc13gMw"
+          "music": "-MZ_he2IWG8"
         },
         {
           "id": "lavender_town",
@@ -391,7 +418,14 @@
               "height": 1
             }
           ],
-          "music": "JNJJ-QkZ8cM"
+          "music": "WYFmPXABRaM",
+          "sub_locations": [
+            {
+              "id": "pokemon_tower",
+              "name": "Pokemon Tower",
+              "music": "kp32K2WuMt8"
+            }
+          ]
         },
         {
           "id": "celadon_city",
@@ -404,7 +438,19 @@
               "height": 1
             }
           ],
-          "music": "iMyDrhNf2t0"
+          "music": "lz86LjNP018",
+          "sub_locations": [
+            {
+              "id": "game_corner",
+              "name": "Game Corner",
+              "music": "cFh6xxE-DhU"
+            },
+            {
+              "id": "team_rocket_hideout",
+              "name": "Team Rocket Hideout",
+              "music": "oHQELBH2gUM"
+            }
+          ]
         },
         {
           "id": "vermilion_city",
@@ -417,7 +463,14 @@
               "height": 1
             }
           ],
-          "music": "h7yDXSq18mY"
+          "music": "aPKfaoGyYx0",
+          "sub_locations": [
+            {
+              "id": "ss_anne",
+              "name": "S.S. Anne",
+              "music": "NFNBu7XFwKA"
+            }
+          ]
         },
         {
           "id": "cinnabar_island",
@@ -430,9 +483,17 @@
               "height": 1
             }
           ],
-          "music": "VBby1E3tWwo"
+          "music": "TC3C7PjUzis",
+          "sub_loactions": [
+            {
+              "id": "pokemon_mansion",
+              "name": "Pokemon Mansion",
+              "music": "WfJSY72gpWU"
+            }
+          ]
         }
       ],
+      "versions": ["kanto_gsc", "kanto_frlg_original", "kanto_hgss_original"],
       "src": "https://cdn.bulbagarden.net/upload/8/86/Kanto_Town_Map_RBY.png"
     },
     {
@@ -440,6 +501,7 @@
       "type": "basic",
       "coord_multiplier": 8,
       "locations": [],
+      "versions": ["johto_hgss_original"],
       "src": "https://cdn.bulbagarden.net/upload/2/2e/Johto_Town_Map_GSC.png"
     },
     {
@@ -470,6 +532,7 @@
           "volume": 30
         }
       ],
+      "versions": ["kanto_rby", "kanto_frlg_original", "kanto_hgss_original"],
       "src": "https://cdn.bulbagarden.net/upload/0/02/Kanto_Town_Map_GSC.png"
     },
     {
@@ -544,17 +607,17 @@
               "height": 1
             }
           ],
-          "polys": [
-            [
-              {"x": 8, "y": 15},
-              {"x": 8, "y": 16},
-              {"x": 9, "y": 16},
-              {"x": 9, "y": 15}
-            ]
-          ],
-          "music": "dfRLeXXsdnM"
+          "music": "dfRLeXXsdnM",
+          "sub_locations": [
+            {
+              "id": "pokemon_lab",
+              "name": "Pokemon Lab",
+              "music": "MBehF_iqxCI"
+            }
+          ]
         }
       ],
+      "versions": ["kanto_rby", "kanto_gsc", "kanto_hgss_original"],
       "src": "https://cdn.bulbagarden.net/upload/7/7c/KantoTownMap.png"
     },
     {
@@ -594,6 +657,7 @@
       "type": "basic",
       "coord_multiplier": 8,
       "locations": [],
+      "versions": ["johto_gsc"],
       "src": "https://cdn.bulbagarden.net/upload/0/04/Johto.png"
     },
     {
@@ -619,6 +683,7 @@
       "type": "basic",
       "coord_multiplier": 8,
       "locations": [],
+      "versions": ["kanto_rby", "kanto_gsc", "kanto_frlg_original"],
       "src": "https://cdn.bulbagarden.net/upload/7/78/Kanto.png"
     },
     {
@@ -667,5 +732,6 @@
       "fix_corners": true
     }
   ],
-  "proxy_url": "https://cors-anywhere.herokuapp.com/"
+  "proxy_url": "https://cors-anywhere.herokuapp.com/",
+  "music_source": "https://www.youtube.com/channel/UCTZHcSIHcyfcFCYnc-rV7Cw"
 }

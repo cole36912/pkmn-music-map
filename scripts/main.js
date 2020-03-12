@@ -47,8 +47,10 @@ var ItNode = gpcas.geometry.ItNode;
  *     {
  *         id: string
  *         name: string
- *         rects: Array<Rectangle>,
- *         music: string
+ *         [rects]: Array<Rectangle>,
+ *         music: string,
+ *         [volume]: number,
+ *         [sub_locations]: Array<Location>
  *     }
  * } Location
  *
@@ -56,12 +58,13 @@ var ItNode = gpcas.geometry.ItNode;
  *     {
  *         id: string,
  *         type: string,
- *         coord_multiplier: number,
- *         locations: Array<Location>,
- *         src: string,
- *         width: number,
- *         height: number,
- *         parts: Array<{
+ *         [coord_multiplier]: number,
+ *         [locations]: Array<Location>,
+ *         [versions]: Array<String>,
+ *         [src]: string,
+ *         [width]: number,
+ *         [height]: number,
+ *         [parts]: Array<{
  *             map: string,
  *             x: number,
  *             y: number,
@@ -89,16 +92,6 @@ var ItNode = gpcas.geometry.ItNode;
  *     }
  * } Data
  *
- * @typedef {
- *     {
- *         x: number,
- *         y: number,
- *         length: number,
- *         axis: boolean,
- *         rect: number
- *         side: number
- *     }
- * } Side
  */
 
 /**
@@ -130,24 +123,6 @@ function rects_to_polys(rects){
         polys.push(part);
     }
     return polys;
-    /**@returns {boolean}*/ function overlap(/*Side*/ s1, /*Side*/ s2){
-        return s1.axis === s2.axis &&
-            ( s1.axis
-                ? s1.y === s2.y && s1.x + s1.length > s2.x + (s1.x > s2.x) * s2.length
-                : s1.x === s2.x && s1.y + s1.length > s2.y + (s1.y > s2.y) * s2.length
-            );
-    }
-    /**@type {Array<Side>}*/ let sides = [];
-    for(let i = 0; i < rects.length; i++)
-        for(let side = 0; side < 4; side++)
-            sides.push({
-                x: rects[i].x + (side === 3) * rects[i].width,
-                y: rects[i].y + (side === 2) * rects[i].height,
-                length: side % 2 === 0 ? rects[i].width : rects[i].height,
-                axis: side % 2 === 1,
-                rect: i,
-                side: side
-            });
 }
 
 
@@ -168,13 +143,17 @@ function get(url){
     return get_raw(append_url(url));
 }
 
-/**@type {Number}*/ const scale = 4;
+/**@type {Number}*/ const scale = 5;
 /**@type {String}*/ const no_ref = "javascript:void(0)";
+
+/**@type {Array<string>}*/ let shown_maps = [];
+
 let paused = true;
 
 /**@type {Map<String, MapItem>}*/ let maps = new Map();
 /**@type {Map<String, {div: HTMLDivElement, is_active: Boolean, active_location: String}>}*/ let block_containers = new Map();
 /**@type {Map<String, Array<String>>}*/ let compositions = new Map();
+/**@type {Map<String, Array<String>>}*/ let containers = new Map();
 for(let i = 0; i < data.maps.length; i++) {
     maps.set(data.maps[i].id, data.maps[i]);
     let block_container = {
@@ -188,12 +167,14 @@ for(let i = 0; i < data.maps.length; i++) {
     block_container.div.style.top = "0px";
     block_containers.set(data.maps[i].id, block_container);
     compositions.set(data.maps[i].id, []);
+    containers.set(data.maps[i].id, []);
 }
 for(let map of data.maps){
     if(map.type === "composition"){
         for(let part of map.parts){
             compositions.get(map.id).push(part.map);
             compositions.get(part.map).push(map.id);
+            containers.get(part.map).push(map.id);
         }
     }
 }
@@ -262,6 +243,10 @@ for(let i = 0; i < data.games.length; i++) {
 
 /**@returns {HTMLDivElement}*/ let page = document.createElement("div");
 
+//page.style.display = "inline-block";
+//page.style.marginLeft = "auto";
+//page.style.marginRight = "auto";
+
 
 let playing = document.createElement("div");
 playing.style.position = "fixed";
@@ -271,14 +256,33 @@ playing.style.margin = "20px";
 playing.style.padding = "20px";
 playing.style.width = "auto";
 playing.style.height = "auto";
-playing.style.border = "2px solid black";
-playing.style.backgroundColor = "hsl(0,0%,83%)";
-playing.style.fontWeight = "bold";
+//playing.style.border = "2px solid black";
+//playing.style.backgroundColor = "hsl(0,0%,83%)";
+//playing.style.fontWeight = "bold";
 //playing.style.animation = "rainbow 4s linear 0s infinite normal";
 playing.append("Now Playing: ");
+playing.appendChild(document.createElement("br"));
+playing.append("[ ");
 let now_playing = document.createElement("span");
 now_playing.innerText = "Nothing";
 playing.appendChild(now_playing);
+playing.append(" ]");
+
+playing.appendChild(document.createElement("br"));
+
+let sub_locations = document.createElement("div");
+sub_locations.style.top = "0px";
+sub_locations.style.left = "0px";
+sub_locations.append("Sub-locations:");
+sub_locations.appendChild(document.createElement("br"));
+
+playing.appendChild(document.createElement("br"));
+
+let versions = document.createElement("div");
+versions.style.top = "0px";
+versions.style.left = "0px";
+versions.append("Other Versions:");
+versions.appendChild(document.createElement("br"));
 
 
 
@@ -298,6 +302,10 @@ const null_part = {
     height: 0
 };
 
+const null_map = {
+    type: "null"
+};
+
 
 /**@returns {void}*/ function post_map(/*String*/ map_name){
     /**@returns {HTMLImageElement}*/ let image = get_map_image(map_name);
@@ -307,37 +315,191 @@ const null_part = {
         image.style.imageRendering = "pixelated";
         image.style.verticalAlign = "top";
         image.style.margin = `${image_margin}px`;
+        image.style.pointerEvents = "auto";
+        //image.style.display = "block";
+        //image.style.marginLeft = "auto";
+        //image.style.marginRight = "auto";
         image.useMap = `#${map_name}`;
     });
     let container = document.createElement("div");
     container.style.position = "relative";
+    container.style.pointerEvents = "none";
+    //container.style.display = "inline-block";
+    //container.style.marginLeft = "auto";
+    //container.style.marginRight = "auto";
+    //container.style.width = "auto";
     let image_map = document.createElement("map");
     image_map.name = map_name;
-    /**@returns {void}*/ function create_map(locations, part, coord_multiplier){
-        function highlight_location(location){
-            for(let block_container of block_containers.values()) {
-                block_container.div.innerHTML = "";
-                block_container.is_active = false;
-            }
-            for (let rect of location.rects) {
-                let block = document.createElement("div");
-                block.style.position = "absolute";
-                block.style.left = `${image_margin + scale * (coord_multiplier * rect.x + part.x - part.start_x)}px`;
-                block.style.top = `${image_margin + scale * (coord_multiplier * rect.y + part.y - part.start_y)}px`;
-                block.style.width = `${scale * coord_multiplier * rect.width}px`;
-                block.style.height = `${scale * coord_multiplier * rect.height}px`;
-                block.style.backgroundColor = "rgba(255,0,0,0)";
-                block.style.pointerEvents = "none";
-                block.style.animation = "pulse 1s cubic-bezier(0.3, 0.18, 0.58, 1) 0s infinite alternate";
-                block_containers.get(map_name).div.appendChild(block);
-            }
-            block_containers.get(map_name).is_active = true;
-            block_containers.get(map_name).active_location = location.id;
+    function highlight_location(/*Location*/ location, target_map, part){
+        let container_map_id = (part === null_part ? target_map.id : containers.get(target_map.id)[0]);
+        for(let block_container of block_containers.values()) {
+            block_container.div.innerHTML = "";
+            block_container.is_active = false;
         }
-        for(let location of locations){
+        for (let rect of location.rects) {
+            let block = document.createElement("div");
+            block.style.position = "absolute";
+            block.style.left = `${image_margin + scale * (target_map.coord_multiplier * rect.x + part.x - part.start_x)}px`;
+            block.style.top = `${image_margin + scale * (target_map.coord_multiplier * rect.y + part.y - part.start_y)}px`;
+            block.style.width = `${scale * target_map.coord_multiplier * rect.width}px`;
+            block.style.height = `${scale * target_map.coord_multiplier * rect.height}px`;
+            block.style.backgroundColor = "rgba(255,0,0,0)";
+            block.style.pointerEvents = "none";
+            block.style.animation = "pulse 1s cubic-bezier(0.3, 0.18, 0.58, 1) 0s infinite alternate";
+            block_containers.get(container_map_id).div.appendChild(block);
+        }
+        block_containers.get(container_map_id).is_active = true;
+        block_containers.get(container_map_id).active_location = location.id;
+    }
+
+
+    let parent_location;
+    let parent_map;
+    let parent_part;
+
+    function play(location, target_map, part){
+
+        let is_sub = true;
+        if(target_map.type !== "null") {
+            parent_location = location;
+            parent_map = target_map;
+            parent_part = part;
+            is_sub = false;
+        }
+
+        player.cueVideoById(location.music);
+        if(location.hasOwnProperty("volume")){
+            player.setVolume(location.volume);
+        }
+        else{
+            player.setVolume(20);
+        }
+        player.playVideo();
+        paused = false;
+        updateControls();
+
+        function game_name(target_map_name){
+            let game = "null";
+            if(games.has(target_map_name)){
+                game = games.get(target_map_name);
+            }
+            else{
+                for(let related of compositions.get(target_map_name)){
+                    if(games.has(related)){
+                        game = games.get(related);
+                        break;
+                    }
+                }
+            }
+            return game;
+        }
+        now_playing.innerText = `${game_name(parent_map.id)} ${location.name}`;
+
+        highlight_location(parent_location, parent_map, parent_part);
+
+
+        let breaks = playing.getElementsByTagName("br");
+        for(let ele of breaks)
+            ele.remove();
+
+        playing.appendChild(document.createElement("br"));
+
+        versions.remove();
+        versions.innerHTML = "Other Versions:";
+        let show_versions = false;
+        for(let version of parent_map.versions){
+            let version_map = maps.get(version);
+            let version_locations = version_map.locations;
+            for(let version_location of version_locations){
+                if(version_location.id === parent_location.id){
+                    let version_parent_location = version_location;
+                    if(is_sub){
+                        if(!version_location.hasOwnProperty("sub_locations"))
+                            break;
+                        let found = false;
+                        for(let version_sub_location of version_location.sub_locations){
+                            if(version_sub_location.id === location.id){
+                                found = true;
+                                version_location = version_sub_location;
+                            }
+                        }
+                        if(!found)
+                            break;
+                    }
+                    show_versions = true;
+                    let version_element = document.createElement("div");
+                    let anchor = document.createElement("a");
+                    anchor.href = no_ref;
+                    anchor.innerText = `${game_name(version)} ${version_location.name}`;
+                    anchor.addEventListener("click", function () {
+                        let version_part = null_part;
+                        outer:
+                            for (let shown_map of shown_maps) {
+                                for(let version_comp of compositions.get(version)){
+                                    if(shown_map === version_comp){
+                                        let shown_map_data = maps.get(shown_map);
+                                        if(shown_map_data.type === "composition"){
+                                            for(let potential_part of shown_map_data.parts){
+                                                if(potential_part.map === version){
+                                                    version_part = potential_part;
+                                                }
+                                            }
+                                        }
+                                        break outer;
+                                    }
+                                }
+                            }
+                        parent_map = version_map;
+                        parent_part = version_part;
+                        parent_location = version_parent_location;
+                        play(version_location, (is_sub ? null_map : version_map), (is_sub ? null_part : version_part));
+                    });
+                    version_element.append("[ ");
+                    version_element.appendChild(anchor);
+                    version_element.append(" ]");
+                    versions.appendChild(version_element);
+                    break;
+                }
+            }
+        }
+        if(show_versions) {
+            playing.appendChild(versions);
+            playing.appendChild(document.createElement("br"));
+        }
+
+
+
+        sub_locations.remove();
+        if(is_sub || !location.hasOwnProperty("sub_locations"))
+            return;
+        sub_locations.innerHTML = "Sub-locations:";
+        let show_sub_locations = false;
+        for(let sub_location of location.sub_locations){
+            show_sub_locations = true;
+            let sub_location_element = document.createElement("div");
+            let anchor = document.createElement("a");
+            anchor.href = no_ref;
+            anchor.innerText = `${game_name(target_map.id)} ${sub_location.name}`;
+            anchor.addEventListener("click", function () {
+                play(sub_location, null_map, null_part);
+            });
+            sub_location_element.append("[ ");
+            sub_location_element.appendChild(anchor);
+            sub_location_element.append(" ]");
+            sub_locations.appendChild(sub_location_element);
+        }
+        if(show_sub_locations)
+            playing.appendChild(sub_locations);
+
+
+
+
+    }
+    /**@returns {void}*/ function create_map(target_map, part, ){
+        for(let location of target_map.locations){
             for(let related of compositions.get(map_name)){
                 if(block_containers.get(related).is_active && block_containers.get(related).active_location === location.id){
-                    highlight_location(location);
+                    highlight_location(location, target_map, part);
                     break;
                 }
             }
@@ -347,50 +509,27 @@ const null_part = {
                 area.coords = "";
                 for (let point of poly)
                     area.coords += `${
-                        scale * (coord_multiplier * point.x + part.x - part.start_x)
+                        scale * (target_map.coord_multiplier * point.x + part.x - part.start_x)
                     }, ${
-                        scale * (coord_multiplier * point.y + part.y - part.start_y)
+                        scale * (target_map.coord_multiplier * point.y + part.y - part.start_y)
                     }, `;
                 area.coords = area.coords.substr(0, area.coords.length - 2);
                 area.href = no_ref;
                 area.addEventListener("click", function () {
-                    highlight_location(location);
-                    player.cueVideoById(location.music);
-                    if(location.hasOwnProperty("volume")){
-                        player.setVolume(location.volume);
-                    }
-                    else{
-                        player.setVolume(20);
-                    }
-                    player.playVideo();
-                    paused = false;
-                    updateControls();
-                    let game = "null";
-                    if(games.has(map_name)){
-                        game = games.get(map_name);
-                    }
-                    else{
-                        for(let related of compositions.get(map_name)){
-                            if(games.has(related)){
-                                game = games.get(related);
-                                break;
-                            }
-                        }
-                    }
-                    now_playing.innerText = `${game} ${location.name}`;
                     this.blur();
+                    play(location, target_map, part);
                 });
                 image_map.appendChild(area);
             }
         }
     }
     if(map.type === "basic") {
-        create_map(map.locations, null_part, map.coord_multiplier);
+        create_map(map, null_part);
     }
     else{
         for(let part of map.parts){
             let sub_map = maps.get(part.map);
-            create_map(sub_map.locations, part, sub_map.coord_multiplier);
+            create_map(sub_map, part);
         }
     }
     container.appendChild(image);
@@ -401,8 +540,10 @@ const null_part = {
 
 /**@returns {void}*/ function set_page(/*PageItem*/ new_page){
     page.innerHTML = "";
+    shown_maps = [];
     for(let i = 0; i < new_page.maps.length; i++){
         post_map(new_page.maps[i]);
+        shown_maps.push(new_page.maps[i]);
     }
 
 }
@@ -448,6 +589,10 @@ let s = "\n";
 for(let i = 0; i <= 20; i++)
     s += `${i * 5}%  {color: hsl(${i * 18}, 100%, 50%);}\n`
 style.innerHTML = `
+@font-face {
+  font-family: in_game;
+  src: url(assets/gen_1-2.ttf);
+}
 @keyframes pulse {
   0%    {background-color: rgba(255,0,0,0.1);}
   100%  {background-color: rgba(255,0,0,0.75);}
@@ -458,6 +603,7 @@ document.head.appendChild(style);
 
 
 document.body.style.fontFamily = "\"Lucida Console\", Monaco, monospace"
+//document.body.style.fontFamily = "in_game";
 
 document.body.append("Generations: ");
 make_bar(data.generations);
