@@ -161,6 +161,7 @@ function rects_to_polys(rects){
 /**@type {Map<string, {div: HTMLDivElement, is_loaded: boolean}>}*/ let full_containers = new Map();
 /**@type {Map<string, Array<string>>}*/ let compositions = new Map();
 /**@type {Map<string, Array<string>>}*/ let containers = new Map();
+/**@type {Map<string, Map<string, Location>>}*/ let map_locations = new Map();
 for(let i = 0; i < data.maps.length; i++) {
     maps.set(data.maps[i].id, data.maps[i]);
     let block_container = {
@@ -190,12 +191,14 @@ for(let map of data.maps){
         }
     }
     else{
+        map_locations.set(map.id, new Map());
         for(let location of map.locations){
             if(location.hasOwnProperty("other_maps")){
                 for(let other_map of location.other_maps){
                     external_locations.get(other_map.id).push({location: location, rects: other_map.rects});
                 }
             }
+            map_locations.get(map.id).set(location.id, location);
         }
     }
 }
@@ -451,7 +454,9 @@ const root_location = {id: "root"};
 
         //--- start - post_map/play/game_name ---//
 
-        function game_name(target_map_name){
+        function game_name(target_map_name, location){
+            if(location.hasOwnProperty("game_name"))
+                return location.game_name;
             let game = "null";
             if(games.has(target_map_name)){
                 game = games.get(target_map_name);
@@ -469,7 +474,7 @@ const root_location = {id: "root"};
 
         //--- end - post_map/play/game_name ---//
 
-        now_playing.innerText = `${game_name(parent_map.id)} ${location.name}`;
+        now_playing.innerText = `${game_name(parent_map.id, location)} ${location.name}`;
 
         clear_highlights();
         if(!is_sub && location.hasOwnProperty("other_maps")){
@@ -522,7 +527,7 @@ const root_location = {id: "root"};
                     let version_element = document.createElement("div");
                     let anchor = document.createElement("a");
                     anchor.href = no_ref;
-                    anchor.innerText = `${game_name(version)} ${version_location.name}`;
+                    anchor.innerText = `${game_name(version, version_location)} ${version_location.name}`;
                     anchor.addEventListener("click", function () {
                         let version_part = null_part;
                         outer:
@@ -573,13 +578,13 @@ const root_location = {id: "root"};
                 let anchor = document.createElement("a");
                 anchor.href = no_ref;
                 if (is_variant) {
-                    anchor.innerText = `${game_name(variant.map)} ${variant.name}`;
+                    anchor.innerText = `${game_name(variant.map, variant)} ${variant.name}`;
                     variant.type = "normal";
                     anchor.addEventListener("click", function () {
                         play(variant, maps.get(variant.map), null_part, root_location);
                     });
                 } else {
-                    anchor.innerText = `${game_name(target_map.id)} ${variant.name}`;
+                    anchor.innerText = `${game_name(target_map.id, variant)} ${variant.name}`;
                     let new_location = {};
                     Object.assign(new_location, location);
                     new_location.type = "variant";
@@ -608,13 +613,16 @@ const root_location = {id: "root"};
         sub_locations.innerHTML = "Sub-locations:";
         let show_sub_locations = false;
         for(let sub_location of location.sub_locations){
+            let is_link = sub_location.hasOwnProperty("link");
+            if(is_link)
+                sub_location = map_locations.get(target_map.id).get(sub_location.link);
             show_sub_locations = true;
             let sub_location_element = document.createElement("div");
             let anchor = document.createElement("a");
             anchor.href = no_ref;
-            anchor.innerText = `${game_name(is_variant ?super_location.map : target_map.id)} ${sub_location.name}`;
+            anchor.innerText = `${game_name(is_variant ? super_location.map : target_map.id, sub_location)} ${sub_location.name}`;
             anchor.addEventListener("click", function () {
-                play(sub_location, null_map, null_part, location);
+                play(sub_location, is_link ? target_map : null_map, is_link ? part : null_part, location);
             });
             sub_location_element.append("[ ");
             sub_location_element.appendChild(anchor);
@@ -642,36 +650,28 @@ const root_location = {id: "root"};
         if(has_shapes)
             for(let shape of target_map.shapes)
                 shape_map.set(shape.id, shape);
-        if(target_map.hasOwnProperty("shift"))
-            shift =  target_map.shift;
-        for(let location of target_map.locations){
-            for(let related of compositions.get(map_name)){
-                if(block_containers.get(related).is_active && block_containers.get(related).active_location === location.id){
-                    //highlight_location(location, target_map, part);
-                    break;
-                }
-            }
-            if(has_shapes && location.hasOwnProperty("shape")){
-                location.rects = [];
-                for(let rect of shape_map.get(location.shape.id).rects){
+        function create_rects(shapes, no_click_rects){
+            let rects = [];
+            for(let shape of shapes){
+                for(let rect of shape_map.get(shape.id).rects){
                     let shape_scale = {x: 1, y: 1};
-                    if(location.shape.hasOwnProperty("scale"))
-                        shape_scale = location.shape.scale;
+                    if(shape.hasOwnProperty("scale"))
+                        shape_scale = shape.scale;
                     let new_rect = (
-                            location.shape.hasOwnProperty("transpose") && location.shape.transpose ?
-                        {
-                            x: rect.y * shape_scale.y + location.shape.x,
-                            y: rect.x * shape_scale.x + location.shape.y,
-                            width: rect.height * shape_scale.y,
-                            height: rect.width * shape_scale.x
-                        }
-                        :
-                        {
-                            x: rect.x * shape_scale.x + location.shape.x,
-                            y: rect.y * shape_scale.y + location.shape.y,
-                            width: rect.width * shape_scale.x,
-                            height: rect.height * shape_scale.y
-                        }
+                        shape.hasOwnProperty("transpose") && shape.transpose ?
+                            {
+                                x: rect.y * shape_scale.y + shape.x,
+                                y: rect.x * shape_scale.x + shape.y,
+                                width: rect.height * shape_scale.y,
+                                height: rect.width * shape_scale.x
+                            }
+                            :
+                            {
+                                x: rect.x * shape_scale.x + shape.x,
+                                y: rect.y * shape_scale.y + shape.y,
+                                width: rect.width * shape_scale.x,
+                                height: rect.height * shape_scale.y
+                            }
                     );
                     if(new_rect.width < 0){
                         new_rect.x += new_rect.width;
@@ -681,8 +681,38 @@ const root_location = {id: "root"};
                         new_rect.y += new_rect.height;
                         new_rect.height = Math.abs(new_rect.height);
                     }
-                    location.rects.push(new_rect);
+                    if(shape.hasOwnProperty("no_click") && shape.no_click)
+                        no_click_rects.push(new_rect);
+                    else
+                        rects.push(new_rect);
                 }
+            }
+            return rects;
+        }
+        if(target_map.hasOwnProperty("shift"))
+            shift = target_map.shift;
+        for(let location of target_map.locations){
+            for(let related of compositions.get(map_name)){
+                if(block_containers.get(related).is_active && block_containers.get(related).active_location === location.id){
+                    //highlight_location(location, target_map, part);
+                    break;
+                }
+            }
+            if(has_shapes && location.hasOwnProperty("shapes")){
+                if(!location.hasOwnProperty("rects"))
+                    location.rects = [];
+                if(!location.hasOwnProperty("no_click_rects"))
+                    location.no_click_rects = [];
+                location.rects = location.rects.concat(create_rects(location.shapes, location.no_click_rects));
+                if(location.hasOwnProperty("sub_locations"))
+                    for(let sub_location of location.sub_locations)
+                        if(sub_location.hasOwnProperty("shapes")) {
+                            if(!sub_location.hasOwnProperty("rects"))
+                                sub_location.rects = [];
+                            if(!sub_location.hasOwnProperty("no_click_rects"))
+                                sub_location.no_click_rects = [];
+                            sub_location.rects = sub_location.rects.concat(create_rects(sub_location.shapes, sub_location.no_click_rects = []));
+                        }
             }
             for(let poly of rects_to_polys(location.rects)){
                 let area = document.createElement("area");
@@ -704,6 +734,13 @@ const root_location = {id: "root"};
                     play(location, target_map, part, root_location);
                 });
                 image_map.appendChild(area);
+            }
+            if(location.hasOwnProperty("no_click_rects")) {
+                location.rects = location.rects.concat(location.no_click_rects);
+                if (location.hasOwnProperty("sub_locations"))
+                    for (let sub_location of location.sub_locations)
+                        if (sub_location.hasOwnProperty("no_click_rects"))
+                            sub_location.rects = sub_location.rects.concat(sub_location.no_click_rects);
             }
         }
     }

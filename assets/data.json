@@ -544,16 +544,152 @@
               "height": 1
             }
           ],
-          "polys": [
-            [
-              {"x": 5, "y": 11},
-              {"x": 5, "y": 12},
-              {"x": 6, "y": 12},
-              {"x": 6, "y": 11}
-            ]
+          "music": "RT7Hgx_LQN0"
+        },
+        {
+          "id": "route_1_2",
+          "name": "Route 1/2 and Fuchsia City",
+          "rects": [
+            {
+              "x": 5,
+              "y": 8,
+              "width": 1,
+              "height": 3
+            },
+            {
+              "x": 5,
+              "y": 5,
+              "width": 1,
+              "height": 2
+            }
           ],
-          "music": "eaK564p5ksc",
-          "volume": 30
+          "music": "CBJZlrLDowY",
+          "sub_locations": [
+            {
+              "link": "viridian_forest_digletts_cave_seafoam_islands"
+            }
+          ]
+        },
+        {
+          "id": "viridian_pewter_saffron_city",
+          "name": "Viridian/Pewter/Saffron/Cerulean City",
+          "rects": [
+            {
+              "x": 5,
+              "y": 7,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 11,
+              "y": 6,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 5,
+              "y": 4,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "music": "2TKFV7PM-Bg",
+          "sub_locations": []
+        },
+        {
+          "id": "viridian_forest_digletts_cave_seafoam_islands",
+          "name": "Viridian Forest",
+          "rects": [],
+          "no_click_rects": [
+            {
+              "x": 5,
+              "y": 5,
+              "width": 1,
+              "height": 2
+            }
+          ],
+          "music": "ruQG7uFxn9M"
+        },
+        {
+          "id": "route_3-10_16-22",
+          "name": "Routes 3-10/16-22/24-25",
+          "rects": [],
+          "music": "LD-X5TXB-tk",
+          "sub_locations": []
+        },
+        {
+          "id": "route_11-15",
+          "name": "Routes 11-15",
+          "rects": [],
+          "music": "QAXU8H5AnUw"
+        },
+        {
+          "id": "route_23_indigo_plateau",
+          "name": "Route 23/Indigo Plateau",
+          "rects": [],
+          "music": "qA4OLGX-mhE",
+          "sub_locations":[
+            {
+              "id": "hall_of_fame",
+              "name": "Hall of Fame",
+              "music": "DufFB7kwKCw",
+              "rects": [
+                {
+                  "x": 2,
+                  "y": 2,
+                  "width": 1,
+                  "height": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mt_moon_rock_tunnel_victory_road",
+          "name": "Mt. Moon/Rock Tunnel",
+          "rects": [],
+          "music": "ndQX3lbn33s",
+          "sub_locations": [
+            {
+              "id": "mt_moon_square",
+              "name": "Mt. Moon Square",
+              "music": "sjKJevc3Yvc"
+            }
+          ]
+        },
+        {
+          "id": "celadon_city",
+          "name": "Celadon City",
+          "rects": [
+            {
+              "x": 8,
+              "y": 6,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "music": "e3e7WYlb6p0",
+          "sub_locations": [
+            {
+              "id": "game_corner",
+              "name": "Game Corner",
+              "music": "a9DJRhRuG3o"
+            }
+          ]
+        },
+        {
+          "id": "vermilion_city",
+          "name": "Vermilion City",
+          "rects": [
+            {
+              "x": 11,
+              "y": 8,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "music": "bynZtdjnvA8",
+          "sub_locations": []
         }
       ],
       "versions": ["kanto_rby", "kanto_frlg_original", "kanto_hgss_original"],
@@ -1170,11 +1306,13 @@
         {
           "id": "twinleaf_town_day",
           "name": "Twinleaf Town (Day)",
-          "shape": {
-            "id": "town",
-            "x": 22,
-            "y": 150
-          },
+          "shapes": [
+            {
+              "id": "town",
+              "x": 22,
+              "y": 150
+            }
+          ],
           "music": "HhDBpjabNyg",
           "variants": [
             {
@@ -1187,11 +1325,13 @@
         {
           "id": "sandgem_town_day",
           "name": "Sandgem Town (Day)",
-          "shape": {
-            "id": "town",
-            "x": 36,
-            "y": 143
-          },
+          "shapes": [
+            {
+              "id": "town",
+              "x": 36,
+              "y": 143
+            }
+          ],
           "music": "GHk6bNwL6Iw",
           "variants": [
             {
@@ -1211,11 +1351,13 @@
         {
           "id": "jubilife_city_day",
           "name": "Jubilife City (Day)",
-          "shape": {
-            "id": "O_city",
-            "x": 29,
-            "y": 122
-          },
+          "shapes": [
+            {
+              "id": "O_city",
+              "x": 29,
+              "y": 122
+            }
+          ],
           "music": "82ibCg9_fZA",
           "variants": [
             {
@@ -1232,23 +1374,32 @@
             },
             {
               "id": "global_trade_station",
+              "game_name": "D/P",
               "name": "Global Trade Station",
               "music": "mk1OGWA97TA"
+            },
+            {
+              "id": "global_terminal",
+              "game_name": "Pt",
+              "name": "Global Terminal",
+              "music": "JMvQguyIRfs"
             }
           ]
         },
         {
           "id": "oreburgh_city_day",
           "name": "Oreburgh City (Day)",
-          "shape": {
-            "id": "R_city",
-            "x": 72,
-            "y": 122,
-            "scale": {
-              "x": -1,
-              "y": 1
+          "shapes": [
+            {
+              "id": "R_city",
+              "x": 72,
+              "y": 122,
+              "scale": {
+                "x": -1,
+                "y": 1
+              }
             }
-          },
+          ],
           "music": "TYfuavaMf10",
           "variants": [
             {
@@ -1267,34 +1418,43 @@
         },
         {
           "id": "floaroma_town_day",
-          "name": "Floaroma Town (Day)",
-          "shape": {
-            "id": "I_city",
-            "x": 36,
-            "y": 94
-          },
+          "name": "Floaroma Town/Meadow (Day)",
+          "shapes": [
+            {
+              "id": "I_city",
+              "x": 36,
+              "y": 94
+            }
+          ],
           "music": "QEFQvtt8efw",
           "variants": [
             {
               "id": "floaroma_town_night",
-              "name": "Floaroma Town (Night)",
+              "name": "Floaroma Town/Meadow (Night)",
               "music": "814NKUnmx1E"
             }
           ]
         },
         {
-          "id": "eterna_city_day",
-          "name": "Eterna City (Day)",
-          "shape": {
-            "id": "R_city",
-            "x": 64,
-            "y": 73
-          },
+          "id": "eterna_city_celestic_town_day",
+          "name": "Eterna City and Celestic Town (Day)",
+          "shapes": [
+            {
+              "id": "R_city",
+              "x": 64,
+              "y": 73
+            },
+            {
+              "id": "town",
+              "x": 100,
+              "y": 73
+            }
+          ],
           "music": "haOA0A6nJ84",
           "variants": [
             {
-              "id": "eterna_city_night",
-              "name": "Eterna City (Night)",
+              "id": "eterna_city_celestic_town_night",
+              "name": "Eterna City and Celestic Town (Night)",
               "music": "QRFmXPrOf3o"
             }
           ]
@@ -1302,11 +1462,13 @@
         {
           "id": "hearthome_city_day",
           "name": "Hearthome City (Day)",
-          "shape": {
-            "id": "O_city",
-            "x": 99,
-            "y": 108
-          },
+          "shapes": [
+            {
+              "id": "O_city",
+              "x": 99,
+              "y": 108
+            }
+          ],
           "music": "t03CRBZS7p8",
           "variants": [
             {
@@ -1329,31 +1491,80 @@
           ]
         },
         {
-          "id": "solaceon_town_day",
-          "name": "Solaceon Town (Day)",
-          "shape": {
-            "id": "I_city",
-            "x": 120,
-            "y": 101,
-            "transpose": true
-          },
+          "id": "solaceon_town_pastoria_city_day",
+          "name": "Solaceon Town and Pastoria City (Day)",
+          "shapes": [
+            {
+              "id": "I_city",
+              "x": 120,
+              "y": 101,
+              "transpose": true
+            },
+            {
+              "id": "O_city",
+              "x": 127,
+              "y": 136
+            }
+          ],
           "music": "75OlLWtV8gc",
           "variants": [
             {
-              "id": "solaceon_town_night",
-              "name": "Solaceon Town (Night)",
+              "id": "solaceon_town_pastoria_city_night",
+              "name": "Solaceon Town and Pastoria City (Night)",
               "music": "FfE73mrn3cc"
+            }
+          ],
+          "sub_locations": [
+            {
+              "id": "great_marsh",
+              "name": "Great Marsh",
+              "music": "M47Pd2GcMy0",
+              "shapes": [
+                {
+                  "id": "O_city",
+                  "x": 127,
+                  "y": 136
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "veilstone_city_day",
+          "name": "Veilstone City (Day)",
+          "shapes": [
+            {
+              "id": "O_city",
+              "x": 148,
+              "y": 87
+            }
+          ],
+          "music": "kn9WWzjxJkk",
+          "variants": [
+            {
+              "id": "veilstone_city_night",
+              "name": "Veilstone City (Night)",
+              "music": "vHgggjKImns"
+            }
+          ],
+          "sub_locations": [
+            {
+              "id": "game_corner",
+              "name": "Game Corner",
+              "music": "owghgsl_z5o"
             }
           ]
         },
         {
           "id": "canalave_city_day",
           "name": "Canalave City (Day)",
-          "shape": {
-            "id": "I_city",
-            "x": 8,
-            "y": 115
-          },
+          "shapes": [
+            {
+              "id": "I_city",
+              "x": 8,
+              "y": 115
+            }
+          ],
           "music": "qvCboyezCWw",
           "variants": [
             {
@@ -1362,6 +1573,317 @@
               "music": "rulfjC9U1KE"
             }
           ]
+        },
+        {
+          "id": "snowpoint_city_day",
+          "name": "Snowpoint City (Day)",
+          "shapes": [
+            {
+              "id": "I_city",
+              "x": 78,
+              "y": 3
+            }
+          ],
+          "music": "C7FkBLIZThY",
+          "variants": [
+            {
+              "id": "snowpoint_city_night",
+              "name": "Snowpoint City (Night)",
+              "music": "YcnuRz-ZSi0"
+            }
+          ]
+        },
+        {
+          "id": "sunyshore_city_day",
+          "name": "Sunyshore City (Day)",
+          "shapes": [
+            {
+              "id": "O_city",
+              "x": 183,
+              "y": 122
+            }
+          ],
+          "music": "AW2Dcg_DY-c",
+          "variants": [
+            {
+              "id": "sunyshore_city_night",
+              "name": "Sunyshore City (Night)",
+              "music": "HXNMTA96EOE"
+            }
+          ]
+        },
+        {
+          "id": "pokemon_league_day",
+          "name": "Pokémon League (Day)",
+          "shapes": [
+            {
+              "id": "town",
+              "x": 183,
+              "y": 80
+            },
+            {
+              "id": "zone",
+              "x": 183,
+              "y": 88
+            }
+          ],
+          "music": "Mxb7chtXGBE",
+          "variants": [
+            {
+              "id": "pokemon_league_night",
+              "name": "Pokémon League (Night)",
+              "music": "7dzZl8ge1z0"
+            }
+          ]
+        },
+        {
+          "id": "fight_survival_area_day",
+          "name": "Fight/Survival Area (Day)",
+          "shapes": [
+            {
+              "id": "I_city",
+              "x": 134,
+              "y": 52,
+              "transpose": true
+            },
+            {
+              "id": "town",
+              "x": 141,
+              "y": 31
+            }
+          ],
+          "music": "e6lj84SCd28",
+          "variants": [
+            {
+              "id": "fight_survival_area_night",
+              "name": "Fight/Survival Area (Night)",
+              "music": "4KScTX6lMuU"
+            }
+          ]
+        },
+        {
+          "id": "eterna_forest_lost_tower",
+          "name": "Eterna Forest and Lost Tower",
+          "shapes": [
+            {
+              "id": "route",
+              "x": 120,
+              "y": 109,
+              "scale": {
+                "x": 1,
+                "y": 6
+              },
+              "no_click": true
+            }
+          ],
+          "rects": [
+            {
+              "x": 44,
+              "y": 73,
+              "width": 14,
+              "height": 1
+            },
+            {
+              "x": 43,
+              "y": 74,
+              "width": 15,
+              "height": 13
+            },
+            {
+              "x": 43,
+              "y": 87,
+              "width": 14,
+              "height": 1
+            }
+          ],
+          "music": "y0Fg9xtjFxk",
+          "sub_locations": [
+            {
+              "id": "old_chateau",
+              "name": "Old Chateau",
+              "music": "4ZE2eDWXtKo",
+              "shapes": [
+                {
+                  "id": "route",
+                  "x": 50,
+                  "y": 73,
+                  "scale": {
+                    "x": 1,
+                    "y": 8
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "route_201_day",
+          "name": "Route 201 (Day)",
+          "shapes": [
+            {
+              "id": "route",
+              "x": 30,
+              "y": 143,
+              "scale": {
+                "x": 1,
+                "y": 6
+              },
+              "transpose": true
+            },
+            {
+              "id": "route",
+              "x": 22,
+              "y": 143,
+              "scale": {
+                "x": 1,
+                "y": 7
+              }
+            }
+          ],
+          "music": "Q0AwE8EjpDs",
+          "variants": [
+            {
+              "id": "route_201_night",
+              "name": "Route 201 (Night)",
+              "music": "nT3YVdf81iU"
+            }
+          ]
+        },
+        {
+          "id": "route_209_day",
+          "name": "Route 209 (Day)",
+          "shapes": [
+            {
+              "id": "route",
+              "x": 120,
+              "y": 109,
+              "scale": {
+                "x": 1,
+                "y": 6
+              }
+            },
+            {
+              "id": "R_corner",
+              "x": 128,
+              "y": 123,
+              "scale": {
+                "x": -1,
+                "y": -1
+              }
+            },
+            {
+              "id": "route",
+              "x": 114,
+              "y": 115,
+              "scale": {
+                "x": 1,
+                "y": 7
+              },
+              "transpose": true
+            }
+          ],
+          "music": "krGXMh6qaxA",
+          "variants": [
+            {
+              "id": "route_209_night",
+              "name": "Route 209 (Night)",
+              "music": "LsYIjJC0Nu4"
+            }
+          ],
+          "sub_locations": [
+            {
+              "link": "eterna_forest_lost_tower"
+            }
+          ]
+        },
+        {
+          "id": "valor_lakefront_route_213_resort_area_day",
+          "name": "Valor Lakefront and Route 213 and Resort Area (Day)",
+          "rects": [
+            {
+              "x": 149,
+              "y": 122,
+              "width": 14,
+              "height": 1
+            },
+            {
+              "x": 148,
+              "y": 123,
+              "width": 15,
+              "height": 13
+            },
+            {
+              "x": 142,
+              "y": 136,
+              "width": 21,
+              "height": 14
+            },
+            {
+              "x": 142,
+              "y": 150,
+              "width": 20,
+              "height": 1
+            }
+          ],
+          "shapes": [
+            {
+              "id": "town",
+              "x": 176,
+              "y": 59
+            }
+          ],
+          "music": "fB5Jogayhjo",
+          "variants": [
+            {
+              "id": "valor_lakefront_route_213_resort_area_night",
+              "name": "Valor Lakefront and Route 213 and Resort Area (Night)",
+              "music": "-zPjhE8poMM"
+            }
+          ],
+          "sub_locations": [
+            {
+              "link": "lake_verity_valor_acuity"
+            }
+          ]
+        },
+        {
+          "id": "lake_verity_valor_acuity",
+          "name": "Lake Verity/Valor/Acuity",
+          "shapes": [
+            {
+              "id": "O_city",
+              "x": 148,
+              "y": 122,
+              "no_click": true
+            },
+            {
+              "id": "O_city",
+              "x": 8,
+              "y": 136,
+              "no_click": true
+            }
+          ],
+          "no_click_rects": [
+            {
+              "x": 65,
+              "y": 3,
+              "width": 13,
+              "height": 1
+            },
+            {
+              "x": 64,
+              "y": 4,
+              "width": 14,
+              "height": 13
+            },
+            {
+              "x": 65,
+              "y": 17,
+              "width": 13,
+              "height": 1
+            }
+          ],
+          "music": "OOmznKTv74M"
         }
       ],
       "versions": [],
@@ -1465,7 +1987,7 @@
             {
               "x": 1,
               "y": 14,
-              "width": 5,
+              "width": 6,
               "height": 1
             }
           ]
@@ -1489,6 +2011,51 @@
               "x": 1,
               "y": 5,
               "width": 6,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "id": "R_corner",
+          "rects": [
+            {
+              "x": 1,
+              "y": 0,
+              "width": 6,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 1,
+              "width": 7,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "id": "end",
+          "rects": [
+            {
+              "x": 1,
+              "y": 0,
+              "width": 6,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 1,
+              "width": 8,
+              "height": 6
+            }
+          ]
+        },
+        {
+          "id": "route",
+          "rects": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 8,
               "height": 1
             }
           ]
