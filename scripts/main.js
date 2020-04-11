@@ -77,6 +77,8 @@
 
 /**@type {Data}*/ const data = JSON.parse(get_raw("assets/data.json"));
 
+document.title = data.title;
+
 /**@returns {string}*/ function append_url(/*string*/ url){
     return data.proxy_url + url;
 }

@@ -90,7 +90,7 @@
           "sub_locations": [
             {
               "id": "pokemon_lab",
-              "name": "Pokemon Lab",
+              "name": "Pokémon Lab",
               "music": "P5U_CRFvKXQ"
             }
           ]
@@ -446,7 +446,7 @@
           "sub_locations": [
             {
               "id": "pokemon_tower",
-              "name": "Pokemon Tower",
+              "name": "Pokémon Tower",
               "music": "kp32K2WuMt8"
             }
           ]
@@ -511,7 +511,7 @@
           "sub_locations": [
             {
               "id": "pokemon_mansion",
-              "name": "Pokemon Mansion",
+              "name": "Pokémon Mansion",
               "music": "WfJSY72gpWU"
             }
           ]
@@ -786,7 +786,7 @@
           "sub_locations": [
             {
               "id": "pokemon_lab",
-              "name": "Pokemon Lab",
+              "name": "Pokémon Lab",
               "music": "c25XN4mTMvQ"
             }
           ]
@@ -1213,7 +1213,7 @@
           "sub_locations": [
             {
               "id": "pokemon_tower",
-              "name": "Pokemon Tower",
+              "name": "Pokémon Tower",
               "music": "VCLxPp4tvT8"
             }
           ]
@@ -1278,7 +1278,7 @@
           "sub_locations": [
             {
               "id": "pokemon_mansion",
-              "name": "Pokemon Mansion",
+              "name": "Pokémon Mansion",
               "music": "lGLMEbQ-YJY"
             }
           ]
@@ -2158,5 +2158,6 @@
     }
   ],
   "proxy_url": "https://cors-anywhere.herokuapp.com/",
-  "music_source": "https://www.youtube.com/channel/UCTZHcSIHcyfcFCYnc-rV7Cw"
+  "music_source": "https://www.youtube.com/channel/UCTZHcSIHcyfcFCYnc-rV7Cw",
+  "title": "Pokémon Music Map"
 }
