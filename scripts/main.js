@@ -1,30 +1,4 @@
 
-
-
-//define classes for GPC
-const PolyDefault         = gpcas.geometry.PolyDefault;
-const ArrayList           = gpcas.util    .ArrayList;
-const PolySimple          = gpcas.geometry.PolySimple;
-const Clip                = gpcas.geometry.Clip;
-const OperationType       = gpcas.geometry.OperationType;
-const LmtTable            = gpcas.geometry.LmtTable;
-const ScanBeamTreeEntries = gpcas.geometry.ScanBeamTreeEntries;
-const EdgeTable           = gpcas.geometry.EdgeTable;
-const EdgeNode            = gpcas.geometry.EdgeNode;
-const ScanBeamTree        = gpcas.geometry.ScanBeamTree;
-const Rectangle           = gpcas.geometry.Rectangle;
-const BundleState         = gpcas.geometry.BundleState;
-const LmtNode             = gpcas.geometry.LmtNode;
-const TopPolygonNode      = gpcas.geometry.TopPolygonNode;
-const AetTree             = gpcas.geometry.AetTree;
-const HState              = gpcas.geometry.HState;
-const VertexType          = gpcas.geometry.VertexType;
-const VertexNode          = gpcas.geometry.VertexNode;
-const PolygonNode         = gpcas.geometry.PolygonNode;
-const ItNodeTable         = gpcas.geometry.ItNodeTable;
-const StNode              = gpcas.geometry.StNode;
-const ItNode              = gpcas.geometry.ItNode;
-
 /**
  *
  * @typedef {
@@ -36,12 +10,6 @@ const ItNode              = gpcas.geometry.ItNode;
  *     }
  * } LocationRectangle
  *
- * @typedef {
- *     Array<{
- *         x: number,
- *         y: number
- *     }>
- * } Polygon
  *
  * @typedef {
  *     {
@@ -98,36 +66,6 @@ const ItNode              = gpcas.geometry.ItNode;
  * @returns {Array<Polygon>}
  * @param rects {Array<LocationRectangle>}
  */
-function rects_to_polys(rects){
-    /**@returns {PolyDefault}*/ function createPoly(/*LocationRectangle*/rect) {
-        const res = new PolyDefault();
-        res.addPoint(new Point(rect.x, rect.y));
-        res.addPoint(new Point(rect.x + rect.width, rect.y));
-        res.addPoint(new Point(rect.x + rect.width, rect.y + rect.height));
-        res.addPoint(new Point(rect.x, rect.y + rect.height));
-        return res;
-    }
-    let poly = new PolyDefault();
-    for(let i = 0; i < rects.length; i++) {
-        //let expanded = {};
-        //Object.assign(expanded, rects[i]);
-        //expanded.width += shift.x;
-        //expanded.height += shift.y;
-        poly = poly.union(createPoly(rects[i]));
-    }
-    /**@type {Array<Polygon>}*/ let polys = [];
-    for(let i = 0; i < poly.getNumInnerPoly(); i++){
-        let sub_poly = poly.getInnerPoly(i);
-        /**@type {Polygon}*/ let part = [];
-        for(let j = 0; j < sub_poly.getNumPoints(); j++)
-            part.push({
-                x: sub_poly.getX(j),
-                y: sub_poly.getY(j)
-            });
-        polys.push(part);
-    }
-    return polys;
-}
 
 
 /**@returns {string}*/ function get_raw(/*string*/ url){
@@ -173,6 +111,7 @@ for(let i = 0; i < data.maps.length; i++) {
     block_container.div.style.position = "absolute";
     block_container.div.style.left = "0px";
     block_container.div.style.top = "0px";
+    block_container.div.style.zIndex = "1";
     block_containers.set(data.maps[i].id, block_container);
     full_containers.set(data.maps[i].id, {
         div: null,
@@ -383,6 +322,7 @@ const root_location = {id: "root"};
     //container.style.width = "auto";
     let image_map = document.createElement("map");
     image_map.name = map_name;
+    image_map.style.zIndex = "2";
 
     //--- start - post_map/clear_highlights ---//
     //uses block_containers
@@ -414,6 +354,7 @@ const root_location = {id: "root"};
             block.style.backgroundColor = "rgba(255,0,0,0)";
             block.style.pointerEvents = "none";
             block.style.animation = "pulse 1s cubic-bezier(0.3, 0.18, 0.58, 1) 0s infinite alternate";
+            block.style.zIndex = "1";
             block_containers.get(container_map_id).div.appendChild(block);
         }
         block_containers.get(container_map_id).is_active = true;
@@ -714,14 +655,17 @@ const root_location = {id: "root"};
                             sub_location.rects = sub_location.rects.concat(create_rects(sub_location.shapes, sub_location.no_click_rects = []));
                         }
             }
-            for(let poly of rects_to_polys(location.rects)){
+            let new_rects = [];
+            for(let rect of location.rects)
+                new_rects.push(new Rectangle(rect));
+            for(let poly of rects_to_polys(new_rects)){
                 let area = document.createElement("area");
                 area.shape = "poly";
                 area.coords = "";
                 let offset = {x: 0, y: 0};
                 if(target_map.hasOwnProperty("location_offset"))
                     offset =  target_map.location_offset;
-                for (let point of poly)
+                for (let point of poly.points)
                     area.coords += `${
                         scale * (target_map.coord_multiplier * point.x + part.x - part.start_x + offset.x)
                     }, ${
