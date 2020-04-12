@@ -533,8 +533,11 @@ const root_location = {id: "root"};
                     new_location.type = "variant";
                     new_location.map = target_map.id;
                     variant.sub_locations = location.sub_locations;
+                    let null_map_copy = {}
+                    Object.assign(null_map_copy, null_map);
+                    null_map_copy.id = target_map.id;
                     anchor.addEventListener("click", function () {
-                        play(variant, null_map, null_part, new_location);
+                        play(variant, null_map_copy, null_part, new_location);
                     });
                 }
                 variant_element.append("[ ");
@@ -767,6 +770,7 @@ let s = "\n";
 for(let i = 0; i <= 20; i++)
     s += `${i * 5}%  {color: hsl(${i * 18}, 100%, 50%);}\n`
 style.innerHTML = `
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @font-face {
   font-family: in_game;
   src: url(assets/gen_1-2.ttf);
@@ -781,7 +785,8 @@ document.head.appendChild(style);
 
 
 document.body.style.fontFamily = "\"Lucida Console\", Monaco, monospace"
-//document.body.style.fontFamily = "in_game";
+//document.body.style.fontFamily = "'Press Start 2P', cursive";
+//document.body.style.fontSize = "12px";
 
 document.body.append("Generations: ");
 make_bar(data.generations);
