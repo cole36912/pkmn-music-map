@@ -96,6 +96,8 @@ document.title = data.title;
 
 /**@type {Map<string, Array<{location: Location, rects: Array<LocationRectangle>}>>}*/ let external_locations = new Map();
 
+let current_page;
+
 /**@type {Map<string, MapItem>}*/ let maps = new Map();
 /**@type {Map<string, {div: HTMLDivElement, is_active: boolean, active_location: string}>}*/ let block_containers = new Map();
 /**@type {Map<string, {div: HTMLDivElement, is_loaded: boolean}>}*/ let full_containers = new Map();
@@ -122,6 +124,9 @@ for(let i = 0; i < data.maps.length; i++) {
     compositions.set(data.maps[i].id, []);
     containers.set(data.maps[i].id, []);
     external_locations.set(data.maps[i].id, [])
+    data.maps[i].generation_shown = false;
+    data.maps[i].region_shown = false;
+    data.maps[i].game_shown = false;
 }
 for(let map of data.maps) {
     if (map.type === "composition") {
@@ -168,16 +173,30 @@ for(let map of data.maps){
 }
 
 /**@type {Map<string, string>}*/ let games = new Map();
+/**@type {Map<string, string>}*/ let regions = new Map();
+/**@type {Map<string, string>}*/ let generations = new Map();
 
 /**@type {Map<string, Array<string>>}*/ let pages = new Map();
-for(let i = 0; i < data.generations.length; i++)
+for(let i = 0; i < data.generations.length; i++) {
     pages.set(data.generations[i].name, data.generations[i].maps);
-for(let i = 0; i < data.regions.length; i++)
+    for (let j = 0; j < data.generations[i].maps.length; j++) {
+        generations.set(data.generations[i].maps[j], data.generations[i].name);
+        maps.get(data.generations[i].maps[j]).generation_shown = true;
+    }
+}
+for(let i = 0; i < data.regions.length; i++) {
     pages.set(data.regions[i].name, data.regions[i].maps);
+    for (let j = 0; j < data.regions[i].maps.length; j++) {
+        regions.set(data.regions[i].maps[j], data.regions[i].name);
+        maps.get(data.regions[i].maps[j]).region_shown = true;
+    }
+}
 for(let i = 0; i < data.games.length; i++) {
     pages.set(data.games[i].name, data.games[i].maps);
-    for(let j = 0; j < data.games[i].maps.length; j++)
+    for(let j = 0; j < data.games[i].maps.length; j++) {
         games.set(data.games[i].maps[j], data.games[i].name);
+        maps.get(data.games[i].maps[j]).game_shown = true;
+    }
 }
 
 
@@ -517,6 +536,24 @@ const root_location = {id: "root"};
                         parent_part = version_part;
                         parent_location = version_parent_location;
                         play(version_location, (is_sub ? null_map : version_map), (is_sub ? null_part : version_part), version_parent_location);
+                        let lookup_table;
+                        switch(current_page.type){
+                            case "games":
+                                lookup_table = games;
+                                break;
+                            case "generations":
+                                lookup_table = generations;
+                                break;
+                            case "regions":
+                                lookup_table = regions;
+                        }
+                        let page_item = {
+                            name: lookup_table.get(parent_map[`${current_page.type.substr(0, current_page.type.length - 1)}_shown`] ? parent_map.id : containers.get(parent_map.id)[0].map.id),
+                            maps: []
+                        };
+                        page_item.maps = pages.get(page_item.name);
+                        set_page(page_item);
+                        current_page.name = page_item.name
                     });
                     version_element.append("[ ");
                     version_element.appendChild(anchor);
@@ -808,12 +845,16 @@ const root_location = {id: "root"};
     }
 }
 
-function make_bar(/*Array<PageItem>*/ list){
+function make_bar(/*Array<PageItem>*/ list, bar){
     for(let i = 0; i < list.length; i++) {
         /**@type {HTMLAnchorElement}*/ let anchor = document.createElement("a");
         anchor.href = no_ref;
         anchor.addEventListener("click", function() {
             set_page(list[i]);
+            current_page = {
+                name: list[i].name,
+                type: bar
+            }
         });
         anchor.innerText = list[i].name;
         document.body.append("[ ");
@@ -868,17 +909,17 @@ document.body.style.fontFamily = "\"Lucida Console\", Monaco, monospace"
 //document.body.style.fontSize = "12px";
 
 document.body.append("Generations: ");
-make_bar(data.generations);
+make_bar(data.generations, "generations");
 
 document.body.appendChild(document.createElement("br"));
 
 document.body.append("Regions: ");
-make_bar(data.regions);
+make_bar(data.regions, "regions");
 
 document.body.appendChild(document.createElement("br"));
 
 document.body.append("Games: ");
-make_bar(data.games);
+make_bar(data.games, "games");
 
 document.body.appendChild(document.createElement("br"));
 
@@ -927,6 +968,10 @@ document.body.append(page);
 
 
 set_page(data.games[0]);
+current_page = {
+    name: data.games[0].name,
+    type: "games"
+}
 
 
 
