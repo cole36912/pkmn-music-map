@@ -878,7 +878,7 @@
         },
         {
           "id": "viridian_forest_digletts_cave_seafoam_islands",
-          "name": "Viridian Forest/Diglett's Cave/Seafoam Islands",
+          "name": "Viridian/Berry Forest and Diglett's Cave and Seafoam Islands and Three Isle Path",
           "rects": [
             {
               "x": 8,
@@ -899,11 +899,32 @@
               "height": 1
             }
           ],
-          "music": "3hJC6PuuT2E"
+          "music": "3hJC6PuuT2E",
+          "other_maps": [
+            {
+              "id": "sevii_frlg",
+              "rects": [
+                {
+                  "x": 15,
+                  "y": 14,
+                  "width": 1,
+                  "height": 1
+                }
+              ],
+              "no_click_rects": [
+                {
+                  "x": 19,
+                  "y": 15,
+                  "width": 2,
+                  "height": 1
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "route_3-10_16-22",
-          "name": "Routes 3-10/16-22 and Treasure Beach/Kindle Road/Cape Brink",
+          "name": "Routes 3-10/16-22 and Treasure Beach and Kindle Road and Cape Brink and Three Isle Port and Bond Bridge",
           "rects": [
             {
               "x": 9,
@@ -1009,7 +1030,14 @@
             }
           ],
           "music": "0LIOeGNQ3to",
-          "sub_locations": [],
+          "sub_locations": [
+            {
+              "link": "cerulean_fuchsia_city"
+            },
+            {
+              "link": "viridian_forest_digletts_cave_seafoam_islands"
+            }
+          ],
           "other_maps": [
             {
               "id": "sevii_frlg",
@@ -1031,6 +1059,18 @@
                   "y": 9,
                   "width": 1,
                   "height": 2
+                },
+                {
+                  "x": 16,
+                  "y": 14,
+                  "width": 3,
+                  "height": 1
+                },
+                {
+                  "x": 19,
+                  "y": 15,
+                  "width": 2,
+                  "height": 1
                 }
               ],
               "sub_location_references": [
@@ -1112,7 +1152,7 @@
         },
         {
           "id": "mt_moon_rock_tunnel_victory_road",
-          "name": "Mt. Moon/Rock Tunnel/Mt. Ember/Victory Road",
+          "name": "Mt. Moon/Rock Tunnel/Mt. Ember/Victory Road/Icefall Cave",
           "rects": [
             {
               "x": 13,
@@ -1144,6 +1184,14 @@
                   "width": 1,
                   "height": 1
                 }
+              ],
+              "no_click_rects": [
+                {
+                  "x": 4,
+                  "y": 24,
+                  "width": 1,
+                  "height": 1
+                }
               ]
             }
           ]
@@ -1169,7 +1217,8 @@
           "other_maps": [
             {
               "id": "sevii_frlg",
-              "rects": [
+              "rects": [],
+              "no_click_rects": [
                 {
                   "x": 3,
                   "y": 7,
@@ -1283,6 +1332,57 @@
               "music": "lGLMEbQ-YJY"
             }
           ]
+        },
+        {
+          "id": "4-5_island",
+          "name": "4-5 Island",
+          "rects": [],
+          "music": "HwBkvnbAZmM",
+          "other_maps": [
+            {
+              "id": "sevii_frlg",
+              "rects": [
+                {
+                  "x": 4,
+                  "y": 24,
+                  "width": 1,
+                  "height": 1
+                },
+                {
+                  "x": 17,
+                  "y": 31,
+                  "width": 1,
+                  "height": 1
+                }
+              ]
+            }
+          ],
+          "sub_locations": [
+            {
+              "link": "mt_moon_rock_tunnel_victory_road"
+            }
+          ]
+        },
+        {
+          "id": "five_isle_meadow",
+          "name": "Five Isle Meadow",
+          "rects": [],
+          "music": "EvpQsxxzELw",
+          "other_maps": [
+            {
+              "id": "sevii_frlg",
+              "rects": [
+                {
+                  "x": 18,
+                  "y": 31,
+                  "width": 1,
+                  "height": 2
+                }
+              ]
+            }
+          ],
+          "sub_locations": [
+          ]
         }
       ],
       "versions": ["kanto_rby", "kanto_gsc", "kanto_hgss_original"],
@@ -1310,7 +1410,9 @@
       "id": "sevii_frlg",
       "type": "basic",
       "coord_multiplier": 8,
-      "locations": [],
+      "locations": [
+
+      ],
       "src": "https://cdn.bulbagarden.net/upload/3/3f/Sevii_Islands_map.png"
     },
     {
@@ -2142,16 +2244,16 @@
           "y": 0,
           "start_x": 1,
           "start_y": 1,
-          "width": 184,
+          "width": 185,
           "height": 143
         },
         {
           "map": "kanto_hgss_original",
-          "x": 184,
+          "x": 185,
           "y": 0,
-          "start_x": 15,
+          "start_x": 16,
           "start_y": 1,
-          "width": 176,
+          "width": 175,
           "height": 143
         }
       ],

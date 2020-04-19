@@ -123,12 +123,18 @@ for(let i = 0; i < data.maps.length; i++) {
     containers.set(data.maps[i].id, []);
     external_locations.set(data.maps[i].id, [])
 }
+for(let map of data.maps) {
+    if (map.type === "composition") {
+        for (let part of map.parts) {
+            containers.get(part.map).push({map: map, part: part});
+        }
+    }
+}
 for(let map of data.maps){
     if(map.type === "composition"){
         for(let part of map.parts){
             compositions.get(map.id).push(part.map);
             compositions.get(part.map).push(map.id);
-            containers.get(part.map).push(map.id);
         }
     }
     else{
@@ -136,7 +142,24 @@ for(let map of data.maps){
         for(let location of map.locations){
             if(location.hasOwnProperty("other_maps")){
                 for(let other_map of location.other_maps){
-                    external_locations.get(other_map.id).push({location: location, rects: other_map.rects});
+                    if(containers.get(map.id).length > 0){
+                        for(let container of containers.get(map.id)){
+                            external_locations.get(other_map.id).push({
+                                location: location,
+                                rects: other_map.rects,
+                                original_map: map,
+                                original_part: container.part
+                            });
+                        }
+                    }
+                    else{
+                        external_locations.get(other_map.id).push({
+                            location: location,
+                            rects: other_map.rects,
+                            original_map: map,
+                            original_part: null_part
+                        });
+                    }
                 }
             }
             map_locations.get(map.id).set(location.id, location);
@@ -342,7 +365,7 @@ const root_location = {id: "root"};
     //uses block_containers, containers, null_part, image_margin, scale
 
     function highlight_location(/*Location*/ location, target_map, part){
-        let container_map_id = (part === null_part ? target_map.id : containers.get(target_map.id)[0]);
+        let container_map_id = (part === null_part ? target_map.id : containers.get(target_map.id)[0].map.id);
         let offset = {x: 0, y: 0};
         if(target_map.hasOwnProperty("location_offset"))
             offset =  target_map.location_offset;
@@ -426,6 +449,8 @@ const root_location = {id: "root"};
                 let other_location = {};
                 Object.assign(other_location, location);
                 other_location.rects = other_map.rects;
+                if(other_map.hasOwnProperty("no_click_rects"))
+                    other_location.rects = other_location.rects.concat(other_map.no_click_rects);
                 highlight_location(other_location, maps.get(other_map.id), other_part)
             }
         }
@@ -692,6 +717,61 @@ const root_location = {id: "root"};
                             sub_location.rects = sub_location.rects.concat(sub_location.no_click_rects);
             }
         }
+        for(let location of external_locations.get(target_map.id)){
+            for(let related of compositions.get(map_name)){
+                if(block_containers.get(related).is_active && block_containers.get(related).active_location === location.id){
+                    //highlight_location(location, target_map, part);
+                    break;
+                }
+            }
+            if(has_shapes && location.hasOwnProperty("shapes")){
+                if(!location.hasOwnProperty("rects"))
+                    location.rects = [];
+                if(!location.hasOwnProperty("no_click_rects"))
+                    location.no_click_rects = [];
+                location.rects = location.rects.concat(create_rects(location.shapes, location.no_click_rects));
+                if(location.hasOwnProperty("sub_locations"))
+                    for(let sub_location of location.sub_locations)
+                        if(sub_location.hasOwnProperty("shapes")) {
+                            if(!sub_location.hasOwnProperty("rects"))
+                                sub_location.rects = [];
+                            if(!sub_location.hasOwnProperty("no_click_rects"))
+                                sub_location.no_click_rects = [];
+                            sub_location.rects = sub_location.rects.concat(create_rects(sub_location.shapes, sub_location.no_click_rects = []));
+                        }
+            }
+            let new_rects = [];
+            for(let rect of location.rects)
+                new_rects.push(new Rectangle(rect));
+            for(let poly of rects_to_polys(new_rects)){
+                let area = document.createElement("area");
+                area.shape = "poly";
+                area.coords = "";
+                let offset = {x: 0, y: 0};
+                if(target_map.hasOwnProperty("location_offset"))
+                    offset =  target_map.location_offset;
+                for (let point of poly.points)
+                    area.coords += `${
+                        scale * (target_map.coord_multiplier * point.x + part.x - part.start_x + offset.x)
+                    }, ${
+                        scale * (target_map.coord_multiplier * point.y + part.y - part.start_y + offset.y)
+                    }, `;
+                area.coords = area.coords.substr(0, area.coords.length - 2);
+                area.href = no_ref;
+                area.addEventListener("click", function () {
+                    this.blur();
+                    play(location.location, location.original_map, location.original_part, root_location);
+                });
+                image_map.appendChild(area);
+            }
+            if(location.hasOwnProperty("no_click_rects")) {
+                location.rects = location.rects.concat(location.no_click_rects);
+                if (location.hasOwnProperty("sub_locations"))
+                    for (let sub_location of location.sub_locations)
+                        if (sub_location.hasOwnProperty("no_click_rects"))
+                            sub_location.rects = sub_location.rects.concat(sub_location.no_click_rects);
+            }
+        }
     }
 
     //--- end - post_map/create_map ---//
@@ -726,7 +806,6 @@ const root_location = {id: "root"};
         post_map(new_page.maps[i]);
         shown_maps.push(new_page.maps[i]);
     }
-
 }
 
 function make_bar(/*Array<PageItem>*/ list){
