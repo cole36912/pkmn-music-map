@@ -13,14 +13,24 @@
  *
  * @typedef {
  *     {
- *         id: string
- *         name: string
+ *         id: string,
+ *         name: string,
  *         [rects]: Array<LocationRectangle>,
  *         music: string,
  *         [volume]: number,
  *         [sub_locations]: Array<Location>
  *     }
  * } Location
+ *
+ * @typedef {
+ *     {
+ *         map: string,
+ *         x: number,
+ *         y: number,
+ *         start_x: number,
+ *         start_y: number
+ *     }
+ * } MapPart
  *
  * @typedef {
  *     {
@@ -32,14 +42,11 @@
  *         [src]: string,
  *         [width]: number,
  *         [height]: number,
- *         [parts]: Array<{
- *             map: string,
- *             x: number,
- *             y: number,
- *             start_x: number,
- *             start_y: number
- *         }>,
- *         fix_corners: boolean
+ *         [parts]: Array<MapPart>,
+ *         fix_corners: boolean,
+ *         [generations_shown]: boolean,
+ *         [regions_shown]: boolean,
+ *         [games_shown]: boolean
  *     }
  * } MapItem
  *
@@ -56,16 +63,13 @@
  *          regions: Array<PageItem>,
  *          games: Array<PageItem>,
  *          maps: Array<MapItem>,
- *          proxy_url: string
+ *          proxy_url: string,
+ *          title: string
  *     }
  * } Data
  *
  */
 
-/**
- * @returns {Array<Polygon>}
- * @param rects {Array<LocationRectangle>}
- */
 
 
 /**@returns {string}*/ function get_raw(/*string*/ url){
@@ -102,7 +106,7 @@ let current_page;
 /**@type {Map<string, {div: HTMLDivElement, is_active: boolean, active_location: string}>}*/ let block_containers = new Map();
 /**@type {Map<string, {div: HTMLDivElement, is_loaded: boolean}>}*/ let full_containers = new Map();
 /**@type {Map<string, Array<string>>}*/ let compositions = new Map();
-/**@type {Map<string, Array<string>>}*/ let containers = new Map();
+/**@type {Map<string, Array<{map: MapItem, part: MapPart}>>}*/ let containers = new Map();
 /**@type {Map<string, Map<string, Location>>}*/ let map_locations = new Map();
 for(let i = 0; i < data.maps.length; i++) {
     maps.set(data.maps[i].id, data.maps[i]);
@@ -124,9 +128,9 @@ for(let i = 0; i < data.maps.length; i++) {
     compositions.set(data.maps[i].id, []);
     containers.set(data.maps[i].id, []);
     external_locations.set(data.maps[i].id, [])
-    data.maps[i].generation_shown = false;
-    data.maps[i].region_shown = false;
-    data.maps[i].game_shown = false;
+    data.maps[i].generations_shown = false;
+    data.maps[i].regions_shown = false;
+    data.maps[i].games_shown = false;
 }
 for(let map of data.maps) {
     if (map.type === "composition") {
@@ -171,34 +175,31 @@ for(let map of data.maps){
         }
     }
 }
-
-/**@type {Map<string, string>}*/ let games = new Map();
-/**@type {Map<string, string>}*/ let regions = new Map();
-/**@type {Map<string, string>}*/ let generations = new Map();
+/**@type {
+ *     {
+ *         games: Map<string, string>,
+ *         regions: Map<string, string>,
+ *         generations: Map<string, string>
+ *     }
+ * }
+ */
+let classifications = {
+    games: new Map(),
+    regions: new Map(),
+    generations: new Map()
+}
 
 /**@type {Map<string, Array<string>>}*/ let pages = new Map();
-for(let i = 0; i < data.generations.length; i++) {
-    pages.set(data.generations[i].name, data.generations[i].maps);
-    for (let j = 0; j < data.generations[i].maps.length; j++) {
-        generations.set(data.generations[i].maps[j], data.generations[i].name);
-        maps.get(data.generations[i].maps[j]).generation_shown = true;
-    }
-}
-for(let i = 0; i < data.regions.length; i++) {
-    pages.set(data.regions[i].name, data.regions[i].maps);
-    for (let j = 0; j < data.regions[i].maps.length; j++) {
-        regions.set(data.regions[i].maps[j], data.regions[i].name);
-        maps.get(data.regions[i].maps[j]).region_shown = true;
-    }
-}
-for(let i = 0; i < data.games.length; i++) {
-    pages.set(data.games[i].name, data.games[i].maps);
-    for(let j = 0; j < data.games[i].maps.length; j++) {
-        games.set(data.games[i].maps[j], data.games[i].name);
-        maps.get(data.games[i].maps[j]).game_shown = true;
-    }
-}
 
+for(let classification in classifications){
+    for(let entry of data[classification]){
+        pages.set(entry.name, entry.maps);
+        for(let map of entry.maps){
+            classifications[classification].set(map, entry.name);
+            maps.get(map)[`${classification}_shown`] = true;
+        }
+    }
+}
 
 
 
@@ -384,25 +385,35 @@ const root_location = {id: "root"};
     //uses block_containers, containers, null_part, image_margin, scale
 
     function highlight_location(/*Location*/ location, target_map, part){
-        let container_map_id = (part === null_part ? target_map.id : containers.get(target_map.id)[0].map.id);
+        let to_draw = [{
+            container_map_id: target_map.id,
+            part: null_part
+        }];
+        for(let container of containers.get(target_map.id))
+            to_draw.push({
+                container_map_id: container.map.id,
+                part: container.part
+            });
         let offset = {x: 0, y: 0};
         if(target_map.hasOwnProperty("location_offset"))
             offset =  target_map.location_offset;
-        for (let rect of location.rects) {
-            let block = document.createElement("div");
-            block.style.position = "absolute";
-            block.style.left = `${image_margin + scale * (target_map.coord_multiplier * rect.x + part.x - part.start_x + offset.x)}px`;
-            block.style.top = `${image_margin + scale * (target_map.coord_multiplier * rect.y + part.y - part.start_y + offset.y)}px`;
-            block.style.width = `${scale * target_map.coord_multiplier * rect.width}px`;
-            block.style.height = `${scale * target_map.coord_multiplier * rect.height}px`;
-            block.style.backgroundColor = "rgba(255,0,0,0)";
-            block.style.pointerEvents = "none";
-            block.style.animation = "pulse 1s cubic-bezier(0.3, 0.18, 0.58, 1) 0s infinite alternate";
-            block.style.zIndex = "1";
-            block_containers.get(container_map_id).div.appendChild(block);
+        for(let draw of to_draw) {
+            for (let rect of location.rects) {
+                let block = document.createElement("div");
+                block.style.position = "absolute";
+                block.style.left = `${image_margin + scale * (target_map.coord_multiplier * rect.x + draw.part.x - draw.part.start_x + offset.x)}px`;
+                block.style.top = `${image_margin + scale * (target_map.coord_multiplier * rect.y + draw.part.y - draw.part.start_y + offset.y)}px`;
+                block.style.width = `${scale * target_map.coord_multiplier * rect.width}px`;
+                block.style.height = `${scale * target_map.coord_multiplier * rect.height}px`;
+                block.style.backgroundColor = "rgba(255,0,0,0)";
+                block.style.pointerEvents = "none";
+                block.style.animation = "pulse 1s cubic-bezier(0.3, 0.18, 0.58, 1) 0s infinite alternate";
+                block.style.zIndex = "1";
+                block_containers.get(draw.container_map_id).div.appendChild(block);
+            }
+            block_containers.get(draw.container_map_id).is_active = true;
+            block_containers.get(draw.container_map_id).active_location = location.id;
         }
-        block_containers.get(container_map_id).is_active = true;
-        block_containers.get(container_map_id).active_location = location.id;
     }
 
     //--- end - post_map/highlight_location ---//
@@ -443,13 +454,13 @@ const root_location = {id: "root"};
             if(location.hasOwnProperty("game_name"))
                 return location.game_name;
             let game = "null";
-            if(games.has(target_map_name)){
-                game = games.get(target_map_name);
+            if(classifications.games.has(target_map_name)){
+                game = classifications.games.get(target_map_name);
             }
             else{
                 for(let related of compositions.get(target_map_name)){
-                    if(games.has(related)){
-                        game = games.get(related);
+                    if(classifications.games.has(related)){
+                        game = classifications.games.get(related);
                         break;
                     }
                 }
@@ -470,11 +481,12 @@ const root_location = {id: "root"};
                 other_location.rects = other_map.rects;
                 if(other_map.hasOwnProperty("no_click_rects"))
                     other_location.rects = other_location.rects.concat(other_map.no_click_rects);
-                highlight_location(other_location, maps.get(other_map.id), other_part)
+                highlight_location(other_location, maps.get(other_map.id), other_part);
             }
         }
 
-
+        if(location.hasOwnProperty("no_click_rects"))
+            location.rects = Array.from(new Set([...location.rects, ...location.no_click_rects]).values());
         highlight_location((is_sub && location.hasOwnProperty("rects")) ? location : parent_location, parent_map, parent_part);
 
         let break_elements_size = playing.getElementsByTagName("br").length;
@@ -535,20 +547,11 @@ const root_location = {id: "root"};
                         parent_map = version_map;
                         parent_part = version_part;
                         parent_location = version_parent_location;
+                        //if(!is_sub && classifications[current_page.type].get(version_map.id) === current_page.name)
+                            //version_part = null_part;
                         play(version_location, (is_sub ? null_map : version_map), (is_sub ? null_part : version_part), version_parent_location);
-                        let lookup_table;
-                        switch(current_page.type){
-                            case "games":
-                                lookup_table = games;
-                                break;
-                            case "generations":
-                                lookup_table = generations;
-                                break;
-                            case "regions":
-                                lookup_table = regions;
-                        }
                         let page_item = {
-                            name: lookup_table.get(parent_map[`${current_page.type.substr(0, current_page.type.length - 1)}_shown`] ? parent_map.id : containers.get(parent_map.id)[0].map.id),
+                            name: classifications[current_page.type].get(parent_map[`${current_page.type}_shown`] ? parent_map.id : containers.get(parent_map.id)[0].map.id),
                             maps: []
                         };
                         page_item.maps = pages.get(page_item.name);
@@ -895,6 +898,9 @@ style.innerHTML = `
   font-family: in_game;
   src: url(assets/gen_1-2.ttf);
 }
+@font-face{ 
+    font-family:"bitxmap"; 
+    src: url("http://static.tumblr.com/ofgksh6/md0mkd9yd/bitxmap_font_tfb.ttf")}
 @keyframes pulse {
   0%    {background-color: rgba(255,0,0,0.1);}
   100%  {background-color: rgba(255,0,0,0.75);}
@@ -906,6 +912,7 @@ document.head.appendChild(style);
 
 document.body.style.fontFamily = "\"Lucida Console\", Monaco, monospace"
 //document.body.style.fontFamily = "'Press Start 2P', cursive";
+//document.body.style.fontFamily = "'bitxmap'";
 //document.body.style.fontSize = "12px";
 
 document.body.append("Generations: ");
