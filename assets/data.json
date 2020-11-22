@@ -79,12 +79,7 @@
           "id": "pallet_town",
           "name": "Pallet Town",
           "rects": [
-            {
-              "x": 4,
-              "y": 11,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 4, "y": 11, "width": 1, "height": 1}
           ],
           "music": "4q6l2cBUrcU",
           "sub_locations": [
@@ -99,18 +94,8 @@
           "id": "route_1_2",
           "name": "Route 1/2",
           "rects": [
-            {
-              "x": 4,
-              "y": 9,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 4,
-              "y": 5,
-              "width": 1,
-              "height": 3
-            }
+            {"x": 4, "y": 9, "width": 1, "height": 2},
+            {"x": 4, "y": 5, "width": 1, "height": 3}
           ],
           "music": "x5BYQf4q49U"
         },
@@ -118,24 +103,9 @@
           "id": "viridian_pewter_saffron_city",
           "name": "Viridian/Pewter/Saffron City",
           "rects": [
-            {
-              "x": 4,
-              "y": 8,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 12,
-              "y": 5,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 4,
-              "y": 3,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 4, "y": 8, "width": 1, "height": 1},
+            {"x": 12, "y": 5, "width": 1, "height": 1},
+            {"x": 4, "y": 3, "width": 1, "height": 1}
           ],
           "music": "wzGTeBMULjU",
           "sub_locations": [
@@ -144,12 +114,7 @@
               "name": "Silph Co.",
               "music": "6UeIH78oyio",
               "rects": [
-                {
-                  "x": 12,
-                  "y": 5,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 12, "y": 5, "width": 1, "height": 1}
               ]
             }
           ]
@@ -158,18 +123,8 @@
           "id": "viridian_forest_digletts_cave_seafoam_islands",
           "name": "Viridian Forest/Diglett's Cave/Seafoam Islands",
           "rects": [
-            {
-              "x": 4,
-              "y": 4,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 7,
-              "y": 15,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 4, "y": 4, "width": 1, "height": 1},
+            {"x": 7, "y": 15, "width": 1, "height": 1}
           ],
           "music": "SmJrn24tZyE"
         },
@@ -177,108 +132,23 @@
           "id": "route_3-10_16-22",
           "name": "Routes 3-10/16-22",
           "rects": [
-            {
-              "x": 5,
-              "y": 3,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 7,
-              "y": 2,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 9,
-              "y": 2,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 12,
-              "y": 3,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 12,
-              "y": 6,
-              "width": 1,
-              "height": 3
-            },
-            {
-              "x": 10,
-              "y": 5,
-              "width": 2,
-              "height": 1
-            },
-            {
-              "x": 13,
-              "y": 5,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 13,
-              "y": 2,
-              "width": 4,
-              "height": 1
-            },
-            {
-              "x": 16,
-              "y": 4,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 6,
-              "y": 5,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 6,
-              "y": 6,
-              "width": 1,
-              "height": 7
-            },
-            {
-              "x": 6,
-              "y": 13,
-              "width": 4,
-              "height": 1
-            },
-            {
-              "x": 10,
-              "y": 14,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 8,
-              "y": 15,
-              "width": 2,
-              "height": 1
-            },
-            {
-              "x": 5,
-              "y": 15,
-              "width": 2,
-              "height": 1
-            },
-            {
-              "x": 4,
-              "y": 12,
-              "width": 1,
-              "height": 3
-            },
-            {
-              "x": 2,
-              "y": 8,
-              "width": 2,
-              "height": 1
-            }
+            {"x": 5, "y": 3, "width": 3, "height": 1},
+            {"x": 7, "y": 2, "width": 1, "height": 1},
+            {"x": 9, "y": 2, "width": 3, "height": 1},
+            {"x": 12, "y": 3, "width": 1, "height": 2},
+            {"x": 12, "y": 6, "width": 1, "height": 3},
+            {"x": 10, "y": 5, "width": 2, "height": 1},
+            {"x": 13, "y": 5, "width": 3, "height": 1},
+            {"x": 13, "y": 2, "width": 4, "height": 1},
+            {"x": 16, "y": 4, "width": 1, "height": 1},
+            {"x": 6, "y": 5, "width": 3, "height": 1},
+            {"x": 6, "y": 6, "width": 1, "height": 7},
+            {"x": 6, "y": 13, "width": 4, "height": 1},
+            {"x": 10, "y": 14, "width": 1, "height": 2},
+            {"x": 8, "y": 15, "width": 2, "height": 1},
+            {"x": 5, "y": 15, "width": 2, "height": 1},
+            {"x": 4, "y": 12, "width": 1, "height": 3},
+            {"x": 2, "y": 8, "width": 2, "height": 1}
           ],
           "music": "IGV2YkdmJYg",
           "sub_locations": [
@@ -288,12 +158,7 @@
               "game_name": "Y",
               "music": "H5y-E_rp8Nk",
               "rects": [
-                {
-                  "x": 10,
-                  "y": 14,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 10, "y": 14, "width": 1, "height": 1}
               ]
             }
           ]
@@ -302,36 +167,11 @@
           "id": "route_11-15",
           "name": "Routes 11-15",
           "rects": [
-            {
-              "x": 13,
-              "y": 9,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 16,
-              "y": 6,
-              "width": 1,
-              "height": 5
-            },
-            {
-              "x": 14,
-              "y": 11,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 13,
-              "y": 11,
-              "width": 1,
-              "height": 3
-            },
-            {
-              "x": 11,
-              "y": 13,
-              "width": 2,
-              "height": 1
-            }
+            {"x": 13, "y": 9, "width": 3, "height": 1},
+            {"x": 16, "y": 6, "width": 1, "height": 5},
+            {"x": 14, "y": 11, "width": 3, "height": 1},
+            {"x": 13, "y": 11, "width": 1, "height": 3},
+            {"x": 11, "y": 13, "width": 2, "height": 1}
           ],
           "music": "W7lbYGRXhvQ"
         },
@@ -339,18 +179,8 @@
           "id": "route_23_indigo_plateau",
           "name": "Route 23/Indigo Plateau",
           "rects": [
-            {
-              "x": 2,
-              "y": 2,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 2,
-              "y": 5,
-              "width": 1,
-              "height": 3
-            }
+            {"x": 2, "y": 2, "width": 1, "height": 2},
+            {"x": 2, "y": 5, "width": 1, "height": 3}
           ],
           "music": "V5AFlOh1HaM",
           "sub_locations":[
@@ -359,12 +189,7 @@
               "name": "Hall of Fame",
               "music": "zvE7jSiV59c",
               "rects": [
-                {
-                  "x": 2,
-                  "y": 2,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 2, "y": 2, "width": 1, "height": 1}
               ]
             }
           ]
@@ -373,24 +198,9 @@
           "id": "mt_moon_rock_tunnel_victory_road",
           "name": "Mt. Moon/Rock Tunnel/Victory Road",
           "rects": [
-            {
-              "x": 8,
-              "y": 2,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 16,
-              "y": 3,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 2,
-              "y": 4,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 8, "y": 2, "width": 1, "height": 1},
+            {"x": 16, "y": 3, "width": 1, "height": 1},
+            {"x": 2, "y": 4, "width": 1, "height": 1}
           ],
           "music": "nD0V-_Wf9y8"
         },
@@ -398,18 +208,8 @@
           "id": "cerulean_fuchsia_city",
           "name": "Cerulean/Fuchsia City",
           "rects": [
-            {
-              "x": 12,
-              "y": 2,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 10,
-              "y": 13,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 12, "y": 2, "width": 1, "height": 1},
+            {"x": 10, "y": 13, "width": 1, "height": 1}
           ],
           "music": "lVbfzupS0RE"
         },
@@ -417,18 +217,8 @@
           "id": "route_24_25",
           "name": "Route 24/25",
           "rects": [
-            {
-              "x": 12,
-              "y": 0,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 13,
-              "y": 0,
-              "width": 2,
-              "height": 1
-            }
+            {"x": 12, "y": 0, "width": 1, "height": 2},
+            {"x": 13, "y": 0, "width": 2, "height": 1}
           ],
           "music": "-MZ_he2IWG8"
         },
@@ -436,12 +226,7 @@
           "id": "lavender_town",
           "name": "Lavender Town",
           "rects": [
-            {
-              "x": 16,
-              "y": 5,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 16, "y": 5, "width": 1, "height": 1}
           ],
           "music": "WYFmPXABRaM",
           "sub_locations": [
@@ -456,12 +241,7 @@
           "id": "celadon_city",
           "name": "Celadon City",
           "rects": [
-            {
-              "x": 9,
-              "y": 5,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 9, "y": 5, "width": 1, "height": 1}
           ],
           "music": "lz86LjNP018",
           "sub_locations": [
@@ -481,12 +261,7 @@
           "id": "vermilion_city",
           "name": "Vermilion City",
           "rects": [
-            {
-              "x": 12,
-              "y": 9,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 12, "y": 9, "width": 1, "height": 1}
           ],
           "music": "aPKfaoGyYx0",
           "sub_locations": [
@@ -501,12 +276,7 @@
           "id": "cinnabar_island",
           "name": "Cinnabar Island",
           "rects": [
-            {
-              "x": 4,
-              "y": 15,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 4, "y": 15, "width": 1, "height": 1}
           ],
           "music": "TC3C7PjUzis",
           "sub_locations": [
@@ -530,12 +300,7 @@
           "id": "new_bark_town",
           "name": "New Bark Town",
           "rects": [
-            {
-              "x": 16,
-              "y": 10,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 16, "y": 10, "width": 1, "height": 1}
           ],
           "music": "ZUJCpOZIjdo"
         }
@@ -552,12 +317,7 @@
           "id": "pallet_town",
           "name": "Pallet Town",
           "rects": [
-            {
-              "x": 5,
-              "y": 11,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 5, "y": 11, "width": 1, "height": 1}
           ],
           "music": "RT7Hgx_LQN0"
         },
@@ -565,18 +325,8 @@
           "id": "route_1_2",
           "name": "Route 1/2 and Fuchsia City",
           "rects": [
-            {
-              "x": 5,
-              "y": 8,
-              "width": 1,
-              "height": 3
-            },
-            {
-              "x": 5,
-              "y": 5,
-              "width": 1,
-              "height": 2
-            }
+            {"x": 5, "y": 8, "width": 1, "height": 3},
+            {"x": 5, "y": 5, "width": 1, "height": 2}
           ],
           "music": "CBJZlrLDowY",
           "sub_locations": [
@@ -589,30 +339,10 @@
           "id": "viridian_pewter_saffron_city",
           "name": "Viridian/Pewter/Saffron/Cerulean City",
           "rects": [
-            {
-              "x": 5,
-              "y": 7,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 11,
-              "y": 6,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 11,
-              "y": 4,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 5,
-              "y": 4,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 5, "y": 7, "width": 1, "height": 1},
+            {"x": 11, "y": 6, "width": 1, "height": 1},
+            {"x": 11, "y": 4, "width": 1, "height": 1},
+            {"x": 5, "y": 4, "width": 1, "height": 1}
           ],
           "music": "2TKFV7PM-Bg",
           "sub_locations": []
@@ -622,12 +352,7 @@
           "name": "Viridian Forest",
           "rects": [],
           "no_click_rects": [
-            {
-              "x": 5,
-              "y": 5,
-              "width": 1,
-              "height": 2
-            }
+            {"x": 5, "y": 5, "width": 1, "height": 2}
           ],
           "music": "ruQG7uFxn9M"
         },
@@ -655,12 +380,7 @@
               "name": "Hall of Fame",
               "music": "DufFB7kwKCw",
               "rects": [
-                {
-                  "x": 2,
-                  "y": 2,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 2, "y": 2, "width": 1, "height": 1}
               ]
             }
           ]
@@ -682,12 +402,7 @@
           "id": "lavender_town",
           "name": "Lavender Town",
           "rects": [
-            {
-              "x": 15,
-              "y": 6,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 15, "y": 6, "width": 1, "height": 1}
           ],
           "music": "CTPDR4k42lc",
           "sub_locations": []
@@ -696,12 +411,7 @@
           "id": "celadon_city",
           "name": "Celadon City",
           "rects": [
-            {
-              "x": 8,
-              "y": 6,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 8, "y": 6, "width": 1, "height": 1}
           ],
           "music": "e3e7WYlb6p0",
           "sub_locations": [
@@ -716,12 +426,7 @@
           "id": "vermilion_city",
           "name": "Vermilion City",
           "rects": [
-            {
-              "x": 11,
-              "y": 8,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 11, "y": 8, "width": 1, "height": 1}
           ],
           "music": "bynZtdjnvA8",
           "sub_locations": []
@@ -766,12 +471,7 @@
           "id": "littleroot_town",
           "name": "Littleroot Town",
           "rects": [
-            {
-              "x": 5,
-              "y": 13,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 5, "y": 13, "width": 1, "height": 1}
           ],
           "polys": [
             [
@@ -796,12 +496,7 @@
           "id": "pallet_town",
           "name": "Pallet Town",
           "rects": [
-            {
-              "x": 8,
-              "y": 15,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 8, "y": 15, "width": 1, "height": 1}
           ],
           "music": "DKn_eDhoGzo",
           "sub_locations": [
@@ -816,18 +511,8 @@
           "id": "route_1_2",
           "name": "Route 1/2",
           "rects": [
-            {
-              "x": 8,
-              "y": 13,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 8,
-              "y": 11,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 8, "y": 13, "width": 1, "height": 2},
+            {"x": 8, "y": 11, "width": 1, "height": 1}
           ],
           "music": "8RGDdRFxkco"
         },
@@ -835,24 +520,9 @@
           "id": "viridian_pewter_saffron_city",
           "name": "Viridian/Pewter/Saffron City and 1-3 Islands",
           "rects": [
-            {
-              "x": 8,
-              "y": 12,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 8,
-              "y": 8,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 18,
-              "y": 10,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 8, "y": 12, "width": 1, "height": 1},
+            {"x": 8, "y": 8, "width": 1, "height": 1},
+            {"x": 18, "y": 10, "width": 1, "height": 1}
           ],
           "music": "gzYwQYp8vNs",
           "sub_locations": [
@@ -861,12 +531,7 @@
               "name": "Silph Co.",
               "music": "jW-oZXOqx4Y",
               "rects": [
-                {
-                  "x": 18,
-                  "y": 10,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 18, "y": 10, "width": 1, "height": 1}
               ]
             }
           ],
@@ -874,24 +539,9 @@
             {
               "id": "sevii_frlg",
               "rects": [
-                {
-                  "x": 2,
-                  "y": 10,
-                  "width": 1,
-                  "height": 1
-                },
-                {
-                  "x": 10,
-                  "y": 11,
-                  "width": 1,
-                  "height": 1
-                },
-                {
-                  "x": 19,
-                  "y": 14,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 2, "y": 10, "width": 1, "height": 1},
+                {"x": 10, "y": 11, "width": 1, "height": 1},
+                {"x": 19, "y": 14, "width": 1, "height": 1}
               ]
             }
           ]
@@ -900,44 +550,19 @@
           "id": "viridian_forest_digletts_cave_seafoam_islands",
           "name": "Viridian/Berry Forest and Diglett's Cave and Seafoam Islands and Three Isle Path",
           "rects": [
-            {
-              "x": 8,
-              "y": 9,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 12,
-              "y": 18,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 19,
-              "y": 13,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 8, "y": 9, "width": 1, "height": 2},
+            {"x": 12, "y": 18, "width": 1, "height": 1},
+            {"x": 19, "y": 13, "width": 1, "height": 1}
           ],
           "music": "3hJC6PuuT2E",
           "other_maps": [
             {
               "id": "sevii_frlg",
               "rects": [
-                {
-                  "x": 15,
-                  "y": 14,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 15, "y": 14, "width": 1, "height": 1}
               ],
               "no_click_rects": [
-                {
-                  "x": 19,
-                  "y": 15,
-                  "width": 2,
-                  "height": 1
-                }
+                {"x": 19, "y": 15, "width": 2, "height": 1}
               ]
             }
           ]
@@ -946,108 +571,23 @@
           "id": "route_3-10_16-22",
           "name": "Routes 3-10/16-22 and 1-3 Island Routes",
           "rects": [
-            {
-              "x": 9,
-              "y": 8,
-              "width": 4,
-              "height": 1
-            },
-            {
-              "x": 12,
-              "y": 7,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 14,
-              "y": 7,
-              "width": 4,
-              "height": 1
-            },
-            {
-              "x": 18,
-              "y": 8,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 18,
-              "y": 11,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 16,
-              "y": 10,
-              "width": 2,
-              "height": 1
-            },
-            {
-              "x": 19,
-              "y": 10,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 19,
-              "y": 7,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 22,
-              "y": 9,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 11,
-              "y": 10,
-              "width": 4,
-              "height": 1
-            },
-            {
-              "x": 11,
-              "y": 11,
-              "width": 1,
-              "height": 5
-            },
-            {
-              "x": 11,
-              "y": 16,
-              "width": 5,
-              "height": 1
-            },
-            {
-              "x": 16,
-              "y": 17,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 13,
-              "y": 18,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 9,
-              "y": 18,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 8,
-              "y": 16,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 6,
-              "y": 12,
-              "width": 2,
-              "height": 1
-            }
+            {"x": 9, "y": 8, "width": 4, "height": 1},
+            {"x": 12, "y": 7, "width": 1, "height": 1},
+            {"x": 14, "y": 7, "width": 4, "height": 1},
+            {"x": 18, "y": 8, "width": 1, "height": 2},
+            {"x": 18, "y": 11, "width": 1, "height": 2},
+            {"x": 16, "y": 10, "width": 2, "height": 1},
+            {"x": 19, "y": 10, "width": 3, "height": 1},
+            {"x": 19, "y": 7, "width": 3, "height": 1},
+            {"x": 22, "y": 9, "width": 1, "height": 1},
+            {"x": 11, "y": 10, "width": 4, "height": 1},
+            {"x": 11, "y": 11, "width": 1, "height": 5},
+            {"x": 11, "y": 16, "width": 5, "height": 1},
+            {"x": 16, "y": 17, "width": 1, "height": 2},
+            {"x": 13, "y": 18, "width": 3, "height": 1},
+            {"x": 9, "y": 18, "width": 3, "height": 1},
+            {"x": 8, "y": 16, "width": 1, "height": 2},
+            {"x": 6, "y": 12, "width": 2, "height": 1}
           ],
           "music": "0LIOeGNQ3to",
           "sub_locations": [
@@ -1062,36 +602,11 @@
             {
               "id": "sevii_frlg",
               "rects": [
-                {
-                  "x": 2,
-                  "y": 11,
-                  "width": 1,
-                  "height": 2
-                },
-                {
-                  "x": 3,
-                  "y": 6,
-                  "width": 1,
-                  "height": 5
-                },
-                {
-                  "x": 10,
-                  "y": 9,
-                  "width": 1,
-                  "height": 2
-                },
-                {
-                  "x": 16,
-                  "y": 14,
-                  "width": 3,
-                  "height": 1
-                },
-                {
-                  "x": 19,
-                  "y": 15,
-                  "width": 2,
-                  "height": 1
-                }
+                {"x": 2, "y": 11, "width": 1, "height": 2},
+                {"x": 3, "y": 6, "width": 1, "height": 5},
+                {"x": 10, "y": 9, "width": 1, "height": 2},
+                {"x": 16, "y": 14, "width": 3, "height": 1},
+                {"x": 19, "y": 15, "width": 2, "height": 1}
               ],
               "sub_location_references": [
 
@@ -1103,36 +618,11 @@
           "id": "route_11-15",
           "name": "Routes 11-15",
           "rects": [
-            {
-              "x": 20,
-              "y": 13,
-              "width": 2,
-              "height": 1
-            },
-            {
-              "x": 22,
-              "y": 11,
-              "width": 1,
-              "height": 4
-            },
-            {
-              "x": 20,
-              "y": 15,
-              "width": 3,
-              "height": 1
-            },
-            {
-              "x": 19,
-              "y": 15,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 17,
-              "y": 16,
-              "width": 2,
-              "height": 1
-            }
+            {"x": 20, "y": 13, "width": 2, "height": 1},
+            {"x": 22, "y": 11, "width": 1, "height": 4},
+            {"x": 20, "y": 15, "width": 3, "height": 1},
+            {"x": 19, "y": 15, "width": 1, "height": 2},
+            {"x": 17, "y": 16, "width": 2, "height": 1}
           ],
           "music": "NaLD77cA0pU"
         },
@@ -1140,18 +630,8 @@
           "id": "route_23_indigo_plateau",
           "name": "Route 23/Indigo Plateau",
           "rects": [
-            {
-              "x": 6,
-              "y": 7,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 6,
-              "y": 9,
-              "width": 1,
-              "height": 3
-            }
+            {"x": 6, "y": 7, "width": 1, "height": 1},
+            {"x": 6, "y": 9, "width": 1, "height": 3}
           ],
           "music": "DMai9ra6BCA",
           "sub_locations":[
@@ -1160,12 +640,7 @@
               "name": "Hall of Fame",
               "music": "UZSwnEkz0eA",
               "rects": [
-                {
-                  "x": 6,
-                  "y": 7,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 6, "y": 7, "width": 1, "height": 1}
               ]
             }
           ]
@@ -1174,44 +649,19 @@
           "id": "mt_moon_rock_tunnel_victory_road",
           "name": "Mt. Moon/Rock Tunnel/Mt. Ember/Victory Road/Icefall Cave",
           "rects": [
-            {
-              "x": 13,
-              "y": 7,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 22,
-              "y": 7,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 6,
-              "y": 8,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 13, "y": 7, "width": 1, "height": 1},
+            {"x": 22, "y": 7, "width": 1, "height": 1},
+            {"x": 6, "y": 8, "width": 1, "height": 1}
           ],
           "music": "u67i2uWyQr0",
           "other_maps": [
             {
               "id": "sevii_frlg",
               "rects": [
-                {
-                  "x": 3,
-                  "y": 5,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 3, "y": 5, "width": 1, "height": 1}
               ],
               "no_click_rects": [
-                {
-                  "x": 4,
-                  "y": 24,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 4, "y": 24, "width": 1, "height": 1}
               ]
             }
           ]
@@ -1220,18 +670,8 @@
           "id": "cerulean_fuchsia_city",
           "name": "Cerulean/Fuchsia City and Ember Spa",
           "rects": [
-            {
-              "x": 18,
-              "y": 7,
-              "width": 1,
-              "height": 1
-            },
-            {
-              "x": 16,
-              "y": 16,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 18, "y": 7, "width": 1, "height": 1},
+            {"x": 16, "y": 16, "width": 1, "height": 1}
           ],
           "music": "pxaiWfCBXjg",
           "other_maps": [
@@ -1239,12 +679,7 @@
               "id": "sevii_frlg",
               "rects": [],
               "no_click_rects": [
-                {
-                  "x": 3,
-                  "y": 7,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 3, "y": 7, "width": 1, "height": 1}
               ]
             }
           ]
@@ -1253,18 +688,8 @@
           "id": "route_24_25",
           "name": "Route 24/25",
           "rects": [
-            {
-              "x": 18,
-              "y": 5,
-              "width": 1,
-              "height": 2
-            },
-            {
-              "x": 19,
-              "y": 5,
-              "width": 2,
-              "height": 1
-            }
+            {"x": 18, "y": 5, "width": 1, "height": 2},
+            {"x": 19, "y": 5, "width": 2, "height": 1}
           ],
           "music": "h-vR7OkSGVY"
         },
@@ -1272,12 +697,7 @@
           "id": "lavender_town",
           "name": "Lavender Town",
           "rects": [
-            {
-              "x": 22,
-              "y": 10,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 22, "y": 10, "width": 1, "height": 1}
           ],
           "music": "6LO03IieYyE",
           "sub_locations": [
@@ -1292,12 +712,7 @@
           "id": "celadon_city",
           "name": "Celadon City",
           "rects": [
-            {
-              "x": 15,
-              "y": 10,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 15, "y": 10, "width": 1, "height": 1}
           ],
           "music": "Ybp-CC0ogZg",
           "sub_locations": [
@@ -1317,12 +732,7 @@
           "id": "vermilion_city",
           "name": "Vermilion City",
           "rects": [
-            {
-              "x": 18,
-              "y": 13,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 18, "y": 13, "width": 1, "height": 1}
           ],
           "music": "MJV8gjJjG_M",
           "sub_locations": [
@@ -1337,12 +747,7 @@
           "id": "cinnabar_island",
           "name": "Cinnabar Island",
           "rects": [
-            {
-              "x": 8,
-              "y": 18,
-              "width": 1,
-              "height": 1
-            }
+            {"x": 8, "y": 18, "width": 1, "height": 1}
           ],
           "music": "VH69th-_QWE",
           "sub_locations": [
@@ -1362,18 +767,8 @@
             {
               "id": "sevii_frlg",
               "rects": [
-                {
-                  "x": 4,
-                  "y": 24,
-                  "width": 1,
-                  "height": 1
-                },
-                {
-                  "x": 17,
-                  "y": 31,
-                  "width": 1,
-                  "height": 1
-                }
+                {"x": 4, "y": 24, "width": 1, "height": 1},
+                {"x": 17, "y": 31, "width": 1, "height": 1}
               ]
             }
           ],
@@ -1392,12 +787,7 @@
             {
               "id": "sevii_frlg",
               "rects": [
-                {
-                  "x": 18,
-                  "y": 31,
-                  "width": 1,
-                  "height": 2
-                }
+                {"x": 18, "y": 31, "width": 1, "height": 2}
               ]
             }
           ],
@@ -1828,48 +1218,43 @@
             }
           ],
           "rects": [
-            {
-              "x": 44,
-              "y": 73,
-              "width": 14,
-              "height": 1
-            },
-            {
-              "x": 43,
-              "y": 74,
-              "width": 15,
-              "height": 13
-            },
-            {
-              "x": 43,
-              "y": 87,
-              "width": 14,
-              "height": 1
-            }
+            {"x": 44, "y": 73, "width": 14, "height": 1},
+            {"x": 43, "y": 74, "width": 15, "height": 13},
+            {"x": 43, "y": 87, "width": 14, "height": 1}
           ],
           "music": "y0Fg9xtjFxk",
           "sub_locations": [
             {
-              "id": "old_chateau",
-              "name": "Old Chateau",
-              "music": "4ZE2eDWXtKo",
-              "shapes": [
-                {
-                  "id": "route",
-                  "x": 50,
-                  "y": 73,
-                  "scale": {
-                    "x": 1,
-                    "y": 8
-                  }
-                }
-              ]
+              "link": "old_chateau_spring_path_sendoff_spring"
             }
           ]
         },
         {
-          "id": "route_201_202_day",
-          "name": "Route 201/202 (Day)",
+          "id": "old_chateau_spring_path_sendoff_spring",
+          "name": "Old Chateau and Spring Path and Sendoff Spring",
+          "music": "4ZE2eDWXtKo",
+          "rects": [
+            {"x": 163, "y": 108, "width": 13, "height": 15},
+            {"x": 176, "y": 109, "width": 1, "height": 13}
+          ],
+          "shapes": [
+            {
+              "id": "route",
+              "x": 50,
+              "y": 73,
+              "scale": {
+                "x": 1,
+                "y": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "verity_lakefront_route_201_202_day",
+          "name": "Verity Lakefront and Route 201/202 (Day)",
+          "rects": [
+            {"x": 23, "y": 143, "width": 7, "height": 7}
+          ],
           "shapes": [
             {
               "id": "route",
@@ -1883,29 +1268,30 @@
             },
             {
               "id": "route",
-              "x": 22,
-              "y": 143,
-              "scale": {
-                "x": 1,
-                "y": 7
-              }
-            },
-            {
-              "id": "route",
               "x": 36,
               "y": 137,
               "scale": {
                 "x": 1,
                 "y": 6
               }
+            },
+            {
+              "id": "O_city",
+              "x": 8,
+              "y": 136
             }
           ],
           "music": "Q0AwE8EjpDs",
           "variants": [
             {
-              "id": "route_201_202_night",
-              "name": "Route 201/202 (Night)",
+              "id": "verity_lakefront_route_201_202_night",
+              "name": "Verity Lakefront and Route 201/202 (Night)",
               "music": "nT3YVdf81iU"
+            }
+          ],
+          "sub_locations": [
+            {
+              "link": "lake_verity_valor_acuity"
             }
           ]
         },
@@ -1943,45 +1329,15 @@
           ]
         },
         {
-          "id": "route_205_valley_windworks_fuego_ironworks_day",
-          "name": "Route 205 and Valley Windworks and Fuego Ironworks (Day)",
+          "id": "route_205_211_west_side_valley_windworks_fuego_ironworks_day",
+          "name": "Route 205/211 (West Side) and Valley Windworks and Fuego Ironworks (Day)",
           "rects": [
-            {
-              "x": 37,
-              "y": 87,
-              "width": 6,
-              "height": 1
-            },
-            {
-              "x": 36,
-              "y": 88,
-              "width": 15,
-              "height": 6
-            },
-            {
-              "x": 44,
-              "y": 94,
-              "width": 7,
-              "height": 7
-            },
-            {
-              "x": 44,
-              "y": 101,
-              "width": 13,
-              "height": 1
-            },
-            {
-              "x": 44,
-              "y": 102,
-              "width": 14,
-              "height": 6
-            },
-            {
-              "x": 44,
-              "y": 108,
-              "width": 13,
-              "height": 1
-            }
+            {"x": 37, "y": 87, "width": 6, "height": 1},
+            {"x": 36, "y": 88, "width": 15, "height": 6},
+            {"x": 44, "y": 94, "width": 7, "height": 7},
+            {"x": 44, "y": 101, "width": 13, "height": 1},
+            {"x": 44, "y": 102, "width": 14, "height": 6},
+            {"x": 44, "y": 108, "width": 13, "height": 1}
           ],
           "shapes": [
             {
@@ -1993,20 +1349,138 @@
                 "y": 6
               },
               "transpose": true
+            },
+            {
+              "id": "route",
+              "x": 79,
+              "y": 73,
+              "scale": {
+                "x": 1,
+                "y": 6
+              },
+              "transpose": true
             }
           ],
           "music": "YIAlVDLZJ_k",
           "variants": [
             {
-              "id": "route_205_valley_windworks_fuego_ironworks_night",
-              "name": "Route 205 and Valley Windworks and Fuego Ironworks (Night)",
+              "id": "route_205_211_west_side_valley_windworks_fuego_ironworks_night",
+              "name": "Route 205/211 (West Side) and Valley Windworks and Fuego Ironworks (Night)",
               "music": "1brm89Tz64U"
             }
           ]
         },
         {
-          "id": "route_209_day",
-          "name": "Route 209 (Day)",
+          "id": "route_206-208_day",
+          "name": "Route 206-208 (Day)",
+          "shapes": [
+            {
+              "id": "route",
+              "x": 64,
+              "y": 88,
+              "scale": {
+                "x": 1,
+                "y": 34
+              }
+            },
+            {
+              "id": "route",
+              "x": 72,
+              "y": 115,
+              "scale": {
+                "x": 1,
+                "y": 6
+              },
+              "transpose": true
+            },
+            {
+              "id": "route",
+              "x": 86,
+              "y": 115,
+              "scale": {
+                "x": 1,
+                "y": 13
+              },
+              "transpose": true
+            }
+          ],
+          "music": "bkQiFPJUYTQ",
+          "variants": [
+            {
+              "id": "route_206-208_night",
+              "name": "Route 206-208 (Night)",
+              "music": "6-dAsSbgpDM"
+            }
+          ]
+        },
+        {
+          "id": "route_210_211_east_side_214_215_day",
+          "name": "Route 210/211 (East Side)/214/215 (Day)",
+          "rects": [
+            {"x": 127, "y": 74, "width": 1, "height": 7}
+          ],
+          "shapes": [
+            {
+              "id": "route",
+              "x": 120,
+              "y": 81,
+              "scale": {
+                "x": 1,
+                "y": 20
+              }
+            },
+            {
+              "id": "route",
+              "x": 108,
+              "y": 73,
+              "scale": {
+                "x": 1,
+                "y": 19
+              },
+              "transpose": true
+            },
+            {
+              "id": "route",
+              "x": 128,
+              "y": 87,
+              "scale": {
+                "x": 1,
+                "y": 20
+              },
+              "transpose": true
+            },
+            {
+              "id": "route",
+              "x": 93,
+              "y": 73,
+              "scale": {
+                "x": 1,
+                "y": 7
+              },
+              "transpose": true
+            },
+            {
+              "id": "route",
+              "x": 155,
+              "y": 102,
+              "scale": {
+                "x": 1,
+                "y": 20
+              }
+            }
+          ],
+          "music": "c8UkrNo4k2s",
+          "variants": [
+            {
+              "id": "route_210_211_east_side_214_215_night",
+              "name": "Route 210/211 (East Side)/214/215 (Night)",
+              "music": "bl8MSm86Oiw"
+            }
+          ]
+        },
+        {
+          "id": "route_209_212_day",
+          "name": "Route 209/212 (Day)",
           "shapes": [
             {
               "id": "route",
@@ -2035,13 +1509,22 @@
                 "y": 7
               },
               "transpose": true
+            },
+            {
+              "id": "R_corner",
+              "x": 99,
+              "y": 151,
+              "scale": {
+                "x": 1,
+                "y": -1
+              }
             }
           ],
           "music": "krGXMh6qaxA",
           "variants": [
             {
-              "id": "route_209_night",
-              "name": "Route 209 (Night)",
+              "id": "route_209_212_night",
+              "name": "Route 209/212 (Night)",
               "music": "LsYIjJC0Nu4"
             }
           ],
@@ -2055,30 +1538,10 @@
           "id": "valor_lakefront_route_213_resort_area_day",
           "name": "Valor Lakefront and Route 213 and Resort Area (Day)",
           "rects": [
-            {
-              "x": 149,
-              "y": 122,
-              "width": 14,
-              "height": 1
-            },
-            {
-              "x": 148,
-              "y": 123,
-              "width": 15,
-              "height": 13
-            },
-            {
-              "x": 142,
-              "y": 136,
-              "width": 21,
-              "height": 14
-            },
-            {
-              "x": 142,
-              "y": 150,
-              "width": 20,
-              "height": 1
-            }
+            {"x": 149, "y": 122, "width": 14, "height": 1},
+            {"x": 148, "y": 123, "width": 15, "height": 13},
+            {"x": 142, "y": 136, "width": 21, "height": 14},
+            {"x": 142, "y": 150, "width": 20, "height": 1}
           ],
           "shapes": [
             {
@@ -2119,24 +1582,9 @@
             }
           ],
           "no_click_rects": [
-            {
-              "x": 65,
-              "y": 3,
-              "width": 13,
-              "height": 1
-            },
-            {
-              "x": 64,
-              "y": 4,
-              "width": 14,
-              "height": 13
-            },
-            {
-              "x": 65,
-              "y": 17,
-              "width": 13,
-              "height": 1
-            }
+            {"x": 65, "y": 3, "width": 13, "height": 1},
+            {"x": 64, "y": 4, "width": 14, "height": 13},
+            {"x": 65, "y": 17, "width": 13, "height": 1}
           ],
           "music": "OOmznKTv74M"
         }
@@ -2146,173 +1594,63 @@
         {
           "id": "town",
           "rects": [
-            {
-              "x": 1,
-              "y": 0,
-              "width": 6,
-              "height": 1
-            },
-            {
-              "x": 0,
-              "y": 1,
-              "width": 8,
-              "height": 6
-            },
-            {
-              "x": 1,
-              "y": 7,
-              "width": 6,
-              "height": 1
-            }
+            {"x": 1, "y": 0, "width": 6, "height": 1},
+            {"x": 0, "y": 1, "width": 8, "height": 6},
+            {"x": 1, "y": 7, "width": 6, "height": 1}
           ]
         },
         {
           "id": "O_city",
           "rects": [
-            {
-              "x": 1,
-              "y": 0,
-              "width": 13,
-              "height": 1
-            },
-            {
-              "x": 0,
-              "y": 1,
-              "width": 15,
-              "height": 13
-            },
-            {
-              "x": 1,
-              "y": 14,
-              "width": 13,
-              "height": 1
-            }
+            {"x": 1, "y": 0, "width": 13, "height": 1},
+            {"x": 0, "y": 1, "width": 15, "height": 13},
+            {"x": 1, "y": 14, "width": 13, "height": 1}
           ]
         },
         {
           "id": "I_city",
           "rects": [
-            {
-              "x": 1,
-              "y": 0,
-              "width": 6,
-              "height": 1
-            },
-            {
-              "x": 0,
-              "y": 1,
-              "width": 8,
-              "height": 13
-            },
-            {
-              "x": 1,
-              "y": 14,
-              "width": 6,
-              "height": 1
-            }
+            {"x": 1, "y": 0, "width": 6, "height": 1},
+            {"x": 0, "y": 1, "width": 8, "height": 13},
+            {"x": 1, "y": 14, "width": 6, "height": 1}
           ]
         },
         {
           "id": "R_city",
           "rects": [
-            {
-              "x": 1,
-              "y": 0,
-              "width": 13,
-              "height": 1
-            },
-            {
-              "x": 0,
-              "y": 1,
-              "width": 15,
-              "height": 6
-            },
-            {
-              "x": 0,
-              "y": 7,
-              "width": 14,
-              "height": 1
-            },
-            {
-              "x": 0,
-              "y": 8,
-              "width": 8,
-              "height": 6
-            },
-            {
-              "x": 1,
-              "y": 14,
-              "width": 6,
-              "height": 1
-            }
+            {"x": 1, "y": 0, "width": 13, "height": 1},
+            {"x": 0, "y": 1, "width": 15, "height": 6},
+            {"x": 0, "y": 7, "width": 14, "height": 1},
+            {"x": 0, "y": 8, "width": 8, "height": 6},
+            {"x": 1, "y": 14, "width": 6, "height": 1}
           ]
         },
         {
           "id": "zone",
           "rects": [
-            {
-              "x": 1,
-              "y": 0,
-              "width": 6,
-              "height": 1
-            },
-            {
-              "x": 0,
-              "y": 1,
-              "width": 8,
-              "height": 4
-            },
-            {
-              "x": 1,
-              "y": 5,
-              "width": 6,
-              "height": 1
-            }
+            {"x": 1, "y": 0, "width": 6, "height": 1},
+            {"x": 0, "y": 1, "width": 8, "height": 4},
+            {"x": 1, "y": 5, "width": 6, "height": 1}
           ]
         },
         {
           "id": "R_corner",
           "rects": [
-            {
-              "x": 1,
-              "y": 0,
-              "width": 6,
-              "height": 1
-            },
-            {
-              "x": 0,
-              "y": 1,
-              "width": 7,
-              "height": 7
-            }
+            {"x": 1, "y": 0, "width": 6, "height": 1},
+            {"x": 0, "y": 1, "width": 7, "height": 7}
           ]
         },
         {
           "id": "end",
           "rects": [
-            {
-              "x": 1,
-              "y": 0,
-              "width": 6,
-              "height": 1
-            },
-            {
-              "x": 0,
-              "y": 1,
-              "width": 8,
-              "height": 6
-            }
+            {"x": 1, "y": 0, "width": 6, "height": 1},
+            {"x": 0, "y": 1, "width": 8, "height": 6}
           ]
         },
         {
           "id": "route",
           "rects": [
-            {
-              "x": 0,
-              "y": 0,
-              "width": 8,
-              "height": 1
-            }
+            {"x": 0, "y": 0, "width": 8, "height": 1}
           ]
         }
       ],

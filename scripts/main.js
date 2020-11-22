@@ -668,22 +668,21 @@ const root_location = {id: "root"};
                     let shape_scale = {x: 1, y: 1};
                     if(shape.hasOwnProperty("scale"))
                         shape_scale = shape.scale;
-                    let new_rect = (
-                        shape.hasOwnProperty("transpose") && shape.transpose ?
-                            {
-                                x: rect.y * shape_scale.y + shape.x,
-                                y: rect.x * shape_scale.x + shape.y,
-                                width: rect.height * shape_scale.y,
-                                height: rect.width * shape_scale.x
-                            }
-                            :
-                            {
-                                x: rect.x * shape_scale.x + shape.x,
-                                y: rect.y * shape_scale.y + shape.y,
-                                width: rect.width * shape_scale.x,
-                                height: rect.height * shape_scale.y
-                            }
-                    );
+                    let new_rect = shape.hasOwnProperty("transpose") && shape.transpose ?
+                        {
+                            x: rect.y * shape_scale.y + shape.x,
+                            y: rect.x * shape_scale.x + shape.y,
+                            width: rect.height * shape_scale.y,
+                            height: rect.width * shape_scale.x
+                        }
+                    :
+                        {
+                            x: rect.x * shape_scale.x + shape.x,
+                            y: rect.y * shape_scale.y + shape.y,
+                            width: rect.width * shape_scale.x,
+                            height: rect.height * shape_scale.y
+                        }
+                    ;
                     if(new_rect.width < 0){
                         new_rect.x += new_rect.width;
                         new_rect.width = Math.abs(new_rect.width);
