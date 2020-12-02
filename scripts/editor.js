@@ -74,6 +74,9 @@ function select_map(map){
     let locations = document.createElement("select");
     map_content.appendChild(locations);
     locations.append(null_option);
+    let location_out = document.createElement("button");
+    location_out.append("Get Location Data");
+    map_content.appendChild(location_out);
     map_content.appendChild(document.createElement("br"));
     let rect = document.createElement("a");
     rect.append("New rect");
@@ -90,6 +93,28 @@ function select_map(map){
             map_content.appendChild(shape);
             map_content.append(" | ");
         }
+    let shape_pane = document.createElement("div");
+    map_content.appendChild(shape_pane);
+    shape_pane.append("Scale: (");
+    let scale_x_box = document.createElement("input");
+    scale_x_box.type = "number";
+    shape_pane.appendChild(scale_x_box);
+    shape_pane.append(", ");
+    let scale_y_box = document.createElement("input");
+    scale_y_box.type = "number";
+    shape_pane.appendChild(scale_y_box);
+    shape_pane.append(") Transpose: ");
+    let transpose = document.createElement("input");
+    transpose.type = "checkbox";
+    shape_pane.appendChild(transpose);
+    shape_pane.append(" No-Click: ");
+    let no_click = document.createElement("input");
+    no_click.type = "checkbox";
+    shape_pane.appendChild(no_click);
+    shape_pane.append(" ");
+    let shape_out = document.createElement("button");
+    shape_out.append("Get Shape Data");
+    shape_pane.appendChild(shape_out);
     map_content.appendChild(document.createElement("br"));
     let image_container = document.createElement("div");
     image_container.style.position = "relative";
@@ -121,20 +146,105 @@ function select_map(map){
         option.value = location_data.id;
         locations.append(option);
         render_location[location_data.id] = function(){
+            location_out.onclick = function(){
+                alert(JSON.stringify(location_data));
+            };
+            window.unselect = null;
             render_zone.innerHTML = "";
-            function render_data(rect_data, is_shape){
+            function render_data(rect_data, is_shape, is_no_click){
                 function render_rect_data(color){
                     let access = function(r){
                         r.addEventListener("mousedown", function(e){
                             let x = e.clientX - rect.offsetLeft;
                             let y = e.clientY - rect.offsetTop;
+                            if(window.unselect)
+                                window.unselect(rect);
                             rect.remove();
                             rect = render_rect_data(blue);
+                            if(is_shape){
+                                if(!rect_data.scale){
+                                    rect_data.scale = {x: 1, y: 1};
+                                }
+                                scale_x_box.value = rect_data.scale.x;
+                                scale_x_box.onchange = function(){
+                                    rect_data.scale.x = parseInt(this.value);
+                                    rect.remove();
+                                    rect = render_rect_data(blue);
+                                };
+                                scale_y_box.value = rect_data.scale.y;
+                                scale_y_box.onchange = function(){
+                                    rect_data.scale.y = parseInt(this.value);
+                                    rect.remove();
+                                    rect = render_rect_data(blue);
+                                };
+                            }
+                            else{
+                                scale_x_box.value = rect_data.width;
+                                scale_x_box.onchange = function(){
+                                    rect_data.width = parseInt(this.value);
+                                    rect.remove();
+                                    rect = render_rect_data(blue);
+                                };
+                                scale_y_box.value = rect_data.height;
+                                scale_y_box.onchange = function(){
+                                    rect_data.height = parseInt(this.value);
+                                    rect.remove();
+                                    rect = render_rect_data(blue);
+                                };
+                            }
+                            transpose.checked = false;
+                            if(is_shape){
+                                transpose.checked = rect_data.transpose;
+                                transpose.onchange = function(){
+                                    rect_data.transpose = transpose.checked;
+                                    rect.remove();
+                                    rect = render_rect_data(blue);
+                                };
+                            }
+                            else
+                                transpose.onchange = null;
+                            no_click.checked = is_no_click;
+                            if(is_shape)
+                                no_click.onchange = function(){
+                                    rect_data.no_click = no_click.checked;
+                                    is_no_click = no_click.checked;
+                                };
+                            else
+                                no_click.onchange = function(){
+                                    if(is_no_click){
+                                        if(!location_data.rects)
+                                            location_data.rects = [];
+                                        for(let i in location_data.no_click_rects)
+                                            if (location_data.no_click_rects[i] === rect_data) {
+                                                location_data.no_click_rects.splice(i, 1);
+                                                location_data.rects.push(rect_data);
+                                            }
+                                        is_no_click = false;
+                                    }
+                                    else{
+                                        if(!location_data.no_click_rects)
+                                            location_data.no_click_rects = [];
+                                        for(let i in location_data.rects)
+                                            if (location_data.rects[i] === rect_data) {
+                                                location_data.rects.splice(i, 1);
+                                                location_data.no_click_rects.push(rect_data);
+                                            }
+                                        is_no_click = true;
+                                    }
+                                };
+                            shape_out.onclick = function(){
+                                alert(JSON.stringify(rect_data));
+                            };
                             document.onmouseup = function(){
                                 document.onmousemove = null;
                                 document.onmouseup = null;
-                                rect.remove();
-                                render_rect_data(is_shape ? green : red);
+                                window.unselect = function(new_rect){
+                                    if(rect !== new_rect){
+                                        rect.remove();
+                                        render_rect_data(is_shape ? green : red);
+                                        window.unselect = null;
+                                    }
+                                };
                             }
                             document.onmousemove = function(ne){
                                 let new_y = Math.round((ne.clientY - y) / scale);
@@ -156,15 +266,15 @@ function select_map(map){
             }
             if(location_data.rects)
                 for(let rect_data of location_data.rects){
-                    render_data(rect_data, false);
+                    render_data(rect_data, false, false);
                 }
             if(location_data.no_click_rects)
                 for(let rect_data of location_data.no_click_rects){
-                    render_data(rect_data, false);
+                    render_data(rect_data, false, true);
                 }
             if(location_data.shapes)
                 for(let shape_data of location_data.shapes){
-                    render_data(shape_data, true);
+                    render_data(shape_data, true, shape_data.no_click);
                 }
         };
     }
