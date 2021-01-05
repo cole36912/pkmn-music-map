@@ -1736,8 +1736,8 @@
       "fix_corners": true
     }
   ],
-  "proxy_url_old": "https://cors-anywhere.herokuapp.com/",
-  "proxy_url": "https://yacdn.org/proxy/",
+  "proxy_url": "https://cors-anywhere.herokuapp.com/",
+  "proxy_url_old": "https://yacdn.org/proxy/",
   "music_source": "https://www.youtube.com/channel/UCTZHcSIHcyfcFCYnc-rV7Cw",
   "title": "Pokémon Music Map"
 }
