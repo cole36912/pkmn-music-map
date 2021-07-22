@@ -40,6 +40,7 @@
  *         [locations]: Array<Location>,
  *         [versions]: Array<String>,
  *         [src]: string,
+ *         [src_local]: string,
  *         [width]: number,
  *         [height]: number,
  *         [parts]: Array<MapPart>,
@@ -99,6 +100,7 @@ document.title = data.title;
 /**@type {boolean}*/ let paused = true;
 
 /**@type {Map<string, Array<{location: Location, rects: Array<LocationRectangle>}>>}*/ let external_locations = new Map();
+
 
 let current_page;
 
@@ -190,6 +192,7 @@ let classifications = {
 }
 
 /**@type {Map<string, Array<string>>}*/ let pages = new Map();
+let bar_funcs = new Map();
 
 for(let classification in classifications){
     for(let entry of data[classification]){
@@ -214,7 +217,7 @@ for(let classification in classifications){
     /**@type {HTMLImageElement}*/ let image = new Image();
     image.setAttribute("crossOrigin", "anonymous");
     if(map.type === "basic"){
-        image.src = append_url(map.src);
+        image.src = map.src_local;
     }
     else if(map.type === "composition"){
         /**@type {HTMLCanvasElement}*/ let canvas = document.createElement("canvas");
@@ -549,14 +552,19 @@ const root_location = {id: "root"};
                         parent_location = version_parent_location;
                         //if(!is_sub && classifications[current_page.type].get(version_map.id) === current_page.name)
                             //version_part = null_part;
-                        play(version_location, (is_sub ? null_map : version_map), (is_sub ? null_part : version_part), version_parent_location);
+                        //play(version_location, (is_sub ? null_map : version_map), (is_sub ? null_part : version_part), version_parent_location);
                         let page_item = {
-                            name: classifications[current_page.type].get(parent_map[`${current_page.type}_shown`] ? parent_map.id : containers.get(parent_map.id)[0].map.id),
+                            name: classifications[current_page.type].get(parent_map[`${current_page.type}_shown`] ? parent_map.id : function(c, m){
+                                for(let map of c)
+                                    if(m.has(map.map.id))
+                                        return map.map.id;
+                            }(containers.get(parent_map.id), classifications[current_page.type])),
                             maps: []
                         };
                         page_item.maps = pages.get(page_item.name);
                         set_page(page_item);
                         current_page.name = page_item.name
+                        play(version_location, (is_sub ? null_map : version_map), (is_sub ? null_part : version_part), version_parent_location);
                     });
                     version_element.append("[ ");
                     version_element.appendChild(anchor);
@@ -845,23 +853,46 @@ const root_location = {id: "root"};
         post_map(new_page.maps[i]);
         shown_maps.push(new_page.maps[i]);
     }
+    bar_funcs.get(new_page.name)();
 }
 
+let current_label;
+
 function make_bar(/*Array<PageItem>*/ list, bar){
+    function select(label){
+        label.span.innerHTML = "";
+        label.span.append("[ ");
+        label.span.append(label.anchor.innerText);
+        label.span.append(" ] ");
+    }
+    function no_select(label){
+        label.span.innerHTML = "";
+        label.span.append("[ ");
+        label.span.appendChild(label.anchor);
+        label.span.append(" ] ");
+    }
+    function switch_to(label){
+        if(current_label)
+            no_select(current_label);
+        current_label = label;
+        select(current_label);
+    }
     for(let i = 0; i < list.length; i++) {
-        /**@type {HTMLAnchorElement}*/ let anchor = document.createElement("a");
-        anchor.href = no_ref;
-        anchor.addEventListener("click", function() {
+        let bar_label = {span: document.createElement("span"), anchor: document.createElement("a")};
+        bar_label.anchor.href = no_ref;
+        bar_label.anchor.addEventListener("click", function() {
             set_page(list[i]);
             current_page = {
                 name: list[i].name,
                 type: bar
             }
         });
-        anchor.innerText = list[i].name;
-        document.body.append("[ ");
-        document.body.appendChild(anchor);
-        document.body.append(" ] ");
+        bar_label.anchor.innerText = list[i].name;
+        bar_funcs.set(list[i].name, function(){
+            switch_to(bar_label);
+        });
+        no_select(bar_label);
+        document.body.appendChild(bar_label.span);
     }
 }
 
@@ -908,6 +939,12 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+let icon = document.createElement("link");
+icon.rel = "icon";
+icon.type = "image/png";
+icon.href = "assets/images/icon.png";
+//icon.sizes = "240x240";
+document.head.appendChild(icon);
 
 document.body.style.fontFamily = "\"Lucida Console\", Monaco, monospace"
 //document.body.style.fontFamily = "'Press Start 2P', cursive";

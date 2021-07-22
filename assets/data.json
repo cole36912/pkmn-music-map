@@ -1,334 +1,633 @@
 {
-  "generations": [
+  "generations"  : [
     {
       "name": "Gen I",
-      "maps": ["kanto_rby"]
+      "maps": [
+        "kanto_rby"
+      ]
     },
     {
       "name": "Gen II",
-      "maps": ["tohjo_gsc"]
+      "maps": [
+        "tohjo_gsc"
+      ]
     },
     {
       "name": "Gen III",
-      "maps": ["hoenn_rse", "kanto_frlg", "sevii_frlg"]
+      "maps": [
+        "hoenn_rse",
+        "kanto_frlg",
+        "sevii_frlg"
+      ]
     },
     {
       "name": "Gen IV",
-      "maps": ["sinnoh_dppt", "tohjo_hgss"]
+      "maps": [
+        "sinnoh_dppt",
+        "tohjo_hgss"
+      ]
     }
   ],
-  "regions": [
+  "regions"      : [
     {
       "name": "Kanto",
-      "maps": ["kanto_rby", "kanto_gsc", "kanto_frlg", "kanto_hgss"]
+      "maps": [
+        "kanto_rby",
+        "kanto_gsc",
+        "kanto_frlg",
+        "kanto_hgss"
+      ]
     },
     {
       "name": "Johto",
-      "maps": ["johto_gsc", "johto_hgss"]
+      "maps": [
+        "johto_gsc",
+        "johto_hgss"
+      ]
     },
     {
       "name": "Tohjo",
-      "maps": ["tohjo_gsc", "tohjo_hgss"]
+      "maps": [
+        "tohjo_gsc",
+        "tohjo_hgss"
+      ]
     },
     {
       "name": "Hoenn",
-      "maps": ["hoenn_rse"]
+      "maps": [
+        "hoenn_rse"
+      ]
     },
     {
       "name": "Sevii Islands",
-      "maps": ["sevii_frlg"]
+      "maps": [
+        "sevii_frlg"
+      ]
     },
     {
       "name": "Sinnoh",
-      "maps": ["sinnoh_dppt"]
+      "maps": [
+        "sinnoh_dppt"
+      ]
     }
   ],
-  "games": [
+  "games"        : [
     {
       "name": "R/B/Y",
-      "maps": ["kanto_rby"]
+      "maps": [
+        "kanto_rby"
+      ]
     },
     {
       "name": "G/S/C",
-      "maps": ["tohjo_gsc"]
+      "maps": [
+        "tohjo_gsc"
+      ]
     },
     {
       "name": "R/S/E",
-      "maps": ["hoenn_rse"]
+      "maps": [
+        "hoenn_rse"
+      ]
     },
     {
       "name": "FR/LG",
-      "maps": ["kanto_frlg", "sevii_frlg"]
+      "maps": [
+        "kanto_frlg",
+        "sevii_frlg"
+      ]
     },
     {
       "name": "D/P/Pt",
-      "maps": ["sinnoh_dppt"]
+      "maps": [
+        "sinnoh_dppt"
+      ]
     },
     {
       "name": "HG/SS",
-      "maps": ["tohjo_hgss"]
+      "maps": [
+        "tohjo_hgss"
+      ]
     }
   ],
-  "maps": [
+  "maps"         : [
     {
-      "id": "kanto_rby",
-      "type": "basic",
+      "id"              : "kanto_rby",
+      "type"            : "basic",
       "coord_multiplier": 8,
-      "locations": [
+      "locations"       : [
         {
-          "id": "pallet_town",
-          "name": "Pallet Town",
-          "rects": [
-            {"x": 4, "y": 11, "width": 1, "height": 1}
+          "id"           : "pallet_town",
+          "name"         : "Pallet Town",
+          "rects"        : [
+            {
+              "x"     : 4,
+              "y"     : 11,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "4q6l2cBUrcU",
+          "music"        : "4q6l2cBUrcU",
           "sub_locations": [
             {
-              "id": "pokemon_lab",
-              "name": "Pokémon Lab",
+              "id"   : "pokemon_lab",
+              "name" : "Pokémon Lab",
               "music": "P5U_CRFvKXQ"
             }
           ]
         },
         {
-          "id": "route_1_2",
-          "name": "Route 1/2",
+          "id"   : "route_1_2",
+          "name" : "Route 1/2",
           "rects": [
-            {"x": 4, "y": 9, "width": 1, "height": 2},
-            {"x": 4, "y": 5, "width": 1, "height": 3}
+            {
+              "x"     : 4,
+              "y"     : 9,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 4,
+              "y"     : 5,
+              "width" : 1,
+              "height": 3
+            }
           ],
           "music": "x5BYQf4q49U"
         },
         {
-          "id": "viridian_pewter_saffron_city",
-          "name": "Viridian/Pewter/Saffron City",
-          "rects": [
-            {"x": 4, "y": 8, "width": 1, "height": 1},
-            {"x": 12, "y": 5, "width": 1, "height": 1},
-            {"x": 4, "y": 3, "width": 1, "height": 1}
+          "id"           : "viridian_pewter_saffron_city",
+          "name"         : "Viridian/Pewter/Saffron City",
+          "rects"        : [
+            {
+              "x"     : 4,
+              "y"     : 8,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 12,
+              "y"     : 5,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 4,
+              "y"     : 3,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "wzGTeBMULjU",
+          "music"        : "wzGTeBMULjU",
           "sub_locations": [
             {
-              "id": "silph_co",
-              "name": "Silph Co.",
+              "id"   : "silph_co",
+              "name" : "Silph Co.",
               "music": "6UeIH78oyio",
               "rects": [
-                {"x": 12, "y": 5, "width": 1, "height": 1}
+                {
+                  "x"     : 12,
+                  "y"     : 5,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "viridian_forest_digletts_cave_seafoam_islands",
-          "name": "Viridian Forest/Diglett's Cave/Seafoam Islands",
+          "id"   : "viridian_forest_digletts_cave_seafoam_islands",
+          "name" : "Viridian Forest/Diglett's Cave/Seafoam Islands",
           "rects": [
-            {"x": 4, "y": 4, "width": 1, "height": 1},
-            {"x": 7, "y": 15, "width": 1, "height": 1}
+            {
+              "x"     : 4,
+              "y"     : 4,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 7,
+              "y"     : 15,
+              "width" : 1,
+              "height": 1
+            }
           ],
           "music": "SmJrn24tZyE"
         },
         {
-          "id": "route_3-10_16-22",
-          "name": "Routes 3-10/16-22",
-          "rects": [
-            {"x": 5, "y": 3, "width": 3, "height": 1},
-            {"x": 7, "y": 2, "width": 1, "height": 1},
-            {"x": 9, "y": 2, "width": 3, "height": 1},
-            {"x": 12, "y": 3, "width": 1, "height": 2},
-            {"x": 12, "y": 6, "width": 1, "height": 3},
-            {"x": 10, "y": 5, "width": 2, "height": 1},
-            {"x": 13, "y": 5, "width": 3, "height": 1},
-            {"x": 13, "y": 2, "width": 4, "height": 1},
-            {"x": 16, "y": 4, "width": 1, "height": 1},
-            {"x": 6, "y": 5, "width": 3, "height": 1},
-            {"x": 6, "y": 6, "width": 1, "height": 7},
-            {"x": 6, "y": 13, "width": 4, "height": 1},
-            {"x": 10, "y": 14, "width": 1, "height": 2},
-            {"x": 8, "y": 15, "width": 2, "height": 1},
-            {"x": 5, "y": 15, "width": 2, "height": 1},
-            {"x": 4, "y": 12, "width": 1, "height": 3},
-            {"x": 2, "y": 8, "width": 2, "height": 1}
+          "id"           : "route_3-10_16-22",
+          "name"         : "Routes 3-10/16-22",
+          "rects"        : [
+            {
+              "x"     : 5,
+              "y"     : 3,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 7,
+              "y"     : 2,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 9,
+              "y"     : 2,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 12,
+              "y"     : 3,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 12,
+              "y"     : 6,
+              "width" : 1,
+              "height": 3
+            },
+            {
+              "x"     : 10,
+              "y"     : 5,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 13,
+              "y"     : 5,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 13,
+              "y"     : 2,
+              "width" : 4,
+              "height": 1
+            },
+            {
+              "x"     : 16,
+              "y"     : 4,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 6,
+              "y"     : 5,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 6,
+              "y"     : 6,
+              "width" : 1,
+              "height": 7
+            },
+            {
+              "x"     : 6,
+              "y"     : 13,
+              "width" : 4,
+              "height": 1
+            },
+            {
+              "x"     : 10,
+              "y"     : 14,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 8,
+              "y"     : 15,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 5,
+              "y"     : 15,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 4,
+              "y"     : 12,
+              "width" : 1,
+              "height": 3
+            },
+            {
+              "x"     : 2,
+              "y"     : 8,
+              "width" : 2,
+              "height": 1
+            }
           ],
-          "music": "IGV2YkdmJYg",
+          "music"        : "IGV2YkdmJYg",
           "sub_locations": [
             {
-              "id": "pikachus_beach",
-              "name": "Pikachu's Beach",
+              "id"       : "pikachus_beach",
+              "name"     : "Pikachu's Beach",
               "game_name": "Y",
-              "music": "H5y-E_rp8Nk",
-              "rects": [
-                {"x": 10, "y": 14, "width": 1, "height": 1}
+              "music"    : "H5y-E_rp8Nk",
+              "rects"    : [
+                {
+                  "x"     : 10,
+                  "y"     : 14,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "route_11-15",
-          "name": "Routes 11-15",
+          "id"   : "route_11-15",
+          "name" : "Routes 11-15",
           "rects": [
-            {"x": 13, "y": 9, "width": 3, "height": 1},
-            {"x": 16, "y": 6, "width": 1, "height": 5},
-            {"x": 14, "y": 11, "width": 3, "height": 1},
-            {"x": 13, "y": 11, "width": 1, "height": 3},
-            {"x": 11, "y": 13, "width": 2, "height": 1}
+            {
+              "x"     : 13,
+              "y"     : 9,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 16,
+              "y"     : 6,
+              "width" : 1,
+              "height": 5
+            },
+            {
+              "x"     : 14,
+              "y"     : 11,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 13,
+              "y"     : 11,
+              "width" : 1,
+              "height": 3
+            },
+            {
+              "x"     : 11,
+              "y"     : 13,
+              "width" : 2,
+              "height": 1
+            }
           ],
           "music": "W7lbYGRXhvQ"
         },
         {
-          "id": "route_23_indigo_plateau",
-          "name": "Route 23/Indigo Plateau",
-          "rects": [
-            {"x": 2, "y": 2, "width": 1, "height": 2},
-            {"x": 2, "y": 5, "width": 1, "height": 3}
-          ],
-          "music": "V5AFlOh1HaM",
-          "sub_locations":[
+          "id"           : "route_23_indigo_plateau",
+          "name"         : "Route 23/Indigo Plateau",
+          "rects"        : [
             {
-              "id": "hall_of_fame",
-              "name": "Hall of Fame",
+              "x"     : 2,
+              "y"     : 2,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 2,
+              "y"     : 5,
+              "width" : 1,
+              "height": 3
+            }
+          ],
+          "music"        : "V5AFlOh1HaM",
+          "sub_locations": [
+            {
+              "id"   : "hall_of_fame",
+              "name" : "Hall of Fame",
               "music": "zvE7jSiV59c",
               "rects": [
-                {"x": 2, "y": 2, "width": 1, "height": 1}
+                {
+                  "x"     : 2,
+                  "y"     : 2,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "mt_moon_rock_tunnel_victory_road",
-          "name": "Mt. Moon/Rock Tunnel/Victory Road",
+          "id"   : "mt_moon_rock_tunnel_victory_road",
+          "name" : "Mt. Moon/Rock Tunnel/Victory Road",
           "rects": [
-            {"x": 8, "y": 2, "width": 1, "height": 1},
-            {"x": 16, "y": 3, "width": 1, "height": 1},
-            {"x": 2, "y": 4, "width": 1, "height": 1}
+            {
+              "x"     : 8,
+              "y"     : 2,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 16,
+              "y"     : 3,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 2,
+              "y"     : 4,
+              "width" : 1,
+              "height": 1
+            }
           ],
           "music": "nD0V-_Wf9y8"
         },
         {
-          "id": "cerulean_fuchsia_city",
-          "name": "Cerulean/Fuchsia City",
+          "id"   : "cerulean_fuchsia_city",
+          "name" : "Cerulean/Fuchsia City",
           "rects": [
-            {"x": 12, "y": 2, "width": 1, "height": 1},
-            {"x": 10, "y": 13, "width": 1, "height": 1}
+            {
+              "x"     : 12,
+              "y"     : 2,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 10,
+              "y"     : 13,
+              "width" : 1,
+              "height": 1
+            }
           ],
           "music": "lVbfzupS0RE"
         },
         {
-          "id": "route_24_25",
-          "name": "Route 24/25",
+          "id"   : "route_24_25",
+          "name" : "Route 24/25",
           "rects": [
-            {"x": 12, "y": 0, "width": 1, "height": 2},
-            {"x": 13, "y": 0, "width": 2, "height": 1}
+            {
+              "x"     : 12,
+              "y"     : 0,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 13,
+              "y"     : 0,
+              "width" : 2,
+              "height": 1
+            }
           ],
           "music": "-MZ_he2IWG8"
         },
         {
-          "id": "lavender_town",
-          "name": "Lavender Town",
-          "rects": [
-            {"x": 16, "y": 5, "width": 1, "height": 1}
+          "id"           : "lavender_town",
+          "name"         : "Lavender Town",
+          "rects"        : [
+            {
+              "x"     : 16,
+              "y"     : 5,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "WYFmPXABRaM",
+          "music"        : "WYFmPXABRaM",
           "sub_locations": [
             {
-              "id": "pokemon_tower",
-              "name": "Pokémon Tower",
+              "id"   : "pokemon_tower",
+              "name" : "Pokémon Tower",
               "music": "kp32K2WuMt8"
             }
           ]
         },
         {
-          "id": "celadon_city",
-          "name": "Celadon City",
-          "rects": [
-            {"x": 9, "y": 5, "width": 1, "height": 1}
+          "id"           : "celadon_city",
+          "name"         : "Celadon City",
+          "rects"        : [
+            {
+              "x"     : 9,
+              "y"     : 5,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "lz86LjNP018",
+          "music"        : "lz86LjNP018",
           "sub_locations": [
             {
-              "id": "game_corner",
-              "name": "Game Corner",
+              "id"   : "game_corner",
+              "name" : "Game Corner",
               "music": "cFh6xxE-DhU"
             },
             {
-              "id": "team_rocket_hideout",
-              "name": "Team Rocket Hideout",
+              "id"   : "team_rocket_hideout",
+              "name" : "Team Rocket Hideout",
               "music": "oHQELBH2gUM"
             }
           ]
         },
         {
-          "id": "vermilion_city",
-          "name": "Vermilion City",
-          "rects": [
-            {"x": 12, "y": 9, "width": 1, "height": 1}
+          "id"           : "vermilion_city",
+          "name"         : "Vermilion City",
+          "rects"        : [
+            {
+              "x"     : 12,
+              "y"     : 9,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "aPKfaoGyYx0",
+          "music"        : "aPKfaoGyYx0",
           "sub_locations": [
             {
-              "id": "ss_anne",
-              "name": "S.S. Anne",
+              "id"   : "ss_anne",
+              "name" : "S.S. Anne",
               "music": "NFNBu7XFwKA"
             }
           ]
         },
         {
-          "id": "cinnabar_island",
-          "name": "Cinnabar Island",
-          "rects": [
-            {"x": 4, "y": 15, "width": 1, "height": 1}
+          "id"           : "cinnabar_island",
+          "name"         : "Cinnabar Island",
+          "rects"        : [
+            {
+              "x"     : 4,
+              "y"     : 15,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "TC3C7PjUzis",
+          "music"        : "TC3C7PjUzis",
           "sub_locations": [
             {
-              "id": "pokemon_mansion",
-              "name": "Pokémon Mansion",
+              "id"   : "pokemon_mansion",
+              "name" : "Pokémon Mansion",
               "music": "WfJSY72gpWU"
             }
           ]
         }
       ],
-      "versions": ["kanto_gsc", "kanto_frlg_original", "kanto_hgss_original"],
-      "src": "https://cdn.bulbagarden.net/upload/8/86/Kanto_Town_Map_RBY.png"
+      "versions"        : [
+        "kanto_gsc",
+        "kanto_frlg_original",
+        "kanto_hgss_original"
+      ],
+      "src"             : "https://cdn2.bulbagarden.net/upload/8/86/Kanto_Town_Map_RBY.png",
+      "src_local"       : "assets/images/kanto_rby.png"
     },
     {
-      "id": "johto_gsc",
-      "type": "basic",
+      "id"              : "johto_gsc",
+      "type"            : "basic",
       "coord_multiplier": 8,
-      "locations": [
+      "locations"       : [
         {
-          "id": "new_bark_town",
-          "name": "New Bark Town",
+          "id"   : "new_bark_town",
+          "name" : "New Bark Town",
           "rects": [
-            {"x": 16, "y": 10, "width": 1, "height": 1}
+            {
+              "x"     : 16,
+              "y"     : 10,
+              "width" : 1,
+              "height": 1
+            }
           ],
           "music": "ZUJCpOZIjdo"
         }
       ],
-      "versions": ["johto_hgss_original"],
-      "src": "https://cdn.bulbagarden.net/upload/2/2e/Johto_Town_Map_GSC.png"
+      "versions"        : [
+        "johto_hgss_original"
+      ],
+      "src"             : "https://cdn2.bulbagarden.net/upload/2/2e/Johto_Town_Map_GSC.png",
+      "src_local"       : "assets/images/johto_gsc.png"
     },
     {
-      "id": "kanto_gsc",
-      "type": "basic",
+      "id"              : "kanto_gsc",
+      "type"            : "basic",
       "coord_multiplier": 8,
-      "locations": [
+      "locations"       : [
         {
-          "id": "pallet_town",
-          "name": "Pallet Town",
+          "id"   : "pallet_town",
+          "name" : "Pallet Town",
           "rects": [
-            {"x": 5, "y": 11, "width": 1, "height": 1}
+            {
+              "x"     : 5,
+              "y"     : 11,
+              "width" : 1,
+              "height": 1
+            }
           ],
           "music": "RT7Hgx_LQN0"
         },
         {
-          "id": "route_1_2",
-          "name": "Route 1/2 and Fuchsia City",
-          "rects": [
-            {"x": 5, "y": 8, "width": 1, "height": 3},
-            {"x": 5, "y": 5, "width": 1, "height": 2}
+          "id"           : "route_1_2",
+          "name"         : "Route 1/2 and Fuchsia City",
+          "rects"        : [
+            {
+              "x"     : 5,
+              "y"     : 8,
+              "width" : 1,
+              "height": 3
+            },
+            {
+              "x"     : 5,
+              "y"     : 5,
+              "width" : 1,
+              "height": 2
+            }
           ],
-          "music": "CBJZlrLDowY",
+          "music"        : "CBJZlrLDowY",
           "sub_locations": [
             {
               "link": "viridian_forest_digletts_cave_seafoam_islands"
@@ -336,260 +635,630 @@
           ]
         },
         {
-          "id": "viridian_pewter_saffron_city",
-          "name": "Viridian/Pewter/Saffron/Cerulean City",
-          "rects": [
-            {"x": 5, "y": 7, "width": 1, "height": 1},
-            {"x": 11, "y": 6, "width": 1, "height": 1},
-            {"x": 11, "y": 4, "width": 1, "height": 1},
-            {"x": 5, "y": 4, "width": 1, "height": 1}
+          "id"           : "viridian_pewter_saffron_city",
+          "name"         : "Viridian/Pewter/Saffron/Cerulean City",
+          "rects"        : [
+            {
+              "x"     : 5,
+              "y"     : 7,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 11,
+              "y"     : 6,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 11,
+              "y"     : 4,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 5,
+              "y"     : 4,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "2TKFV7PM-Bg",
+          "music"        : "2TKFV7PM-Bg",
           "sub_locations": []
         },
         {
-          "id": "viridian_forest_digletts_cave_seafoam_islands",
-          "name": "Viridian Forest",
-          "rects": [],
+          "id"            : "viridian_forest_digletts_cave_seafoam_islands",
+          "name"          : "Viridian Forest",
+          "rects"         : [],
           "no_click_rects": [
-            {"x": 5, "y": 5, "width": 1, "height": 2}
+            {
+              "x"     : 5,
+              "y"     : 5,
+              "width" : 1,
+              "height": 2
+            }
           ],
-          "music": "ruQG7uFxn9M"
+          "music"         : "ruQG7uFxn9M"
         },
         {
-          "id": "route_3-10_16-22",
-          "name": "Routes 3-10/16-22/24-25",
-          "rects": [],
-          "music": "LD-X5TXB-tk",
+          "id"           : "route_3-10_16-22",
+          "name"         : "Routes 3-10/16-22/24-25",
+          "rects"        : [
+            {
+              "x"     : 6,
+              "y"     : 4,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 9,
+              "y"     : 4,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 12,
+              "y"     : 4,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 11,
+              "y"     : 5,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 12,
+              "y"     : 6,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 11,
+              "y"     : 7,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 9,
+              "y"     : 6,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 7,
+              "y"     : 6,
+              "width" : 1,
+              "height": 7
+            },
+            {
+              "x"     : 8,
+              "y"     : 12,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 10,
+              "y"     : 13,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 8,
+              "y"     : 14,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 6,
+              "y"     : 14,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 5,
+              "y"     : 12,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 3,
+              "y"     : 6,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 11,
+              "y"     : 2,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 12,
+              "y"     : 2,
+              "width" : 2,
+              "height": 1
+            }
+          ],
+          "music"        : "LD-X5TXB-tk",
           "sub_locations": []
         },
         {
-          "id": "route_11-15",
-          "name": "Routes 11-15",
-          "rects": [],
+          "id"   : "route_11-15",
+          "name" : "Routes 11-15",
+          "rects": [
+            {
+              "x"     : 12,
+              "y"     : 8,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 15,
+              "y"     : 7,
+              "width" : 1,
+              "height": 4
+            },
+            {
+              "x"     : 13,
+              "y"     : 10,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 13,
+              "y"     : 11,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 11,
+              "y"     : 12,
+              "width" : 2,
+              "height": 1
+            }
+          ],
           "music": "QAXU8H5AnUw"
         },
         {
-          "id": "route_23_indigo_plateau",
-          "name": "Route 23/Indigo Plateau",
-          "rects": [],
-          "music": "qA4OLGX-mhE",
-          "sub_locations":[
+          "id"           : "route_23_indigo_plateau",
+          "name"         : "Route 23/Indigo Plateau",
+          "rects"        : [],
+          "music"        : "qA4OLGX-mhE",
+          "sub_locations": [
             {
-              "id": "hall_of_fame",
-              "name": "Hall of Fame",
+              "id"   : "hall_of_fame",
+              "name" : "Hall of Fame",
               "music": "DufFB7kwKCw",
               "rects": [
-                {"x": 2, "y": 2, "width": 1, "height": 1}
+                {
+                  "x"     : 2,
+                  "y"     : 2,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "mt_moon_rock_tunnel_victory_road",
-          "name": "Mt. Moon/Rock Tunnel",
-          "rects": [],
-          "music": "ndQX3lbn33s",
+          "id"           : "mt_moon_rock_tunnel_victory_road",
+          "name"         : "Mt. Moon/Rock Tunnel",
+          "rects"        : [],
+          "music"        : "ndQX3lbn33s",
           "sub_locations": [
             {
-              "id": "mt_moon_square",
-              "name": "Mt. Moon Square",
+              "id"   : "mt_moon_square",
+              "name" : "Mt. Moon Square",
               "music": "sjKJevc3Yvc"
             }
           ]
         },
         {
-          "id": "lavender_town",
-          "name": "Lavender Town",
-          "rects": [
-            {"x": 15, "y": 6, "width": 1, "height": 1}
+          "id"           : "lavender_town",
+          "name"         : "Lavender Town",
+          "rects"        : [
+            {
+              "x"     : 15,
+              "y"     : 6,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "CTPDR4k42lc",
+          "music"        : "CTPDR4k42lc",
           "sub_locations": []
         },
         {
-          "id": "celadon_city",
-          "name": "Celadon City",
-          "rects": [
-            {"x": 8, "y": 6, "width": 1, "height": 1}
+          "id"           : "celadon_city",
+          "name"         : "Celadon/Fuchsia City",
+          "rects"        : [
+            {
+              "x"     : 8,
+              "y"     : 6,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 10,
+              "y"     : 12,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "e3e7WYlb6p0",
+          "music"        : "e3e7WYlb6p0",
           "sub_locations": [
             {
-              "id": "game_corner",
-              "name": "Game Corner",
-              "music": "a9DJRhRuG3o"
+              "id"   : "game_corner",
+              "name" : "Game Corner",
+              "music": "a9DJRhRuG3o",
+              "rects": [
+                {
+                  "x"     : 8,
+                  "y"     : 6,
+                  "width" : 1,
+                  "height": 1
+                }
+              ]
             }
           ]
         },
         {
-          "id": "vermilion_city",
-          "name": "Vermilion City",
-          "rects": [
-            {"x": 11, "y": 8, "width": 1, "height": 1}
+          "id"           : "vermilion_city",
+          "name"         : "Vermilion City",
+          "rects"        : [
+            {
+              "x"     : 11,
+              "y"     : 8,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "bynZtdjnvA8",
+          "music"        : "bynZtdjnvA8",
           "sub_locations": []
         }
       ],
-      "versions": ["kanto_rby", "kanto_frlg_original", "kanto_hgss_original"],
-      "src": "https://cdn.bulbagarden.net/upload/0/02/Kanto_Town_Map_GSC.png"
+      "versions"        : [
+        "kanto_rby",
+        "kanto_frlg_original",
+        "kanto_hgss_original"
+      ],
+      "src"             : "https://cdn2.bulbagarden.net/upload/0/02/Kanto_Town_Map_GSC.png",
+      "src_local"       : "assets/images/kanto_gsc.png"
     },
     {
-      "id": "tohjo_gsc",
-      "type": "composition",
-      "width": 288,
-      "height": 120,
-      "parts": [
+      "id"         : "tohjo_gsc",
+      "type"       : "composition",
+      "width"      : 288,
+      "height"     : 120,
+      "parts"      : [
         {
-          "map": "johto_gsc",
-          "x": 0,
-          "y": 0,
+          "map"    : "johto_gsc",
+          "x"      : 0,
+          "y"      : 0,
           "start_x": 0,
           "start_y": 0,
-          "width": 144,
-          "height": 120
+          "width"  : 144,
+          "height" : 120
         },
         {
-          "map": "kanto_gsc",
-          "x": 144,
-          "y": 0,
+          "map"    : "kanto_gsc",
+          "x"      : 144,
+          "y"      : 0,
           "start_x": 0,
           "start_y": 0,
-          "width": 144,
-          "height": 120
+          "width"  : 144,
+          "height" : 120
         }
       ],
       "fix_corners": false
     },
     {
-      "id": "hoenn_rse",
-      "type": "basic",
+      "id"              : "hoenn_rse",
+      "type"            : "basic",
       "coord_multiplier": 8,
-      "locations": [
+      "locations"       : [
         {
-          "id": "littleroot_town",
-          "name": "Littleroot Town",
+          "id"   : "littleroot_town",
+          "name" : "Littleroot Town",
           "rects": [
-            {"x": 5, "y": 13, "width": 1, "height": 1}
+            {
+              "x"     : 5,
+              "y"     : 13,
+              "width" : 1,
+              "height": 1
+            }
           ],
           "polys": [
             [
-              {"x": 5, "y": 13},
-              {"x": 6, "y": 13},
-              {"x": 6, "y": 14},
-              {"x": 5, "y": 14}
+              {
+                "x": 5,
+                "y": 13
+              },
+              {
+                "x": 6,
+                "y": 13
+              },
+              {
+                "x": 6,
+                "y": 14
+              },
+              {
+                "x": 5,
+                "y": 14
+              }
             ]
           ],
           "music": "im6tbN9SZXs"
         }
       ],
-      "versions": [],
-      "src": "https://cdn.bulbagarden.net/upload/1/1f/Hoenn_RSE_Map.png"
+      "versions"        : [],
+      "src"             : "https://cdn2.bulbagarden.net/upload/1/1f/Hoenn_RSE_Map.png",
+      "src_local"       : "assets/images/hoenn_rse.png"
     },
     {
-      "id": "kanto_frlg_original",
-      "type": "basic",
+      "id"              : "kanto_frlg_original",
+      "type"            : "basic",
       "coord_multiplier": 8,
-      "locations": [
+      "locations"       : [
         {
-          "id": "pallet_town",
-          "name": "Pallet Town",
-          "rects": [
-            {"x": 8, "y": 15, "width": 1, "height": 1}
+          "id"           : "pallet_town",
+          "name"         : "Pallet Town",
+          "rects"        : [
+            {
+              "x"     : 8,
+              "y"     : 15,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "DKn_eDhoGzo",
+          "music"        : "DKn_eDhoGzo",
           "sub_locations": [
             {
-              "id": "pokemon_lab",
-              "name": "Pokémon Lab",
+              "id"   : "pokemon_lab",
+              "name" : "Pokémon Lab",
               "music": "c25XN4mTMvQ"
             }
           ]
         },
         {
-          "id": "route_1_2",
-          "name": "Route 1/2",
+          "id"   : "route_1_2",
+          "name" : "Route 1/2",
           "rects": [
-            {"x": 8, "y": 13, "width": 1, "height": 2},
-            {"x": 8, "y": 11, "width": 1, "height": 1}
+            {
+              "x"     : 8,
+              "y"     : 13,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 8,
+              "y"     : 11,
+              "width" : 1,
+              "height": 1
+            }
           ],
           "music": "8RGDdRFxkco"
         },
         {
-          "id": "viridian_pewter_saffron_city",
-          "name": "Viridian/Pewter/Saffron City and 1-3 Islands",
-          "rects": [
-            {"x": 8, "y": 12, "width": 1, "height": 1},
-            {"x": 8, "y": 8, "width": 1, "height": 1},
-            {"x": 18, "y": 10, "width": 1, "height": 1}
+          "id"           : "viridian_pewter_saffron_city",
+          "name"         : "Viridian/Pewter/Saffron City and 1-3 Islands",
+          "rects"        : [
+            {
+              "x"     : 8,
+              "y"     : 12,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 8,
+              "y"     : 8,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 18,
+              "y"     : 10,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "gzYwQYp8vNs",
+          "music"        : "gzYwQYp8vNs",
           "sub_locations": [
             {
-              "id": "silph_co",
-              "name": "Silph Co.",
+              "id"   : "silph_co",
+              "name" : "Silph Co.",
               "music": "jW-oZXOqx4Y",
               "rects": [
-                {"x": 18, "y": 10, "width": 1, "height": 1}
+                {
+                  "x"     : 18,
+                  "y"     : 10,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ],
-          "other_maps": [
+          "other_maps"   : [
             {
-              "id": "sevii_frlg",
+              "id"   : "sevii_frlg",
               "rects": [
-                {"x": 2, "y": 10, "width": 1, "height": 1},
-                {"x": 10, "y": 11, "width": 1, "height": 1},
-                {"x": 19, "y": 14, "width": 1, "height": 1}
+                {
+                  "x"     : 2,
+                  "y"     : 10,
+                  "width" : 1,
+                  "height": 1
+                },
+                {
+                  "x"     : 10,
+                  "y"     : 11,
+                  "width" : 1,
+                  "height": 1
+                },
+                {
+                  "x"     : 19,
+                  "y"     : 14,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "viridian_forest_digletts_cave_seafoam_islands",
-          "name": "Viridian/Berry Forest and Diglett's Cave and Seafoam Islands and Three Isle Path",
-          "rects": [
-            {"x": 8, "y": 9, "width": 1, "height": 2},
-            {"x": 12, "y": 18, "width": 1, "height": 1},
-            {"x": 19, "y": 13, "width": 1, "height": 1}
+          "id"        : "viridian_forest_digletts_cave_seafoam_islands",
+          "name"      : "Viridian/Berry Forest and Diglett's Cave and Seafoam Islands and Three Isle Path",
+          "rects"     : [
+            {
+              "x"     : 8,
+              "y"     : 9,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 12,
+              "y"     : 18,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 19,
+              "y"     : 13,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "3hJC6PuuT2E",
+          "music"     : "3hJC6PuuT2E",
           "other_maps": [
             {
-              "id": "sevii_frlg",
-              "rects": [
-                {"x": 15, "y": 14, "width": 1, "height": 1}
+              "id"            : "sevii_frlg",
+              "rects"         : [
+                {
+                  "x"     : 15,
+                  "y"     : 14,
+                  "width" : 1,
+                  "height": 1
+                }
               ],
               "no_click_rects": [
-                {"x": 19, "y": 15, "width": 2, "height": 1}
+                {
+                  "x"     : 19,
+                  "y"     : 15,
+                  "width" : 2,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "route_3-10_16-22",
-          "name": "Routes 3-10/16-22 and 1-3 Island Routes",
-          "rects": [
-            {"x": 9, "y": 8, "width": 4, "height": 1},
-            {"x": 12, "y": 7, "width": 1, "height": 1},
-            {"x": 14, "y": 7, "width": 4, "height": 1},
-            {"x": 18, "y": 8, "width": 1, "height": 2},
-            {"x": 18, "y": 11, "width": 1, "height": 2},
-            {"x": 16, "y": 10, "width": 2, "height": 1},
-            {"x": 19, "y": 10, "width": 3, "height": 1},
-            {"x": 19, "y": 7, "width": 3, "height": 1},
-            {"x": 22, "y": 9, "width": 1, "height": 1},
-            {"x": 11, "y": 10, "width": 4, "height": 1},
-            {"x": 11, "y": 11, "width": 1, "height": 5},
-            {"x": 11, "y": 16, "width": 5, "height": 1},
-            {"x": 16, "y": 17, "width": 1, "height": 2},
-            {"x": 13, "y": 18, "width": 3, "height": 1},
-            {"x": 9, "y": 18, "width": 3, "height": 1},
-            {"x": 8, "y": 16, "width": 1, "height": 2},
-            {"x": 6, "y": 12, "width": 2, "height": 1}
+          "id"           : "route_3-10_16-22",
+          "name"         : "Routes 3-10/16-22 and 1-3 Island Routes",
+          "rects"        : [
+            {
+              "x"     : 9,
+              "y"     : 8,
+              "width" : 4,
+              "height": 1
+            },
+            {
+              "x"     : 12,
+              "y"     : 7,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 14,
+              "y"     : 7,
+              "width" : 4,
+              "height": 1
+            },
+            {
+              "x"     : 18,
+              "y"     : 8,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 18,
+              "y"     : 11,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 16,
+              "y"     : 10,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 19,
+              "y"     : 10,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 19,
+              "y"     : 7,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 22,
+              "y"     : 9,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 11,
+              "y"     : 10,
+              "width" : 4,
+              "height": 1
+            },
+            {
+              "x"     : 11,
+              "y"     : 11,
+              "width" : 1,
+              "height": 5
+            },
+            {
+              "x"     : 11,
+              "y"     : 16,
+              "width" : 5,
+              "height": 1
+            },
+            {
+              "x"     : 16,
+              "y"     : 17,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 13,
+              "y"     : 18,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 9,
+              "y"     : 18,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 8,
+              "y"     : 16,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 6,
+              "y"     : 12,
+              "width" : 2,
+              "height": 1
+            }
           ],
-          "music": "0LIOeGNQ3to",
+          "music"        : "0LIOeGNQ3to",
           "sub_locations": [
             {
               "link": "cerulean_fuchsia_city"
@@ -598,177 +1267,321 @@
               "link": "viridian_forest_digletts_cave_seafoam_islands"
             }
           ],
-          "other_maps": [
+          "other_maps"   : [
             {
-              "id": "sevii_frlg",
-              "rects": [
-                {"x": 2, "y": 11, "width": 1, "height": 2},
-                {"x": 3, "y": 6, "width": 1, "height": 5},
-                {"x": 10, "y": 9, "width": 1, "height": 2},
-                {"x": 16, "y": 14, "width": 3, "height": 1},
-                {"x": 19, "y": 15, "width": 2, "height": 1}
+              "id"                     : "sevii_frlg",
+              "rects"                  : [
+                {
+                  "x"     : 2,
+                  "y"     : 11,
+                  "width" : 1,
+                  "height": 2
+                },
+                {
+                  "x"     : 3,
+                  "y"     : 6,
+                  "width" : 1,
+                  "height": 5
+                },
+                {
+                  "x"     : 10,
+                  "y"     : 9,
+                  "width" : 1,
+                  "height": 2
+                },
+                {
+                  "x"     : 16,
+                  "y"     : 14,
+                  "width" : 3,
+                  "height": 1
+                },
+                {
+                  "x"     : 19,
+                  "y"     : 15,
+                  "width" : 2,
+                  "height": 1
+                }
               ],
               "sub_location_references": [
-
               ]
             }
           ]
         },
         {
-          "id": "route_11-15",
-          "name": "Routes 11-15",
+          "id"   : "route_11-15",
+          "name" : "Routes 11-15",
           "rects": [
-            {"x": 20, "y": 13, "width": 2, "height": 1},
-            {"x": 22, "y": 11, "width": 1, "height": 4},
-            {"x": 20, "y": 15, "width": 3, "height": 1},
-            {"x": 19, "y": 15, "width": 1, "height": 2},
-            {"x": 17, "y": 16, "width": 2, "height": 1}
+            {
+              "x"     : 20,
+              "y"     : 13,
+              "width" : 2,
+              "height": 1
+            },
+            {
+              "x"     : 22,
+              "y"     : 11,
+              "width" : 1,
+              "height": 4
+            },
+            {
+              "x"     : 20,
+              "y"     : 15,
+              "width" : 3,
+              "height": 1
+            },
+            {
+              "x"     : 19,
+              "y"     : 15,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 17,
+              "y"     : 16,
+              "width" : 2,
+              "height": 1
+            }
           ],
           "music": "NaLD77cA0pU"
         },
         {
-          "id": "route_23_indigo_plateau",
-          "name": "Route 23/Indigo Plateau",
-          "rects": [
-            {"x": 6, "y": 7, "width": 1, "height": 1},
-            {"x": 6, "y": 9, "width": 1, "height": 3}
-          ],
-          "music": "DMai9ra6BCA",
-          "sub_locations":[
+          "id"           : "route_23_indigo_plateau",
+          "name"         : "Route 23/Indigo Plateau",
+          "rects"        : [
             {
-              "id": "hall_of_fame",
-              "name": "Hall of Fame",
+              "x"     : 6,
+              "y"     : 7,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 6,
+              "y"     : 9,
+              "width" : 1,
+              "height": 3
+            }
+          ],
+          "music"        : "DMai9ra6BCA",
+          "sub_locations": [
+            {
+              "id"   : "hall_of_fame",
+              "name" : "Hall of Fame",
               "music": "UZSwnEkz0eA",
               "rects": [
-                {"x": 6, "y": 7, "width": 1, "height": 1}
+                {
+                  "x"     : 6,
+                  "y"     : 7,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "mt_moon_rock_tunnel_victory_road",
-          "name": "Mt. Moon/Rock Tunnel/Mt. Ember/Victory Road/Icefall Cave",
-          "rects": [
-            {"x": 13, "y": 7, "width": 1, "height": 1},
-            {"x": 22, "y": 7, "width": 1, "height": 1},
-            {"x": 6, "y": 8, "width": 1, "height": 1}
+          "id"        : "mt_moon_rock_tunnel_victory_road",
+          "name"      : "Mt. Moon/Rock Tunnel/Mt. Ember/Victory Road/Icefall Cave",
+          "rects"     : [
+            {
+              "x"     : 13,
+              "y"     : 7,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 22,
+              "y"     : 7,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 6,
+              "y"     : 8,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "u67i2uWyQr0",
+          "music"     : "u67i2uWyQr0",
           "other_maps": [
             {
-              "id": "sevii_frlg",
-              "rects": [
-                {"x": 3, "y": 5, "width": 1, "height": 1}
+              "id"            : "sevii_frlg",
+              "rects"         : [
+                {
+                  "x"     : 3,
+                  "y"     : 5,
+                  "width" : 1,
+                  "height": 1
+                }
               ],
               "no_click_rects": [
-                {"x": 4, "y": 24, "width": 1, "height": 1}
+                {
+                  "x"     : 4,
+                  "y"     : 24,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "cerulean_fuchsia_city",
-          "name": "Cerulean/Fuchsia City and Ember Spa",
-          "rects": [
-            {"x": 18, "y": 7, "width": 1, "height": 1},
-            {"x": 16, "y": 16, "width": 1, "height": 1}
+          "id"        : "cerulean_fuchsia_city",
+          "name"      : "Cerulean/Fuchsia City and Ember Spa",
+          "rects"     : [
+            {
+              "x"     : 18,
+              "y"     : 7,
+              "width" : 1,
+              "height": 1
+            },
+            {
+              "x"     : 16,
+              "y"     : 16,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "pxaiWfCBXjg",
+          "music"     : "pxaiWfCBXjg",
           "other_maps": [
             {
-              "id": "sevii_frlg",
-              "rects": [],
+              "id"            : "sevii_frlg",
+              "rects"         : [],
               "no_click_rects": [
-                {"x": 3, "y": 7, "width": 1, "height": 1}
+                {
+                  "x"     : 3,
+                  "y"     : 7,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ]
         },
         {
-          "id": "route_24_25",
-          "name": "Route 24/25",
+          "id"   : "route_24_25",
+          "name" : "Route 24/25",
           "rects": [
-            {"x": 18, "y": 5, "width": 1, "height": 2},
-            {"x": 19, "y": 5, "width": 2, "height": 1}
+            {
+              "x"     : 18,
+              "y"     : 5,
+              "width" : 1,
+              "height": 2
+            },
+            {
+              "x"     : 19,
+              "y"     : 5,
+              "width" : 2,
+              "height": 1
+            }
           ],
           "music": "h-vR7OkSGVY"
         },
         {
-          "id": "lavender_town",
-          "name": "Lavender Town",
-          "rects": [
-            {"x": 22, "y": 10, "width": 1, "height": 1}
+          "id"           : "lavender_town",
+          "name"         : "Lavender Town",
+          "rects"        : [
+            {
+              "x"     : 22,
+              "y"     : 10,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "6LO03IieYyE",
+          "music"        : "6LO03IieYyE",
           "sub_locations": [
             {
-              "id": "pokemon_tower",
-              "name": "Pokémon Tower",
+              "id"   : "pokemon_tower",
+              "name" : "Pokémon Tower",
               "music": "VCLxPp4tvT8"
             }
           ]
         },
         {
-          "id": "celadon_city",
-          "name": "Celadon City",
-          "rects": [
-            {"x": 15, "y": 10, "width": 1, "height": 1}
+          "id"           : "celadon_city",
+          "name"         : "Celadon City",
+          "rects"        : [
+            {
+              "x"     : 15,
+              "y"     : 10,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "Ybp-CC0ogZg",
+          "music"        : "Ybp-CC0ogZg",
           "sub_locations": [
             {
-              "id": "game_corner",
-              "name": "Game Corner",
+              "id"   : "game_corner",
+              "name" : "Game Corner",
               "music": "o8OE9C8gXfA"
             },
             {
-              "id": "team_rocket_hideout",
-              "name": "Team Rocket Hideout",
+              "id"   : "team_rocket_hideout",
+              "name" : "Team Rocket Hideout",
               "music": "KCEaFMtlgcs"
             }
           ]
         },
         {
-          "id": "vermilion_city",
-          "name": "Vermilion City",
-          "rects": [
-            {"x": 18, "y": 13, "width": 1, "height": 1}
+          "id"           : "vermilion_city",
+          "name"         : "Vermilion City",
+          "rects"        : [
+            {
+              "x"     : 18,
+              "y"     : 13,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "MJV8gjJjG_M",
+          "music"        : "MJV8gjJjG_M",
           "sub_locations": [
             {
-              "id": "ss_anne",
-              "name": "S.S. Anne",
+              "id"   : "ss_anne",
+              "name" : "S.S. Anne",
               "music": "mb-AGma5mWc"
             }
           ]
         },
         {
-          "id": "cinnabar_island",
-          "name": "Cinnabar Island",
-          "rects": [
-            {"x": 8, "y": 18, "width": 1, "height": 1}
+          "id"           : "cinnabar_island",
+          "name"         : "Cinnabar Island",
+          "rects"        : [
+            {
+              "x"     : 8,
+              "y"     : 18,
+              "width" : 1,
+              "height": 1
+            }
           ],
-          "music": "VH69th-_QWE",
+          "music"        : "VH69th-_QWE",
           "sub_locations": [
             {
-              "id": "pokemon_mansion",
-              "name": "Pokémon Mansion",
+              "id"   : "pokemon_mansion",
+              "name" : "Pokémon Mansion",
               "music": "lGLMEbQ-YJY"
             }
           ]
         },
         {
-          "id": "4-5_island",
-          "name": "4-5 Island",
-          "rects": [],
-          "music": "HwBkvnbAZmM",
-          "other_maps": [
+          "id"           : "4-5_island",
+          "name"         : "4-5 Island",
+          "rects"        : [],
+          "music"        : "HwBkvnbAZmM",
+          "other_maps"   : [
             {
-              "id": "sevii_frlg",
+              "id"   : "sevii_frlg",
               "rects": [
-                {"x": 4, "y": 24, "width": 1, "height": 1},
-                {"x": 17, "y": 31, "width": 1, "height": 1}
+                {
+                  "x"     : 4,
+                  "y"     : 24,
+                  "width" : 1,
+                  "height": 1
+                },
+                {
+                  "x"     : 17,
+                  "y"     : 31,
+                  "width" : 1,
+                  "height": 1
+                }
               ]
             }
           ],
@@ -779,15 +1592,20 @@
           ]
         },
         {
-          "id": "five_isle_meadow",
-          "name": "Five Isle Meadow",
-          "rects": [],
-          "music": "EvpQsxxzELw",
-          "other_maps": [
+          "id"           : "five_isle_meadow",
+          "name"         : "Five Isle Meadow",
+          "rects"        : [],
+          "music"        : "EvpQsxxzELw",
+          "other_maps"   : [
             {
-              "id": "sevii_frlg",
+              "id"   : "sevii_frlg",
               "rects": [
-                {"x": 18, "y": 31, "width": 1, "height": 2}
+                {
+                  "x"     : 18,
+                  "y"     : 31,
+                  "width" : 1,
+                  "height": 2
+                }
               ]
             }
           ],
@@ -795,434 +1613,454 @@
           ]
         }
       ],
-      "versions": ["kanto_rby", "kanto_gsc", "kanto_hgss_original"],
-      "src": "https://cdn.bulbagarden.net/upload/7/7c/KantoTownMap.png"
+      "versions"        : [
+        "kanto_rby",
+        "kanto_gsc",
+        "kanto_hgss_original"
+      ],
+      "src"             : "https://cdn2.bulbagarden.net/upload/7/7c/KantoTownMap.png",
+      "src_local"       : "assets/images/kanto_frlg_original.png"
     },
     {
-      "id": "kanto_frlg",
-      "type": "composition",
-      "width": 192,
-      "height": 144,
-      "parts": [
+      "id"         : "kanto_frlg",
+      "type"       : "composition",
+      "width"      : 192,
+      "height"     : 144,
+      "parts"      : [
         {
-          "map": "kanto_frlg_original",
-          "x": 0,
-          "y": 0,
+          "map"    : "kanto_frlg_original",
+          "x"      : 0,
+          "y"      : 0,
           "start_x": 24,
           "start_y": 16,
-          "width": 192,
-          "height": 144
+          "width"  : 192,
+          "height" : 144
         }
       ],
       "fix_corners": false
     },
     {
-      "id": "sevii_frlg",
-      "type": "basic",
+      "id"              : "sevii_frlg",
+      "type"            : "basic",
       "coord_multiplier": 8,
-      "locations": [
-
+      "locations"       : [
       ],
-      "src": "https://cdn.bulbagarden.net/upload/3/3f/Sevii_Islands_map.png"
+      "src"             : "https://cdn2.bulbagarden.net/upload/3/3f/Sevii_Islands_map.png",
+      "src_local"       : "assets/images/sevii_frlg.png"
     },
     {
-      "id": "sinnoh_dppt",
-      "type": "basic",
+      "id"              : "sinnoh_dppt",
+      "type"            : "basic",
       "coord_multiplier": 1,
-      "locations": [
+      "locations"       : [
         {
-          "id": "twinleaf_town_day",
-          "name": "Twinleaf Town (Day)",
-          "shapes": [
+          "id"      : "twinleaf_town_day",
+          "name"    : "Twinleaf Town (Day)",
+          "shapes"  : [
             {
               "id": "town",
-              "x": 22,
-              "y": 150
+              "x" : 22,
+              "y" : 150
             }
           ],
-          "music": "HhDBpjabNyg",
+          "music"   : "HhDBpjabNyg",
           "variants": [
             {
-              "id": "twinleaf_town_night",
-              "name": "Twinleaf Town (Night)",
+              "id"   : "twinleaf_town_night",
+              "name" : "Twinleaf Town (Night)",
               "music": "mcn9VS5WmVQ"
             }
           ]
         },
         {
-          "id": "sandgem_town_day",
-          "name": "Sandgem Town (Day)",
-          "shapes": [
+          "id"           : "sandgem_town_day",
+          "name"         : "Sandgem Town (Day)",
+          "shapes"       : [
             {
               "id": "town",
-              "x": 36,
-              "y": 143
+              "x" : 36,
+              "y" : 143
             }
           ],
-          "music": "GHk6bNwL6Iw",
-          "variants": [
+          "music"        : "GHk6bNwL6Iw",
+          "variants"     : [
             {
-              "id": "sandgem_town_night",
-              "name": "Sandgem Town (Night)",
+              "id"   : "sandgem_town_night",
+              "name" : "Sandgem Town (Night)",
               "music": "o3eso7fj-Xk"
             }
           ],
           "sub_locations": [
             {
-              "id": "professor_rowans_laboratory",
-              "name": "Professor Rowan's Laboratory",
+              "id"   : "professor_rowans_laboratory",
+              "name" : "Professor Rowan's Laboratory",
               "music": "tuBHchcYb2Y"
             }
           ]
         },
         {
-          "id": "jubilife_city_day",
-          "name": "Jubilife City (Day)",
-          "shapes": [
+          "id"           : "jubilife_city_day",
+          "name"         : "Jubilife City (Day)",
+          "shapes"       : [
             {
               "id": "O_city",
-              "x": 29,
-              "y": 122
+              "x" : 29,
+              "y" : 122
             }
           ],
-          "music": "82ibCg9_fZA",
-          "variants": [
+          "music"        : "82ibCg9_fZA",
+          "variants"     : [
             {
-              "id": "jubilife_city_night",
-              "name": "Jubilife City (Night)",
+              "id"   : "jubilife_city_night",
+              "name" : "Jubilife City (Night)",
               "music": "lAKZZYNb8YI"
             }
           ],
           "sub_locations": [
             {
-              "id": "television_station",
-              "name": "Television Station",
+              "id"   : "television_station",
+              "name" : "Television Station",
               "music": "x6YOZtn6EhQ"
             },
             {
-              "id": "global_trade_station",
+              "id"       : "global_trade_station",
               "game_name": "D/P",
-              "name": "Global Trade Station",
-              "music": "mk1OGWA97TA"
+              "name"     : "Global Trade Station",
+              "music"    : "mk1OGWA97TA"
             },
             {
-              "id": "global_terminal",
+              "id"       : "global_terminal",
               "game_name": "Pt",
-              "name": "Global Terminal",
-              "music": "JMvQguyIRfs"
+              "name"     : "Global Terminal",
+              "music"    : "JMvQguyIRfs"
             }
           ]
         },
         {
-          "id": "oreburgh_city_day",
-          "name": "Oreburgh City (Day)",
-          "shapes": [
+          "id"           : "oreburgh_city_day",
+          "name"         : "Oreburgh City (Day)",
+          "shapes"       : [
             {
-              "id": "R_city",
-              "x": 72,
-              "y": 122,
+              "id"   : "R_city",
+              "x"    : 72,
+              "y"    : 122,
               "scale": {
                 "x": -1,
                 "y": 1
               }
             }
           ],
-          "music": "TYfuavaMf10",
-          "variants": [
+          "music"        : "TYfuavaMf10",
+          "variants"     : [
             {
-              "id": "oreburgh_town_night",
-              "name": "Oreburgh Town (Night)",
+              "id"   : "oreburgh_town_night",
+              "name" : "Oreburgh Town (Night)",
               "music": "W3nMsgCIFhg"
             }
           ],
           "sub_locations": [
             {
-              "id": "oreburgh_mine",
-              "name": "Oreburgh Mine",
+              "id"   : "oreburgh_mine",
+              "name" : "Oreburgh Mine",
               "music": "Ie5ZI1sIBEU"
             }
           ]
         },
         {
-          "id": "floaroma_town_day",
-          "name": "Floaroma Town/Meadow (Day)",
-          "shapes": [
+          "id"      : "floaroma_town_day",
+          "name"    : "Floaroma Town/Meadow (Day)",
+          "shapes"  : [
             {
               "id": "I_city",
-              "x": 36,
-              "y": 94
+              "x" : 36,
+              "y" : 94
             }
           ],
-          "music": "QEFQvtt8efw",
+          "music"   : "QEFQvtt8efw",
           "variants": [
             {
-              "id": "floaroma_town_night",
-              "name": "Floaroma Town/Meadow (Night)",
+              "id"   : "floaroma_town_night",
+              "name" : "Floaroma Town/Meadow (Night)",
               "music": "814NKUnmx1E"
             }
           ]
         },
         {
-          "id": "eterna_city_celestic_town_day",
-          "name": "Eterna City and Celestic Town (Day)",
-          "shapes": [
+          "id"           : "eterna_city_celestic_town_day",
+          "name"         : "Eterna City and Celestic Town (Day)",
+          "shapes"       : [
             {
               "id": "R_city",
-              "x": 64,
-              "y": 73
+              "x" : 64,
+              "y" : 73
             },
             {
               "id": "town",
-              "x": 100,
-              "y": 73
+              "x" : 100,
+              "y" : 73
             }
           ],
-          "music": "haOA0A6nJ84",
-          "variants": [
+          "music"        : "haOA0A6nJ84",
+          "variants"     : [
             {
-              "id": "eterna_city_celestic_town_night",
-              "name": "Eterna City and Celestic Town (Night)",
+              "id"   : "eterna_city_celestic_town_night",
+              "name" : "Eterna City and Celestic Town (Night)",
               "music": "QRFmXPrOf3o"
             }
           ],
           "sub_locations": [
             {
-              "id": "team_galactic_building",
-              "name": "Team Galactic Building",
-              "music": "gi6FJFAIZNw",
+              "id"    : "team_galactic_building",
+              "name"  : "Team Galactic Building",
+              "music" : "gi6FJFAIZNw",
               "shapes": [
                 {
                   "id": "R_city",
-                  "x": 64,
-                  "y": 73
+                  "x" : 64,
+                  "y" : 73
                 }
               ]
             }
           ]
         },
         {
-          "id": "hearthome_city_day",
-          "name": "Hearthome City (Day)",
-          "shapes": [
+          "id"           : "hearthome_city_day",
+          "name"         : "Hearthome City (Day)",
+          "shapes"       : [
             {
               "id": "O_city",
-              "x": 99,
-              "y": 108
+              "x" : 99,
+              "y" : 108
             }
           ],
-          "music": "t03CRBZS7p8",
-          "variants": [
+          "music"        : "t03CRBZS7p8",
+          "variants"     : [
             {
-              "id": "hearthome_city_night",
-              "name": "Hearthome City (Night)",
+              "id"   : "hearthome_city_night",
+              "name" : "Hearthome City (Night)",
               "music": "38Tj7J-CSJA"
             }
           ],
           "sub_locations": [
             {
-              "id": "contest_assembly_hall",
-              "name": "Contest Assembly Hall",
+              "id"   : "contest_assembly_hall",
+              "name" : "Contest Assembly Hall",
               "music": "sM4bR-2xBPc"
             },
             {
-              "id": "amity_square",
-              "name": "Amity Square",
+              "id"   : "amity_square",
+              "name" : "Amity Square",
               "music": "Q3uhu3S2G2M"
             }
           ]
         },
         {
-          "id": "solaceon_town_pastoria_city_day",
-          "name": "Solaceon Town and Pastoria City (Day)",
-          "shapes": [
+          "id"           : "solaceon_town_pastoria_city_day",
+          "name"         : "Solaceon Town and Pastoria City (Day)",
+          "shapes"       : [
             {
-              "id": "I_city",
-              "x": 120,
-              "y": 101,
+              "id"       : "I_city",
+              "x"        : 120,
+              "y"        : 101,
               "transpose": true
             },
             {
               "id": "O_city",
-              "x": 127,
-              "y": 136
+              "x" : 127,
+              "y" : 136
             }
           ],
-          "music": "75OlLWtV8gc",
-          "variants": [
+          "music"        : "75OlLWtV8gc",
+          "variants"     : [
             {
-              "id": "solaceon_town_pastoria_city_night",
-              "name": "Solaceon Town and Pastoria City (Night)",
+              "id"   : "solaceon_town_pastoria_city_night",
+              "name" : "Solaceon Town and Pastoria City (Night)",
               "music": "FfE73mrn3cc"
             }
           ],
           "sub_locations": [
             {
-              "id": "great_marsh",
-              "name": "Great Marsh",
-              "music": "M47Pd2GcMy0",
+              "id"    : "great_marsh",
+              "name"  : "Great Marsh",
+              "music" : "M47Pd2GcMy0",
               "shapes": [
                 {
                   "id": "O_city",
-                  "x": 127,
-                  "y": 136
+                  "x" : 127,
+                  "y" : 136
                 }
               ]
             }
           ]
         },
         {
-          "id": "veilstone_city_day",
-          "name": "Veilstone City (Day)",
-          "shapes": [
+          "id"           : "veilstone_city_day",
+          "name"         : "Veilstone City (Day)",
+          "shapes"       : [
             {
               "id": "O_city",
-              "x": 148,
-              "y": 87
+              "x" : 148,
+              "y" : 87
             }
           ],
-          "music": "kn9WWzjxJkk",
-          "variants": [
+          "music"        : "kn9WWzjxJkk",
+          "variants"     : [
             {
-              "id": "veilstone_city_night",
-              "name": "Veilstone City (Night)",
+              "id"   : "veilstone_city_night",
+              "name" : "Veilstone City (Night)",
               "music": "vHgggjKImns"
             }
           ],
           "sub_locations": [
             {
-              "id": "game_corner",
-              "name": "Game Corner",
+              "id"   : "game_corner",
+              "name" : "Game Corner",
               "music": "owghgsl_z5o"
             }
           ]
         },
         {
-          "id": "canalave_city_day",
-          "name": "Canalave City (Day)",
-          "shapes": [
+          "id"      : "canalave_city_day",
+          "name"    : "Canalave City (Day)",
+          "shapes"  : [
             {
               "id": "I_city",
-              "x": 8,
-              "y": 115
+              "x" : 8,
+              "y" : 115
             }
           ],
-          "music": "qvCboyezCWw",
+          "music"   : "qvCboyezCWw",
           "variants": [
             {
-              "id": "canalave_town_night",
-              "name": "Canalave Town (Night)",
+              "id"   : "canalave_town_night",
+              "name" : "Canalave Town (Night)",
               "music": "rulfjC9U1KE"
             }
           ]
         },
         {
-          "id": "snowpoint_city_day",
-          "name": "Snowpoint City (Day)",
-          "shapes": [
+          "id"      : "snowpoint_city_day",
+          "name"    : "Snowpoint City (Day)",
+          "shapes"  : [
             {
               "id": "I_city",
-              "x": 78,
-              "y": 3
+              "x" : 78,
+              "y" : 3
             }
           ],
-          "music": "C7FkBLIZThY",
+          "music"   : "C7FkBLIZThY",
           "variants": [
             {
-              "id": "snowpoint_city_night",
-              "name": "Snowpoint City (Night)",
+              "id"   : "snowpoint_city_night",
+              "name" : "Snowpoint City (Night)",
               "music": "YcnuRz-ZSi0"
             }
           ]
         },
         {
-          "id": "sunyshore_city_day",
-          "name": "Sunyshore City (Day)",
-          "shapes": [
+          "id"      : "sunyshore_city_day",
+          "name"    : "Sunyshore City (Day)",
+          "shapes"  : [
             {
               "id": "O_city",
-              "x": 183,
-              "y": 122
+              "x" : 183,
+              "y" : 122
             }
           ],
-          "music": "AW2Dcg_DY-c",
+          "music"   : "AW2Dcg_DY-c",
           "variants": [
             {
-              "id": "sunyshore_city_night",
-              "name": "Sunyshore City (Night)",
+              "id"   : "sunyshore_city_night",
+              "name" : "Sunyshore City (Night)",
               "music": "HXNMTA96EOE"
             }
           ]
         },
         {
-          "id": "pokemon_league_day",
-          "name": "Pokémon League (Day)",
-          "shapes": [
+          "id"      : "pokemon_league_day",
+          "name"    : "Pokémon League (Day)",
+          "shapes"  : [
             {
               "id": "town",
-              "x": 183,
-              "y": 80
+              "x" : 183,
+              "y" : 80
             },
             {
               "id": "zone",
-              "x": 183,
-              "y": 88
+              "x" : 183,
+              "y" : 88
             }
           ],
-          "music": "Mxb7chtXGBE",
+          "music"   : "Mxb7chtXGBE",
           "variants": [
             {
-              "id": "pokemon_league_night",
-              "name": "Pokémon League (Night)",
+              "id"   : "pokemon_league_night",
+              "name" : "Pokémon League (Night)",
               "music": "7dzZl8ge1z0"
             }
           ]
         },
         {
-          "id": "fight_survival_area_day",
-          "name": "Fight/Survival Area (Day)",
-          "shapes": [
+          "id"      : "fight_survival_area_day",
+          "name"    : "Fight/Survival Area (Day)",
+          "shapes"  : [
             {
-              "id": "I_city",
-              "x": 134,
-              "y": 52,
+              "id"       : "I_city",
+              "x"        : 134,
+              "y"        : 52,
               "transpose": true
             },
             {
               "id": "town",
-              "x": 141,
-              "y": 31
+              "x" : 141,
+              "y" : 31
             }
           ],
-          "music": "e6lj84SCd28",
+          "music"   : "e6lj84SCd28",
           "variants": [
             {
-              "id": "fight_survival_area_night",
-              "name": "Fight/Survival Area (Night)",
+              "id"   : "fight_survival_area_night",
+              "name" : "Fight/Survival Area (Night)",
               "music": "4KScTX6lMuU"
             }
           ]
         },
         {
-          "id": "eterna_forest_lost_tower",
-          "name": "Eterna Forest and Lost Tower",
-          "shapes": [
+          "id"           : "eterna_forest_lost_tower",
+          "name"         : "Eterna Forest and Lost Tower",
+          "shapes"       : [
             {
-              "id": "route",
-              "x": 120,
-              "y": 109,
-              "scale": {
+              "id"      : "route",
+              "x"       : 120,
+              "y"       : 109,
+              "scale"   : {
                 "x": 1,
                 "y": 6
               },
               "no_click": true
             }
           ],
-          "rects": [
-            {"x": 44, "y": 73, "width": 14, "height": 1},
-            {"x": 43, "y": 74, "width": 15, "height": 13},
-            {"x": 43, "y": 87, "width": 14, "height": 1}
+          "rects"        : [
+            {
+              "x"     : 44,
+              "y"     : 73,
+              "width" : 14,
+              "height": 1
+            },
+            {
+              "x"     : 43,
+              "y"     : 74,
+              "width" : 15,
+              "height": 13
+            },
+            {
+              "x"     : 43,
+              "y"     : 87,
+              "width" : 14,
+              "height": 1
+            }
           ],
-          "music": "y0Fg9xtjFxk",
+          "music"        : "y0Fg9xtjFxk",
           "sub_locations": [
             {
               "link": "old_chateau_spring_path_sendoff_spring"
@@ -1230,18 +2068,28 @@
           ]
         },
         {
-          "id": "old_chateau_spring_path_sendoff_spring",
-          "name": "Old Chateau and Spring Path and Sendoff Spring",
-          "music": "4ZE2eDWXtKo",
-          "rects": [
-            {"x": 163, "y": 108, "width": 13, "height": 15},
-            {"x": 176, "y": 109, "width": 1, "height": 13}
+          "id"    : "old_chateau_spring_path_sendoff_spring",
+          "name"  : "Old Chateau and Spring Path and Sendoff Spring",
+          "music" : "4ZE2eDWXtKo",
+          "rects" : [
+            {
+              "x"     : 163,
+              "y"     : 108,
+              "width" : 13,
+              "height": 15
+            },
+            {
+              "x"     : 176,
+              "y"     : 109,
+              "width" : 1,
+              "height": 13
+            }
           ],
           "shapes": [
             {
-              "id": "route",
-              "x": 50,
-              "y": 73,
+              "id"   : "route",
+              "x"    : 50,
+              "y"    : 73,
               "scale": {
                 "x": 1,
                 "y": 8
@@ -1250,26 +2098,31 @@
           ]
         },
         {
-          "id": "verity_lakefront_route_201_202_day",
-          "name": "Verity Lakefront and Route 201/202 (Day)",
-          "rects": [
-            {"x": 23, "y": 143, "width": 7, "height": 7}
-          ],
-          "shapes": [
+          "id"           : "verity_lakefront_route_201_202_day",
+          "name"         : "Verity Lakefront and Route 201/202 (Day)",
+          "rects"        : [
             {
-              "id": "route",
-              "x": 30,
-              "y": 143,
-              "scale": {
+              "x"     : 23,
+              "y"     : 143,
+              "width" : 7,
+              "height": 7
+            }
+          ],
+          "shapes"       : [
+            {
+              "id"       : "route",
+              "x"        : 30,
+              "y"        : 143,
+              "scale"    : {
                 "x": 1,
                 "y": 6
               },
               "transpose": true
             },
             {
-              "id": "route",
-              "x": 36,
-              "y": 137,
+              "id"   : "route",
+              "x"    : 36,
+              "y"    : 137,
               "scale": {
                 "x": 1,
                 "y": 6
@@ -1277,15 +2130,15 @@
             },
             {
               "id": "O_city",
-              "x": 8,
-              "y": 136
+              "x" : 8,
+              "y" : 136
             }
           ],
-          "music": "Q0AwE8EjpDs",
-          "variants": [
+          "music"        : "Q0AwE8EjpDs",
+          "variants"     : [
             {
-              "id": "verity_lakefront_route_201_202_night",
-              "name": "Verity Lakefront and Route 201/202 (Night)",
+              "id"   : "verity_lakefront_route_201_202_night",
+              "name" : "Verity Lakefront and Route 201/202 (Night)",
               "music": "nT3YVdf81iU"
             }
           ],
@@ -1296,235 +2149,270 @@
           ]
         },
         {
-          "id": "route_203_204_day",
-          "name": "Route 203/204 (Day)",
-          "shapes": [
+          "id"      : "route_203_204_day",
+          "name"    : "Route 203/204 (Day)",
+          "shapes"  : [
             {
-              "id": "route",
-              "x": 44,
-              "y": 122,
-              "scale": {
+              "id"       : "route",
+              "x"        : 44,
+              "y"        : 122,
+              "scale"    : {
                 "x": 1,
                 "y": 13
               },
               "transpose": true
             },
             {
-              "id": "route",
-              "x": 36,
-              "y": 109,
+              "id"   : "route",
+              "x"    : 36,
+              "y"    : 109,
               "scale": {
                 "x": 1,
                 "y": 13
               }
             }
           ],
-          "music": "8gVjsQW-Puo",
+          "music"   : "8gVjsQW-Puo",
           "variants": [
             {
-              "id": "route_203_204_night",
-              "name": "Route 203/204 (Night)",
+              "id"   : "route_203_204_night",
+              "name" : "Route 203/204 (Night)",
               "music": "D3nZAi3y3CM"
             }
           ]
         },
         {
-          "id": "route_205_211_west_side_valley_windworks_fuego_ironworks_day",
-          "name": "Route 205/211 (West Side) and Valley Windworks and Fuego Ironworks (Day)",
-          "rects": [
-            {"x": 37, "y": 87, "width": 6, "height": 1},
-            {"x": 36, "y": 88, "width": 15, "height": 6},
-            {"x": 44, "y": 94, "width": 7, "height": 7},
-            {"x": 44, "y": 101, "width": 13, "height": 1},
-            {"x": 44, "y": 102, "width": 14, "height": 6},
-            {"x": 44, "y": 108, "width": 13, "height": 1}
-          ],
-          "shapes": [
+          "id"      : "route_205_211_west_side_valley_windworks_fuego_ironworks_day",
+          "name"    : "Route 205/211 (West Side) and Valley Windworks and Fuego Ironworks (Day)",
+          "rects"   : [
             {
-              "id": "route",
-              "x": 58,
-              "y": 73,
-              "scale": {
+              "x"     : 37,
+              "y"     : 87,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 36,
+              "y"     : 88,
+              "width" : 15,
+              "height": 6
+            },
+            {
+              "x"     : 44,
+              "y"     : 94,
+              "width" : 7,
+              "height": 7
+            },
+            {
+              "x"     : 44,
+              "y"     : 101,
+              "width" : 13,
+              "height": 1
+            },
+            {
+              "x"     : 44,
+              "y"     : 102,
+              "width" : 14,
+              "height": 6
+            },
+            {
+              "x"     : 44,
+              "y"     : 108,
+              "width" : 13,
+              "height": 1
+            }
+          ],
+          "shapes"  : [
+            {
+              "id"       : "route",
+              "x"        : 58,
+              "y"        : 73,
+              "scale"    : {
                 "x": 1,
                 "y": 6
               },
               "transpose": true
             },
             {
-              "id": "route",
-              "x": 79,
-              "y": 73,
-              "scale": {
+              "id"       : "route",
+              "x"        : 79,
+              "y"        : 73,
+              "scale"    : {
                 "x": 1,
                 "y": 6
               },
               "transpose": true
             }
           ],
-          "music": "YIAlVDLZJ_k",
+          "music"   : "YIAlVDLZJ_k",
           "variants": [
             {
-              "id": "route_205_211_west_side_valley_windworks_fuego_ironworks_night",
-              "name": "Route 205/211 (West Side) and Valley Windworks and Fuego Ironworks (Night)",
+              "id"   : "route_205_211_west_side_valley_windworks_fuego_ironworks_night",
+              "name" : "Route 205/211 (West Side) and Valley Windworks and Fuego Ironworks (Night)",
               "music": "1brm89Tz64U"
             }
           ]
         },
         {
-          "id": "route_206-208_day",
-          "name": "Route 206-208 (Day)",
-          "shapes": [
+          "id"      : "route_206-208_day",
+          "name"    : "Route 206-208 (Day)",
+          "shapes"  : [
             {
-              "id": "route",
-              "x": 64,
-              "y": 88,
+              "id"   : "route",
+              "x"    : 64,
+              "y"    : 88,
               "scale": {
                 "x": 1,
                 "y": 34
               }
             },
             {
-              "id": "route",
-              "x": 72,
-              "y": 115,
-              "scale": {
+              "id"       : "route",
+              "x"        : 72,
+              "y"        : 115,
+              "scale"    : {
                 "x": 1,
                 "y": 6
               },
               "transpose": true
             },
             {
-              "id": "route",
-              "x": 86,
-              "y": 115,
-              "scale": {
+              "id"       : "route",
+              "x"        : 86,
+              "y"        : 115,
+              "scale"    : {
                 "x": 1,
                 "y": 13
               },
               "transpose": true
             }
           ],
-          "music": "bkQiFPJUYTQ",
+          "music"   : "bkQiFPJUYTQ",
           "variants": [
             {
-              "id": "route_206-208_night",
-              "name": "Route 206-208 (Night)",
+              "id"   : "route_206-208_night",
+              "name" : "Route 206-208 (Night)",
               "music": "6-dAsSbgpDM"
             }
           ]
         },
         {
-          "id": "route_210_211_east_side_214_215_day",
-          "name": "Route 210/211 (East Side)/214/215 (Day)",
-          "rects": [
-            {"x": 127, "y": 74, "width": 1, "height": 7}
-          ],
-          "shapes": [
+          "id"      : "route_210_211_east_side_214_215_day",
+          "name"    : "Route 210/211 (East Side)/214/215 (Day)",
+          "rects"   : [
             {
-              "id": "route",
-              "x": 120,
-              "y": 81,
+              "x"     : 127,
+              "y"     : 74,
+              "width" : 1,
+              "height": 7
+            }
+          ],
+          "shapes"  : [
+            {
+              "id"   : "route",
+              "x"    : 120,
+              "y"    : 81,
               "scale": {
                 "x": 1,
                 "y": 20
               }
             },
             {
-              "id": "route",
-              "x": 108,
-              "y": 73,
-              "scale": {
+              "id"       : "route",
+              "x"        : 108,
+              "y"        : 73,
+              "scale"    : {
                 "x": 1,
                 "y": 19
               },
               "transpose": true
             },
             {
-              "id": "route",
-              "x": 128,
-              "y": 87,
-              "scale": {
+              "id"       : "route",
+              "x"        : 128,
+              "y"        : 87,
+              "scale"    : {
                 "x": 1,
                 "y": 20
               },
               "transpose": true
             },
             {
-              "id": "route",
-              "x": 93,
-              "y": 73,
-              "scale": {
+              "id"       : "route",
+              "x"        : 93,
+              "y"        : 73,
+              "scale"    : {
                 "x": 1,
                 "y": 7
               },
               "transpose": true
             },
             {
-              "id": "route",
-              "x": 155,
-              "y": 102,
+              "id"   : "route",
+              "x"    : 155,
+              "y"    : 102,
               "scale": {
                 "x": 1,
                 "y": 20
               }
             }
           ],
-          "music": "c8UkrNo4k2s",
+          "music"   : "c8UkrNo4k2s",
           "variants": [
             {
-              "id": "route_210_211_east_side_214_215_night",
-              "name": "Route 210/211 (East Side)/214/215 (Night)",
+              "id"   : "route_210_211_east_side_214_215_night",
+              "name" : "Route 210/211 (East Side)/214/215 (Night)",
               "music": "bl8MSm86Oiw"
             }
           ]
         },
         {
-          "id": "route_209_212_day",
-          "name": "Route 209/212 (Day)",
-          "shapes": [
+          "id"           : "route_209_212_day",
+          "name"         : "Route 209/212 (Day)",
+          "shapes"       : [
             {
-              "id": "route",
-              "x": 120,
-              "y": 109,
+              "id"   : "route",
+              "x"    : 120,
+              "y"    : 109,
               "scale": {
                 "x": 1,
                 "y": 6
               }
             },
             {
-              "id": "R_corner",
-              "x": 128,
-              "y": 123,
+              "id"   : "R_corner",
+              "x"    : 128,
+              "y"    : 123,
               "scale": {
                 "x": -1,
                 "y": -1
               }
             },
             {
-              "id": "route",
-              "x": 114,
-              "y": 115,
-              "scale": {
+              "id"       : "route",
+              "x"        : 114,
+              "y"        : 115,
+              "scale"    : {
                 "x": 1,
                 "y": 7
               },
               "transpose": true
             },
             {
-              "id": "R_corner",
-              "x": 99,
-              "y": 151,
+              "id"   : "R_corner",
+              "x"    : 99,
+              "y"    : 151,
               "scale": {
                 "x": 1,
                 "y": -1
               }
             }
           ],
-          "music": "krGXMh6qaxA",
-          "variants": [
+          "music"        : "krGXMh6qaxA",
+          "variants"     : [
             {
-              "id": "route_209_212_night",
-              "name": "Route 209/212 (Night)",
+              "id"   : "route_209_212_night",
+              "name" : "Route 209/212 (Night)",
               "music": "LsYIjJC0Nu4"
             }
           ],
@@ -1535,26 +2423,46 @@
           ]
         },
         {
-          "id": "valor_lakefront_route_213_resort_area_day",
-          "name": "Valor Lakefront and Route 213 and Resort Area (Day)",
-          "rects": [
-            {"x": 149, "y": 122, "width": 14, "height": 1},
-            {"x": 148, "y": 123, "width": 15, "height": 13},
-            {"x": 142, "y": 136, "width": 21, "height": 14},
-            {"x": 142, "y": 150, "width": 20, "height": 1}
-          ],
-          "shapes": [
+          "id"           : "valor_lakefront_route_213_resort_area_day",
+          "name"         : "Valor Lakefront and Route 213 and Resort Area (Day)",
+          "rects"        : [
             {
-              "id": "town",
-              "x": 176,
-              "y": 59
+              "x"     : 149,
+              "y"     : 122,
+              "width" : 14,
+              "height": 1
+            },
+            {
+              "x"     : 148,
+              "y"     : 123,
+              "width" : 15,
+              "height": 13
+            },
+            {
+              "x"     : 142,
+              "y"     : 136,
+              "width" : 21,
+              "height": 14
+            },
+            {
+              "x"     : 142,
+              "y"     : 150,
+              "width" : 20,
+              "height": 1
             }
           ],
-          "music": "fB5Jogayhjo",
-          "variants": [
+          "shapes"       : [
             {
-              "id": "valor_lakefront_route_213_resort_area_night",
-              "name": "Valor Lakefront and Route 213 and Resort Area (Night)",
+              "id": "town",
+              "x" : 176,
+              "y" : 59
+            }
+          ],
+          "music"        : "fB5Jogayhjo",
+          "variants"     : [
+            {
+              "id"   : "valor_lakefront_route_213_resort_area_night",
+              "name" : "Valor Lakefront and Route 213 and Resort Area (Night)",
               "music": "-zPjhE8poMM"
             }
           ],
@@ -1565,179 +2473,501 @@
           ]
         },
         {
-          "id": "lake_verity_valor_acuity",
-          "name": "Lake Verity/Valor/Acuity",
-          "shapes": [
+          "id"            : "lake_verity_valor_acuity",
+          "name"          : "Lake Verity/Valor/Acuity",
+          "shapes"        : [
             {
-              "id": "O_city",
-              "x": 148,
-              "y": 122,
+              "id"      : "O_city",
+              "x"       : 148,
+              "y"       : 122,
               "no_click": true
             },
             {
-              "id": "O_city",
-              "x": 8,
-              "y": 136,
+              "id"      : "O_city",
+              "x"       : 8,
+              "y"       : 136,
               "no_click": true
             }
           ],
           "no_click_rects": [
-            {"x": 65, "y": 3, "width": 13, "height": 1},
-            {"x": 64, "y": 4, "width": 14, "height": 13},
-            {"x": 65, "y": 17, "width": 13, "height": 1}
+            {
+              "x"     : 65,
+              "y"     : 3,
+              "width" : 13,
+              "height": 1
+            },
+            {
+              "x"     : 64,
+              "y"     : 4,
+              "width" : 14,
+              "height": 13
+            },
+            {
+              "x"     : 65,
+              "y"     : 17,
+              "width" : 13,
+              "height": 1
+            }
           ],
-          "music": "OOmznKTv74M"
+          "music"         : "OOmznKTv74M"
         }
       ],
-      "versions": [],
-      "shapes": [
+      "versions"        : [],
+      "shapes"          : [
         {
-          "id": "town",
+          "id"   : "town",
           "rects": [
-            {"x": 1, "y": 0, "width": 6, "height": 1},
-            {"x": 0, "y": 1, "width": 8, "height": 6},
-            {"x": 1, "y": 7, "width": 6, "height": 1}
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 8,
+              "height": 6
+            },
+            {
+              "x"     : 1,
+              "y"     : 7,
+              "width" : 6,
+              "height": 1
+            }
           ]
         },
         {
-          "id": "O_city",
+          "id"   : "O_city",
           "rects": [
-            {"x": 1, "y": 0, "width": 13, "height": 1},
-            {"x": 0, "y": 1, "width": 15, "height": 13},
-            {"x": 1, "y": 14, "width": 13, "height": 1}
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 13,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 15,
+              "height": 13
+            },
+            {
+              "x"     : 1,
+              "y"     : 14,
+              "width" : 13,
+              "height": 1
+            }
           ]
         },
         {
-          "id": "I_city",
+          "id"   : "I_city",
           "rects": [
-            {"x": 1, "y": 0, "width": 6, "height": 1},
-            {"x": 0, "y": 1, "width": 8, "height": 13},
-            {"x": 1, "y": 14, "width": 6, "height": 1}
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 8,
+              "height": 13
+            },
+            {
+              "x"     : 1,
+              "y"     : 14,
+              "width" : 6,
+              "height": 1
+            }
           ]
         },
         {
-          "id": "R_city",
+          "id"   : "R_city",
           "rects": [
-            {"x": 1, "y": 0, "width": 13, "height": 1},
-            {"x": 0, "y": 1, "width": 15, "height": 6},
-            {"x": 0, "y": 7, "width": 14, "height": 1},
-            {"x": 0, "y": 8, "width": 8, "height": 6},
-            {"x": 1, "y": 14, "width": 6, "height": 1}
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 13,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 15,
+              "height": 6
+            },
+            {
+              "x"     : 0,
+              "y"     : 7,
+              "width" : 14,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 8,
+              "width" : 8,
+              "height": 6
+            },
+            {
+              "x"     : 1,
+              "y"     : 14,
+              "width" : 6,
+              "height": 1
+            }
           ]
         },
         {
-          "id": "zone",
+          "id"   : "zone",
           "rects": [
-            {"x": 1, "y": 0, "width": 6, "height": 1},
-            {"x": 0, "y": 1, "width": 8, "height": 4},
-            {"x": 1, "y": 5, "width": 6, "height": 1}
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 8,
+              "height": 4
+            },
+            {
+              "x"     : 1,
+              "y"     : 5,
+              "width" : 6,
+              "height": 1
+            }
           ]
         },
         {
-          "id": "R_corner",
+          "id"   : "R_corner",
           "rects": [
-            {"x": 1, "y": 0, "width": 6, "height": 1},
-            {"x": 0, "y": 1, "width": 7, "height": 7}
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 7,
+              "height": 7
+            }
           ]
         },
         {
-          "id": "end",
+          "id"   : "end",
           "rects": [
-            {"x": 1, "y": 0, "width": 6, "height": 1},
-            {"x": 0, "y": 1, "width": 8, "height": 6}
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 8,
+              "height": 6
+            }
           ]
         },
         {
-          "id": "route",
+          "id"   : "route",
           "rects": [
-            {"x": 0, "y": 0, "width": 8, "height": 1}
+            {
+              "x"     : 0,
+              "y"     : 0,
+              "width" : 8,
+              "height": 1
+            }
           ]
         }
       ],
-      "src": "https://cdn.bulbagarden.net/upload/a/ac/Sinnoh.png"
+      "src"             : "https://cdn2.bulbagarden.net/upload/a/ac/Sinnoh.png",
+      "src_local"       : "assets/images/sinnoh_dppt.png"
     },
     {
-      "id": "johto_hgss_original",
-      "type": "basic",
-      "coord_multiplier": 8,
-      "locations": [],
-      "versions": ["johto_gsc"],
-      "src": "https://cdn.bulbagarden.net/upload/0/04/Johto.png"
-    },
-    {
-      "id": "johto_hgss",
-      "type": "composition",
-      "width": 190,
-      "height": 143,
-      "parts": [
+      "id"              : "johto_hgss_original",
+      "type"            : "basic",
+      "coord_multiplier": 1,
+      "locations"       : [
+        {"id":"new_bark_town","name":"New Bark Town","rects":[],"music":"iney2we6iTs","shapes":[{"id":"town","x":159,"y":103,"scale":{"x":1,"y":1}}]}
+      ],
+      "versions"        : [
+        "johto_gsc"
+      ],
+      "shapes"          : [
         {
-          "map": "johto_hgss_original",
-          "x": 0,
-          "y": 0,
+          "id"   : "town",
+          "rects": [
+            {
+              "x"     : 2,
+              "y"     : 0,
+              "width" : 8,
+              "height": 1
+            },
+            {
+              "x"     : 1,
+              "y"     : 1,
+              "width" : 10,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 2,
+              "width" : 12,
+              "height": 8
+            },
+            {
+              "x"     : 1,
+              "y"     : 10,
+              "width" : 10,
+              "height": 1
+            },
+            {
+              "x"     : 2,
+              "y"     : 11,
+              "width" : 8,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "id"   : "O_city",
+          "rects": [
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 13,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 15,
+              "height": 13
+            },
+            {
+              "x"     : 1,
+              "y"     : 14,
+              "width" : 13,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "id"   : "I_city",
+          "rects": [
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 8,
+              "height": 13
+            },
+            {
+              "x"     : 1,
+              "y"     : 14,
+              "width" : 6,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "id"   : "R_city",
+          "rects": [
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 13,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 15,
+              "height": 6
+            },
+            {
+              "x"     : 0,
+              "y"     : 7,
+              "width" : 14,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 8,
+              "width" : 8,
+              "height": 6
+            },
+            {
+              "x"     : 1,
+              "y"     : 14,
+              "width" : 6,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "id"   : "zone",
+          "rects": [
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 8,
+              "height": 4
+            },
+            {
+              "x"     : 1,
+              "y"     : 5,
+              "width" : 6,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "id"   : "R_corner",
+          "rects": [
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 7,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "id"   : "end",
+          "rects": [
+            {
+              "x"     : 1,
+              "y"     : 0,
+              "width" : 6,
+              "height": 1
+            },
+            {
+              "x"     : 0,
+              "y"     : 1,
+              "width" : 8,
+              "height": 6
+            }
+          ]
+        },
+        {
+          "id"   : "route",
+          "rects": [
+            {
+              "x"     : 0,
+              "y"     : 0,
+              "width" : 8,
+              "height": 1
+            }
+          ]
+        }
+      ],
+      "src"             : "https://cdn2.bulbagarden.net/upload/0/04/Johto.png",
+      "src_local"       : "assets/images/johto_hgss_original.png"
+    },
+    {
+      "id"         : "johto_hgss",
+      "type"       : "composition",
+      "width"      : 190,
+      "height"     : 143,
+      "parts"      : [
+        {
+          "map"    : "johto_hgss_original",
+          "x"      : 0,
+          "y"      : 0,
           "start_x": 1,
           "start_y": 1,
-          "width": 190,
-          "height": 143
+          "width"  : 190,
+          "height" : 143
         }
       ],
       "fix_corners": true
     },
     {
-      "id": "kanto_hgss_original",
-      "type": "basic",
+      "id"              : "kanto_hgss_original",
+      "type"            : "basic",
       "coord_multiplier": 8,
-      "locations": [],
-      "versions": ["kanto_rby", "kanto_gsc", "kanto_frlg_original"],
-      "src": "https://cdn.bulbagarden.net/upload/7/78/Kanto.png"
+      "locations"       : [],
+      "versions"        : [
+        "kanto_rby",
+        "kanto_gsc",
+        "kanto_frlg_original"
+      ],
+      "src"             : "https://cdn2.bulbagarden.net/upload/7/78/Kanto.png",
+      "src_local"       : "assets/images/kanto_hgss_original.png"
     },
     {
-      "id": "kanto_hgss",
-      "type": "composition",
-      "width": 190,
-      "height": 143,
-      "parts": [
+      "id"         : "kanto_hgss",
+      "type"       : "composition",
+      "width"      : 190,
+      "height"     : 143,
+      "parts"      : [
         {
-          "map": "kanto_hgss_original",
-          "x": 0,
-          "y": 0,
+          "map"    : "kanto_hgss_original",
+          "x"      : 0,
+          "y"      : 0,
           "start_x": 1,
           "start_y": 1,
-          "width": 190,
-          "height": 143
+          "width"  : 190,
+          "height" : 143
         }
       ],
       "fix_corners": true
     },
     {
-      "id": "tohjo_hgss",
-      "type": "composition",
-      "width": 360,
-      "height": 143,
-      "parts": [
+      "id"         : "tohjo_hgss",
+      "type"       : "composition",
+      "width"      : 360,
+      "height"     : 143,
+      "parts"      : [
         {
-          "map": "johto_hgss_original",
-          "x": 0,
-          "y": 0,
+          "map"    : "johto_hgss_original",
+          "x"      : 0,
+          "y"      : 0,
           "start_x": 1,
           "start_y": 1,
-          "width": 185,
-          "height": 143
+          "width"  : 185,
+          "height" : 143
         },
         {
-          "map": "kanto_hgss_original",
-          "x": 185,
-          "y": 0,
+          "map"    : "kanto_hgss_original",
+          "x"      : 185,
+          "y"      : 0,
           "start_x": 16,
           "start_y": 1,
-          "width": 175,
-          "height": 143
+          "width"  : 175,
+          "height" : 143
         }
       ],
       "fix_corners": true
     }
   ],
-  "proxy_url": "https://cors-anywhere.herokuapp.com/",
+  "proxy_url"    : "https://cors-anywhere.herokuapp.com/",
   "proxy_url_old": "https://yacdn.org/proxy/",
-  "music_source": "https://www.youtube.com/channel/UCTZHcSIHcyfcFCYnc-rV7Cw",
-  "title": "Pokémon Music Map"
+  "music_source" : "https://www.youtube.com/channel/UCTZHcSIHcyfcFCYnc-rV7Cw",
+  "title"        : "Pokémon Music Map"
 }
